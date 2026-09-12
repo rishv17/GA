@@ -1,0 +1,75 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS Shorts Notes - Master Dashboard</title>
+    <style>
+        :root { --primary: #1a252f; --accent: #f39c12; --bg: #f8f9fa; }
+        body { font-family: 'Segoe UI', 'Noto Sans Devanagari', sans-serif; background: var(--bg); margin: 0; padding: 0; color: #2d3436; }
+        .header { background: linear-gradient(135deg, var(--primary), #2c3e50); color: white; padding: 40px 20px; text-align: center; }
+        .header h1 { margin: 0; font-size: 2.5rem; }
+        .header p { opacity: 0.9; font-size: 1.1rem; margin-top: 10px; }
+        
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        
+        .card {
+            background: white; border-radius: 12px; padding: 30px;
+            text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; color: inherit;
+            border-top: 5px solid var(--accent);
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .card .icon { font-size: 3rem; margin-bottom: 15px; display: block; }
+        .card h2 { margin: 10px 0; color: var(--primary); }
+        .card p { color: #636e72; font-size: 0.95rem; }
+        
+        .footer { text-align: center; padding: 30px; color: #7f8c8d; font-size: 0.9rem; margin-top: 50px; border-top: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>📚 GS Shorts Notes</h1>
+    <p>Competitive Exams के लिए Comprehensive, Interactive & Detailed Notes</p>
+</div>
+
+<div class="container">
+    <div class="grid">
+        <!-- History Card -->
+        <a href="history/chapter-01-ancient-1.html" class="card">
+            <span class="icon">📜</span>
+            <h2>इतिहास (History)</h2>
+            <p>प्राचीन, मध्यकालीन, आधुनिक भारत और विश्व इतिहास के विस्तृत नोट्स।</p>
+        </a>
+
+        <!-- Geography Card (Placeholder) -->
+        <a href="geography/index.html" class="card" style="border-top-color: #27ae60;">
+            <span class="icon">🌍</span>
+            <h2>भूगोल (Geography)</h2>
+            <p>भौतिक, भारतीय और विश्व भूगोल के इंटरैक्टिव नोट्स। (Coming Soon)</p>
+        </a>
+
+        <!-- Polity Card (Placeholder) -->
+        <a href="polity/index.html" class="card" style="border-top-color: #2980b9;">
+            <span class="icon">⚖️</span>
+            <h2>राजव्यवस्था (Polity)</h2>
+            <p>भारतीय संविधान, सरकार और नागरिक अधिकारों पर विस्तृत जानकारी। (Coming Soon)</p>
+        </a>
+        
+        <!-- Economy Card (Placeholder) -->
+        <a href="#" class="card" style="border-top-color: #8e44ad;">
+            <span class="icon">📈</span>
+            <h2>अर्थव्यवस्था (Economy)</h2>
+            <p>भारतीय अर्थव्यवस्था, बजट और सर्वेक्षण के मुख्य बिंदु। (Coming Soon)</p>
+        </a>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Made with ❤️ for Competitive Exam Aspirants | Hosted on GitHub Pages</p>
+</div>
+
+</body>
+</html>
