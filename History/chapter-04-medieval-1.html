@@ -1,0 +1,1233 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 4 - मध्यकालीन भारत - I | History Notes</title>
+<style>
+:root {
+    --primary: #1a252f;
+    --ancient: #d35400;
+    --ancient-light: #e67e22;
+    --medieval: #5DADE2;
+    --medieval-light: #85C1E9;
+    --modern: #82E0AA;
+    --culture: #8e44ad;
+    --accent: #f39c12;
+    --bg: #f8f9fa;
+    --text: #2d3436;
+    --box-key: #e8f4f8;
+    --box-tip: #eafaf1;
+    --box-warn: #fdedec;
+    --box-map: #fef5e7;
+    --box-quote: #f4ecf7;
+    --box-flow: #eaf2f8;
+    --box-mind: #fdf2e9;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Segoe UI', 'Noto Sans Devanagari', 'Noto Sans', Tahoma, sans-serif;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    display: flex;
+    min-height: 100vh;
+}
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px; left: 15px;
+    z-index: 200;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.sidebar {
+    width: 300px;
+    background: var(--primary);
+    color: white;
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px 16px;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
+.sidebar .chap-tag {
+    text-align: center; color: var(--accent);
+    font-size: 0.75rem; letter-spacing: 3px; margin-bottom: 10px;
+    text-transform: uppercase; font-weight: bold;
+}
+.sidebar .home-btn {
+    display: block; text-align: center; background: var(--accent);
+    color: white !important; font-weight: bold; padding: 10px;
+    border-radius: 8px; margin-bottom: 20px; text-decoration: none;
+    transition: 0.3s;
+}
+.sidebar .home-btn:hover { background: #d35400; transform: scale(1.02); }
+.sidebar h2 {
+    text-align: center; border-bottom: 2px solid #34495e;
+    padding-bottom: 12px; margin-bottom: 15px; font-size: 1.1rem; color: #bdc3c7;
+}
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar li { margin: 3px 0; }
+.sidebar .subject-header a {
+    color: var(--accent) !important; font-weight: 700; font-size: 0.95rem;
+    padding: 8px 12px; border-left: 3px solid var(--accent);
+    background: rgba(243, 156, 18, 0.1); border-radius: 0 6px 6px 0;
+    display: block; text-decoration: none; transition: 0.3s;
+    margin-top: 12px;
+}
+.sidebar .subject-header a:hover { background: rgba(243, 156, 18, 0.2); }
+.sidebar .chapter-link {
+    color: #dfe6e9 !important; text-decoration: none; display: block;
+    padding: 6px 12px 6px 28px;
+    border-radius: 6px; transition: 0.25s; font-size: 0.85rem;
+}
+.sidebar .chapter-link:hover {
+    background: #34495e; color: white !important; transform: translateX(4px);
+}
+.sidebar .chapter-link.active {
+    background: var(--medieval); color: white !important; font-weight: 600;
+}
+main { margin-left: 320px; padding: 30px 40px; max-width: 1100px; flex: 1; }
+.ch-header {
+    background: linear-gradient(135deg, var(--medieval), var(--medieval-light));
+    color: white; padding: 30px 35px; border-radius: 12px;
+    margin-bottom: 30px; box-shadow: 0 8px 20px rgba(93,173,226,0.2);
+}
+.ch-header h1 { color: white; border: none; font-size: 2rem; margin-bottom: 8px; }
+.ch-header p { opacity: 0.95; font-size: 1.1rem; }
+.ch-header .period {
+    display: inline-block; background: rgba(255,255,255,0.2);
+    padding: 5px 16px; border-radius: 20px; margin-top: 12px; font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+h1 { color: var(--primary); border-bottom: 3px solid var(--primary); padding-bottom: 10px; margin-bottom: 20px; }
+h2 {
+    margin-top: 50px; padding: 14px 22px; border-radius: 8px;
+    color: white; font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: var(--medieval);
+}
+h3 {
+    color: var(--primary); border-left: 5px solid var(--medieval);
+    padding: 10px 16px; margin-top: 35px; font-size: 1.3rem;
+    background: #ecf0f1; border-radius: 0 6px 6px 0;
+}
+h4 {
+    color: #2c3e50; margin-top: 22px;
+    border-bottom: 1px dashed #bdc3c7; padding-bottom: 6px; font-size: 1.1rem;
+}
+.intro-box {
+    background: linear-gradient(135deg, #fff9e6, #fff3cd);
+    border-left: 6px solid var(--accent);
+    padding: 20px 25px; border-radius: 10px; margin: 25px 0;
+}
+.intro-box h3 { color: var(--accent); border: none; background: none; padding: 0; margin-top: 0; }
+.box {
+    padding: 16px 20px; border-radius: 10px; margin: 20px 0;
+    border-left: 6px solid; box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.box-key { background: var(--box-key); border-color: #2980b9; }
+.box-key::before { content: "💡 KEY CONCEPT"; font-weight: 700; color: #2980b9; display: block; margin-bottom: 8px; }
+.box-tip { background: var(--box-tip); border-color: #27ae60; }
+.box-tip::before { content: "🎯 EXAM TIP"; font-weight: 700; color: #27ae60; display: block; margin-bottom: 8px; }
+.box-warn { background: var(--box-warn); border-color: #c0392b; }
+.box-warn::before { content: "⚠️ COMMON MISTAKE"; font-weight: 700; color: #c0392b; display: block; margin-bottom: 8px; }
+.box-map { background: var(--box-map); border-color: var(--accent); }
+.box-map::before { content: "🗺️ GEOGRAPHY"; font-weight: 700; color: #e67e22; display: block; margin-bottom: 8px; }
+.box-compare { background: #f4ecf7; border-color: var(--culture); }
+.box-compare::before { content: "🔄 COMPARISON"; font-weight: 700; color: var(--culture); display: block; margin-bottom: 8px; }
+.box-quote {
+    background: var(--box-quote); border-color: var(--culture);
+    border-left: 6px solid var(--culture); font-style: italic;
+}
+.box-quote::before { content: " QUOTE"; font-weight: 700; color: var(--culture); display: block; margin-bottom: 8px; font-style: normal; }
+.box-art { background: #fdf2e9; border-color: #e67e22; }
+.box-art::before { content: "🎨 ART & ARCHITECTURE"; font-weight: 700; color: #e67e22; display: block; margin-bottom: 8px; }
+.box-econ { background: #e8f8f5; border-color: #1abc9c; }
+.box-econ::before { content: "💰 ECONOMY & SOCIETY"; font-weight: 700; color: #1abc9c; display: block; margin-bottom: 8px; }
+.box-book { background: #f9ebea; border-color: #e74c3c; }
+.box-book::before { content: "📖 BOOKS & AUTHORS"; font-weight: 700; color: #e74c3c; display: block; margin-bottom: 8px; }
+.box-term { background: #f2f3f4; border-color: #7f8c8d; }
+.box-term::before { content: " TERMINOLOGY"; font-weight: 700; color: #7f8c8d; display: block; margin-bottom: 8px; }
+table {
+    width: 100%; border-collapse: collapse; margin: 18px 0;
+    background: white; box-shadow: 0 3px 8px rgba(0,0,0,0.04); font-size: 0.9rem;
+    border-radius: 8px; overflow: hidden;
+}
+th, td { border: 1px solid #eee; padding: 12px 14px; text-align: left; vertical-align: top; }
+th { background: var(--primary); color: white; font-size: 0.85rem; font-weight: 600; }
+tr:nth-child(even) { background: #f9f9f9; }
+tr:hover { background: #f0f4f8; }
+ul, ol { margin: 8px 0; padding-left: 22px; }
+li { margin-bottom: 6px; }
+.timeline {
+    background: white; border-left: 4px solid var(--medieval);
+    padding: 20px; margin: 25px 0; border-radius: 0 10px 10px 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.tl-item {
+    position: relative; padding: 10px 0 10px 32px;
+    border-bottom: 1px dashed #eee;
+}
+.tl-item:last-child { border-bottom: none; }
+.tl-item::before {
+    content: "●"; color: var(--medieval);
+    position: absolute; left: -11px; font-size: 1.2rem;
+    background: white;
+}
+.tl-year { font-weight: 700; color: var(--medieval); display: inline-block; min-width: 150px; }
+.qf-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0;
+}
+.qf-item {
+    background: white; padding: 12px 16px; border-radius: 8px;
+    border-left: 4px solid var(--medieval); font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    transition: transform 0.2s;
+}
+.qf-item:hover { transform: translateX(3px); }
+.qf-item strong { color: var(--medieval); }
+.mindmap {
+    background: var(--box-mind); border-radius: 12px;
+    padding: 25px; margin: 25px 0; font-size: 0.95rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.mindmap .center {
+    background: var(--medieval); color: white; padding: 10px 20px;
+    border-radius: 25px; display: inline-block; font-weight: 700; margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(93,173,226,0.2);
+}
+.mindmap ul { list-style: none; padding-left: 20px; }
+.mindmap > ul > li { margin: 8px 0; }
+.mindmap > ul > li::before { content: "├─ "; color: var(--medieval); font-weight: 700; }
+.mindmap ul ul li::before { content: "│  ├─ "; color: #5DADE2; }
+.summary-box {
+    background: linear-gradient(135deg, #e8f8f5, #d1f2eb);
+    border: 2px solid #16a085; border-radius: 12px;
+    padding: 25px 30px; margin: 40px 0;
+}
+.summary-box h2 { background: #16a085; margin-top: 0; }
+.ref-card {
+    background: linear-gradient(135deg, #fef9e7, #fcf3cf);
+    border: 2px solid #f1c40f; border-radius: 12px;
+    padding: 25px 30px; margin: 30px 0;
+}
+.ref-card h2 { background: #f39c12; margin-top: 0; }
+.glossary {
+    background: #f2f3f4; border-radius: 12px;
+    padding: 25px 30px; margin: 30px 0;
+}
+.glossary h2 { background: #7f8c8d; margin-top: 0; }
+.gloss-item { margin: 8px 0; font-size: 0.95rem; }
+.gloss-item strong { color: var(--primary); min-width: 160px; display: inline-block; }
+.page-footer {
+    text-align: center; margin-top: 50px; padding: 25px;
+    color: #7f8c8d; font-size: 0.85rem; border-top: 2px dashed #bdc3c7;
+}
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px; right: 30px;
+    z-index: 99;
+    background: var(--medieval);
+    color: white;
+    border: none;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+#backToTop:hover { background: var(--medieval-light); transform: translateY(-3px); }
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .sidebar {
+        transform: translateX(-100%);
+        width: 85%;
+        max-width: 320px;
+    }
+    .sidebar.open { transform: translateX(0); }
+    main {
+        margin-left: 0 !important;
+        padding: 70px 15px 20px 15px !important;
+        max-width: 100%;
+    }
+    .qf-grid { grid-template-columns: 1fr; }
+    .ch-header { padding: 25px 20px; }
+    .ch-header h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.3rem; padding: 12px 18px; }
+    h3 { font-size: 1.15rem; }
+    table { font-size: 0.85rem; }
+    th, td { padding: 8px 10px; }
+    .tl-year { min-width: 120px; font-size: 0.85rem; }
+    .box { padding: 14px 16px; }
+    #backToTop { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 1.3rem; }
+}
+</style>
+</head>
+<body>
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ Menu</button>
+<button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+<nav class="sidebar">
+    <div class="chap-tag">GS SHORTS NOTES</div>
+    <a href="../index.html" class="home-btn"> मुख्य पृष्ठ (Home)</a>
+    <h2>📚 विषय सूची</h2>
+    <ul>
+        <li class="subject-header"><a href="index.html">📜 इतिहास (History)</a></li>
+        <li><a href="chapter-01-ancient-1.html" class="chapter-link">1. प्राचीन भारत - I</a></li>
+        <li><a href="chapter-02-ancient-2.html" class="chapter-link">2. प्राचीन भारत - II</a></li>
+        <li><a href="chapter-03-ancient-3.html" class="chapter-link">3. प्राचीन भारत - III</a></li>
+        <li><a href="chapter-04-medieval-1.html" class="chapter-link active">4. मध्यकालीन भारत - I</a></li>
+        <li><a href="chapter-05-medieval-2.html" class="chapter-link">5. मध्यकालीन भारत - II</a></li>
+        <li><a href="chapter-06-modern-1.html" class="chapter-link">6. आधुनिक भारत - I</a></li>
+        <li class="subject-header"><a href="../geography/index.html">🌍 भूगोल (Geography)</a></li>
+        <li class="subject-header"><a href="../polity/index.html">⚖️ राजव्यवस्था (Polity)</a></li>
+    </ul>
+</nav>
+<main>
+<div class="ch-header">
+    <h1>🏰 Chapter 4: मध्यकालीन भारत - I</h1>
+    <p>प्रारंभिक इस्लामी आक्रमण | दिल्ली सल्तनत | विजयनगर व बहमनी | सूफी एवं भक्ति आंदोलन</p>
+    <span class="period">⏳ काल: 712 ई. – 1526 ई.</span>
+</div>
+<section id="intro">
+<div class="intro-box">
+    <h3> भूमिका</h3>
+    <p>भारतीय इतिहास का मध्यकालीन दौर 8वीं शताब्दी में अरब आक्रमणों से शुरू होता है और 1526 ई. में दिल्ली सल्तनत के अंत तक फैला है। इस काल में भारत की राजनीतिक, सामाजिक और सांस्कृतिक संरचना में गहरा परिवर्तन आया। इस्लाम का आगमन, नई प्रशासनिक व्यवस्था (इक्ता प्रथा), बाजार नियंत्रण, और सूफी एवं भक्ति आंदोलनों ने भारतीय समाज को नया आकार दिया। यह काल भारतीय वास्तुकला, साहित्य और धार्मिक सहिष्णुता के विकास के लिए अत्यंत महत्वपूर्ण रहा।</p>
+</div>
+</section>
+<section id="timeline">
+<h2>📅 कालक्रम (Timeline)</h2>
+<div class="timeline">
+    <div class="tl-item"><span class="tl-year">712 ई.</span> मोहम्मद बिन कासिम का सिंध पर आक्रमण</div>
+    <div class="tl-item"><span class="tl-year">998-1030 ई.</span> महमूद गजनवी के 17 आक्रमण</div>
+    <div class="tl-item"><span class="tl-year">1191-1192 ई.</span> तराइन के युद्ध (पृथ्वीराज चौहान vs मोहम्मद गौरी)</div>
+    <div class="tl-item"><span class="tl-year">1206-1290 ई.</span> गुलाम (दास) वंश</div>
+    <div class="tl-item"><span class="tl-year">1290-1320 ई.</span> खिलजी वंश</div>
+    <div class="tl-item"><span class="tl-year">1320-1414 ई.</span> तुगलक वंश</div>
+    <div class="tl-item"><span class="tl-year">1336-1650 ई.</span> विजयनगर साम्राज्य</div>
+    <div class="tl-item"><span class="tl-year">1347-1527 ई.</span> बहमनी साम्राज्य</div>
+    <div class="tl-item"><span class="tl-year">1414-1451 ई.</span> सैयद वंश</div>
+    <div class="tl-item"><span class="tl-year">1451-1526 ई.</span> लोदी वंश</div>
+    <div class="tl-item"><span class="tl-year">1526 ई.</span> पानीपत का प्रथम युद्ध (दिल्ली सल्तनत का अंत)</div>
+</div>
+</section>
+<section id="qfacts">
+<h2>⚡ Quick Facts (30 सबसे महत्वपूर्ण तथ्य)</h2>
+<div class="qf-grid">
+    <div class="qf-item">⚔️ <strong>मोहम्मद बिन कासिम:</strong> 712 ई. में सिंध पर विजय</div>
+    <div class="qf-item">🕌 <strong>महमूद गजनवी:</strong> 17 बार आक्रमण, सोमनाथ (1025 ई.)</div>
+    <div class="qf-item">📖 <strong>तहकीक-ए-हिंद:</strong> अलबरूनी द्वारा रचित</div>
+    <div class="qf-item">🏹 <strong>तराइन का युद्ध:</strong> 1192 ई. (गौरी विजयी)</div>
+    <div class="qf-item">👑 <strong>कुतुबुद्दीन ऐबक:</strong> गुलाम वंश के संस्थापक, 'लाख बख्श'</div>
+    <div class="qf-item">🪙 <strong>इल्तुतमिश:</strong> टंका और जिटल सिक्के, चहलगानी प्रथा</div>
+    <div class="qf-item">📚 <strong>तबकात-ए-नासिरी:</strong> मिन्हाज-उस-सिराज द्वारा</div>
+    <div class="qf-item">👩 <strong>रजिया सुल्तान:</strong> दिल्ली की प्रथम और एकमात्र महिला शासक</div>
+    <div class="qf-item">🩸 <strong>बलबन:</strong> रक्त और लौह नीति, सिजदा और पैबोस</div>
+    <div class="qf-item">💰 <strong>अलाउद्दीन खिलजी:</strong> बाजार नियंत्रण, दाग और चेहरा प्रथा</div>
+    <div class="qf-item">️ <strong>मुहम्मद बिन तुगलक:</strong> राजधानी स्थानांतरण, टोकन मुद्रा</div>
+    <div class="qf-item">📖 <strong>रिहला:</strong> इब्न बतूता द्वारा रचित</div>
+    <div class="qf-item">🕌 <strong>फिरोज शाह तुगलक:</strong> दीवान-ए-खैरात, जिजिया कर</div>
+    <div class="qf-item">📏 <strong>सिकंदर लोदी:</strong> गज-ए-सिकंदरी, आगरा की स्थापना</div>
+    <div class="qf-item">⚔️ <strong>पानीपत का प्रथम युद्ध:</strong> 1526 ई. (बाबर vs इब्राहिम लोदी)</div>
+    <div class="qf-item">📜 <strong>अमीर खुसरो:</strong> 'तूती-ए-हिंद', कव्वाली के जनक</div>
+    <div class="qf-item"> <strong>ख्वाजा मुइनुद्दीन चिश्ती:</strong> चिश्ती सिलसिले के संस्थापक</div>
+    <div class="qf-item">🕌 <strong>निजामुद्दीन औलिया:</strong> महबूब-ए-इलाही</div>
+    <div class="qf-item">🙏 <strong>कबीर दास:</strong> निरगुण संत, बीजक के रचयिता</div>
+    <div class="qf-item">🙏 <strong>गुरु नानक देव:</strong> सिख धर्म के संस्थापक (1469 ई.)</div>
+    <div class="qf-item"> <strong>विजयनगर:</strong> हरीहर और बुक्का द्वारा स्थापित</div>
+    <div class="qf-item">👑 <strong>कृष्णदेव राय:</strong> तुलुव वंश, अष्टदिग्गज</div>
+    <div class="qf-item">🕌 <strong>बहमनी:</strong> हसन गंगू द्वारा स्थापित</div>
+    <div class="qf-item">📖 <strong>तारीख-ए-फिरोजशाही:</strong> जियाउद्दीन बरनी द्वारा</div>
+    <div class="qf-item">📖 <strong>मुद्राराक्षस:</strong> विशाखदत्त द्वारा रचित</div>
+    <div class="qf-item">📖 <strong>इंडिका:</strong> मेगस्थनीज द्वारा रचित</div>
+    <div class="qf-item">📖 <strong>तुजुक-ए-बाबरी:</strong> बाबर द्वारा रचित</div>
+    <div class="qf-item">📖 <strong>हुमायूँनामा:</strong> गुलबदन बेगम द्वारा रचित</div>
+    <div class="qf-item">📖 <strong>आइन-ए-अकबरी:</strong> अबुल फजल द्वारा रचित</div>
+    <div class="qf-item"> <strong>शाहनामा:</strong> फिरदौसी द्वारा रचित</div>
+</div>
+</section>
+<section id="early-invasions">
+<h2>⚔️ 1. प्रारंभिक इस्लामी आक्रमण</h2>
+<h3 id="arab-invasion">1.1 अरब आक्रमण</h3>
+<div class="box box-key">
+    <strong>मोहम्मद बिन कासिम (712 ई.):</strong><br>
+    • सिंध क्षेत्र पर आक्रमण किया।<br>
+    • राजा दाहिर (ब्राह्मण शासक) को पराजित किया।<br>
+    • भारत में इस्लाम की नींव रखी।<br>
+    • जिजिया कर लगाने वाला प्रथम शासक।
+</div>
+<h3 id="turk-invasions">1.2 तुर्क आक्रमण</h3>
+<h4>महमूद गजनवी (998-1030 ई.)</h4>
+<ul>
+    <li>गजनी (अफगानिस्तान) का शासक।</li>
+    <li>भारत पर <strong>17 बार</strong> आक्रमण किया।</li>
+    <li><strong>1ला हमला:</strong> पेशावर का युद्ध (1001 ई.) - जयपाल को हराया।</li>
+    <li><strong>16वाँ हमला:</strong> सोमनाथ मंदिर (1025 ई.)।</li>
+    <li><strong>17वाँ हमला:</strong> अंतिम हमला (1027 ई.)।</li>
+    <li>उद्देश्य: धन लूटना और इस्लाम का प्रसार।</li>
+</ul>
+<div class="box box-book">
+    <strong>प्रमुख रचनाएँ:</strong><br>
+    • <strong>शाहनामा:</strong> फिरदौसी द्वारा (गजनवी के दरबार में)।<br>
+    • <strong>तहकीक-ए-हिंद (किताब-उल-हिंद):</strong> अलबरूनी द्वारा (भारत का विश्वकोश)।
+</div>
+<h4>मोहम्मद गौरी (1175-1206 ई.)</h4>
+<ul>
+    <li>उपनाम: मुइज्जुद्दीन मोहम्मद।</li>
+    <li>उद्देश्य: भारत में साम्राज्य स्थापित करना।</li>
+    <li><strong>1ला हमला:</strong> मुल्तान (1175 ई.)।</li>
+    <li><strong>2रा हमला:</strong> गुजरात में नायकदेवी एवं भीम द्वितीय द्वारा पराजित (1178 ई.)।</li>
+    <li><strong>प्रथम तराइन का युद्ध (1191 ई.):</strong> पृथ्वीराज चौहान विजयी।</li>
+    <li><strong>द्वितीय तराइन का युद्ध (1192 ई.):</strong> गौरी विजयी (भारत में तुर्क साम्राज्य की नींव)।</li>
+    <li><strong>चंदावर का युद्ध (1194 ई.):</strong> जयचंद (कन्नौज) को हराया।</li>
+</ul>
+<div class="box box-book">
+    <strong>पृथ्वीराज रासो:</strong> चंदबरदाई द्वारा रचित।<br>
+    <strong>पृथ्वीराज की रानी:</strong> संयोगिता (कपूर देवी)।
+</div>
+</section>
+<section id="delhi-sultanate">
+<h2> 2. दिल्ली सल्तनत (1206-1526 ई.)</h2>
+<p>दिल्ली सल्तनत की स्थापना 1206 ई. में हुई और यह 5 वंशों तक चली। इसे ममलूक वंश भी कहा जाता है।</p>
+<h3 id="slave-dynasty">2.1 गुलाम (दास) वंश (1206-1290 ई.)</h3>
+<table>
+    <tr><th>शासक</th><th>काल</th><th>प्रमुख उपलब्धियाँ</th></tr>
+    <tr>
+        <td><strong>कुतुबुद्दीन ऐबक</strong></td>
+        <td>1206-1210</td>
+        <td>
+            • संस्थापक।<br>
+            • उपाधि: 'लाख बख्श' (लाखों का दान देने वाला)।<br>
+            • राजधानी: लाहौर।<br>
+            • <strong>कुतुबमीनार</strong> का निर्माण शुरू किया (ख्वाजा कुतुबुद्दीन बख्तियार काकी की याद में)।<br>
+            • अढ़ाई दिन का झोंपड़ा (अजमेर)।<br>
+            • मृत्यु: 1210 ई. पोलो (चौगान) खेलते समय।<br>
+            • <strong>ताज-उल-मआसिर:</strong> हसन-उन-निजामी द्वारा।<br>
+            • <strong>फखरुद्दीन:</strong> तारीख-ए-मुबारकशाही में उल्लेख।
+        </td>
+    </tr>
+    <tr>
+        <td><strong>शम्सुद्दीन इल्तुतमिश</strong></td>
+        <td>1211-1236</td>
+        <td>
+            • कुतुबुद्दीन ऐबक का दामाद।<br>
+            • वास्तविक संस्थापक।<br>
+            • राजधानी: दिल्ली (लाहौर से स्थानांतरित)।<br>
+            • मंगोल चंगेज़ ख़ान के आक्रमण से दिल्ली को बचाया।<br>
+            • वज़ीर: निज़ाम-उल-मुल्क।<br>
+            • सिक्के: <strong>टंका</strong> (चाँदी) और <strong>जिटल</strong> (ताँबे)।<br>
+            • <strong>इक्ता प्रथा</strong> की शुरुआत (भूमि का टुकड़ा)।<br>
+            • <strong>चहलगानी (चालीसा):</strong> 40 गुलामों का समूह।
+        </td>
+    </tr>
+    <tr>
+        <td><strong>रजिया सुल्तान</strong></td>
+        <td>1236-1240</td>
+        <td>
+            • इल्तुतमिश की पुत्री।<br>
+            • भारत पर शासन करने वाली प्रथम और एकमात्र मुस्लिम महिला।<br>
+            • 1240 ई. में खोखर जनजाति द्वारा कैथल (हरियाणा) के पास हत्या।<br>
+            • <strong>तबकात-ए-नासिरी:</strong> मिन्हाज-उस-सिराज द्वारा।
+        </td>
+    </tr>
+    <tr>
+        <td><strong>ग़यासुद्दीन बलबन</strong></td>
+        <td>1266-1287</td>
+        <td>
+            • वास्तविक नाम: उलूघ खान।<br>
+            • नासिरुद्दीन महमूद के अधीन नायब (उप शासक)।<br>
+            • चालीसा (चहलगानी) का अंत किया, ताज की प्रतिष्ठा बहाल की।<br>
+            • <strong>दीवान-ए-अर्ज</strong> (सैन्य विभाग) की स्थापना।<br>
+            • <strong>रक्त और लौह नीति</strong> (Blood and Iron Policy)।<br>
+            • <strong>सिजदा:</strong> शासक के समक्ष साष्टांग प्रणाम।<br>
+            • <strong>पाईबोस:</strong> शासक के चरणों का चुंबन।<br>
+            • नौरोज़ उत्सव की शुरुआत।
+        </td>
+    </tr>
+    <tr>
+        <td><strong>मुइज्जुद्दीन कैकुबाद</strong></td>
+        <td>1287-1290</td>
+        <td>
+            • गुलाम वंश का अंतिम शासक।<br>
+            • बलबन का पौत्र (बुगरा खान का पुत्र)।<br>
+            • जलालुद्दीन खिलजी द्वारा हत्या कर दी गई।
+        </td>
+    </tr>
+</table>
+<h3 id="khilji-dynasty">2.2 खिलजी वंश (1290-1320 ई.)</h3>
+<h4>जलालुद्दीन खिलजी (1290-1296 ई.)</h4>
+<ul>
+    <li>मूल नाम: मलिक फिरोज।</li>
+    <li>खिलजी वंश का संस्थापक।</li>
+</ul>
+<h4>अलाउद्दीन खिलजी (1296-1316 ई.)</h4>
+<div class="box box-key">
+    <strong>प्रथम तुर्क शासक जिसने दक्षिण भारत पर आक्रमण किया।</strong><br>
+    • मूल नाम: अली गुरशा।<br>
+    • जलालुद्दीन का भतीजा।
+</div>
+<h4>दक्षिण विजय अभियान</h4>
+<ul>
+    <li><strong>गुजरात:</strong> 1298 ई.</li>
+    <li><strong>रणथंभौर:</strong> 1301 ई. (पहली बार जौहर)।</li>
+    <li><strong>मेवाड़:</strong> 1303 ई. (राजधानी- चित्तौड़)।</li>
+    <li><strong>मालवा:</strong> 1305 ई.</li>
+    <li><strong>जलोर:</strong> 1311 ई.</li>
+</ul>
+<h4>मलिक काफूर के दक्षिण अभियान</h4>
+<ul>
+    <li><strong>रामचंद्र:</strong> 1308 ई. (देवगिरि का यादव शासक)।</li>
+    <li><strong>प्रतापरुद्र:</strong> 1311 ई. (वारंगल का काकतीय शासक)।</li>
+    <li><strong>वीर बल्लाल III:</strong> 1309 ई. (द्वारसमुद्र का होयसल शासक)।</li>
+    <li><strong>वीर पांड्य:</strong> 1311 ई. (मदुरै का पांड्य शासक)।</li>
+</ul>
+<h4>उपाधियाँ एवं सुधार</h4>
+<div class="box box-key">
+    <strong>उपाधियाँ:</strong><br>
+    • <strong>सिकंदर-ए-सानी:</strong> दक्षिण विजय के बाद।<br>
+    • <strong>सुल्तान-ए-जहाँ:</strong> अमीर खुसरो द्वारा।<br><br>
+    <strong>शासनिक सुधार:</strong><br>
+    • <strong>दाग:</strong> घोड़े पर निशान लगाना।<br>
+    • <strong>चेहरा:</strong> सैनिकों की सूची (चेहरा पहचान)।<br>
+    • <strong>मुखराज:</strong> राजस्व वसूलने वाला अधिकारी।
+</div>
+<h4>कर प्रणाली</h4>
+<div class="box box-econ">
+    • <strong>जिजिया:</strong> गैर मुस्लिमों पर (पहली बार मुहम्मद बिन कासिम ने लगाया)।<br>
+    • <strong>ज़कात:</strong> अमीर मुस्लिमों पर (इन 3 करों से भिन्न)।<br>
+    • <strong>घराई:</strong> मकान कर।<br>
+    • <strong>चराई:</strong> पशु कर।<br>
+    • <strong>खराज:</strong> भूमि कर।
+</div>
+<h4>बाजार नियंत्रण</h4>
+<div class="box box-econ">
+    <strong>दिल्ली में 3 बाजार स्थापित किए:</strong><br>
+    1. अनाज का बाजार।<br>
+    2. महंगे कपड़ों का बाजार।<br>
+    3. घोड़े, दास और मवेशियों का बाजार।<br><br>
+    • प्रत्येक बाजार का नियंत्रण: <strong>शहना</strong> (व्यापारियों की सूची रखता था और कीमतों पर सख्त नियंत्रण रखता था)।<br>
+    • <strong>दीवान-ए-रियासत</strong> और <strong>शहना-ए-मंडी:</strong> बाजार की निगरानी करते थे।<br>
+    • <strong>सरा-ए-अदल:</strong> सभी वस्तुएँ खुले बाजार में यहीं लाई जाती थीं (कपड़े का बाजार)।<br>
+    • <strong>मुनहियान और बारिद:</strong> गुप्तचर।
+</div>
+<h4>निर्माण कार्य</h4>
+<div class="box box-art">
+    • अलाई किला।<br>
+    • <strong>अलाई दरवाज़ा:</strong> कुतुब मीनार का प्रवेश द्वार।<br>
+    • <strong>हज़ार सुतून:</strong> हजार स्तंभों का महल।<br>
+    • <strong>हौज खास:</strong> जलाशय।<br>
+    • <strong>सीरी:</strong> दिल्ली का दूसरा नगर।<br>
+    • अलाउद्दीन का मकबरा - दिल्ली।
+</div>
+<h4>कला और शिक्षा का संरक्षण</h4>
+<div class="box box-book">
+    • दरबारी कवि: <strong>अमीर खुसरो</strong>।<br>
+    • उपाधि: <strong>तूती-ए-हिंद</strong> (भारत का तोता)।<br>
+    • भारत में कव्वाली की शुरुआत।<br>
+    • <strong>मुबारक खान:</strong> (1316-1320 ई.)।<br>
+    • <strong>खुसरो खान:</strong> 1320 ई. (अंतिम शासक)।
+</div>
+<h3 id="tughlaq-dynasty">2.3 तुगलक वंश (1320-1414 ई.)</h3>
+<h4>ग़यासुद्दीन तुगलक (1320-1325 ई.)</h4>
+<ul>
+    <li>खुसरो खान की हत्या गाज़ी मलिक ने की।</li>
+    <li>गद्दी पर बैठकर "ग़यासुद्दीन तुगलक" की उपाधि ली।</li>
+    <li>तुगलकाबाद नगर एवं किला बनवाया।</li>
+    <li>पुत्र जौना (उलूग खान) ने "मुहम्मद बिन तुगलक" नाम से गद्दी संभाली।</li>
+</ul>
+<h4>मुहम्मद बिन तुगलक (1325-1351 ई.)</h4>
+<div class="box box-key">
+    • तुगलक वंश का सबसे बड़ा साम्राज्य।<br>
+    • उपाधि: <strong>Wisest Fool</strong> (क़ाफ़ी खां द्वारा)।<br>
+    • यात्री: <strong>इब्न बतूता</strong> (मोरक्को से)।<br>
+    • पुस्तक: <strong>रिहला</strong> (इब्न बतूता)।<br>
+    • <strong>तारीख-ए-फिरोजशाही</strong> और <strong>तारीख-ए-जहाँदारी:</strong> जियाउद्दीन बरनी द्वारा।
+</div>
+<h4>प्रमुख प्रयोग एवं विफलताएँ</h4>
+<ul>
+    <li><strong>दोआब क्षेत्र में भूमि कर:</strong> 1326 ई. (बढ़ा दिया)।</li>
+    <li><strong>राजधानी स्थानांतरण:</strong> दिल्ली → दौलताबाद (1327 ई.)।</li>
+    <li><strong>खुरासान अभियान:</strong> 1329 ई.</li>
+    <li><strong>कराचल अभियान:</strong> 1330 ई.</li>
+    <li><strong>टोकन मुद्रा:</strong> कांस्य सिक्के चलाए (1329 ई.)।</li>
+</ul>
+<h4>फिरोज शाह तुगलक (1351-1388 ई.)</h4>
+<div class="box box-key">
+    • <strong>वजीहा नीति:</strong> सैनिकों को नकद नहीं, भूमि राजस्व से वेतन।<br>
+    • जिजिया कर को अलग कर के लागू किया (क़ुरान के अनुसार)।
+</div>
+<h4>चार कर प्रणाली</h4>
+<div class="box box-econ">
+    • <strong>ख़राज:</strong> भूमि उत्पादन का 1/10।<br>
+    • <strong>ज़कात:</strong> संपत्ति पर 2.5%।<br>
+    • <strong>जिजिया:</strong> गैर-मुस्लिमों पर।<br>
+    • <strong>ख़म्स:</strong> युद्ध में लूट का 1/5 भाग।<br>
+    • <strong>हक़-ए-शरब / हासिल-ए-शरब:</strong> जल कर।
+</div>
+<h4>जनकल्याणकारी कार्य</h4>
+<ul>
+    <li><strong>नगर निर्माण:</strong> फतेहाबाद, हिसार, जौनपुर, फिरोजाबाद।</li>
+    <li><strong>दार-उल-शिफा:</strong> दिल्ली में अस्पताल।</li>
+    <li><strong>दीवान-ए-खैरात:</strong> निधन कन्याओं के विवाह हेतु विभाग।</li>
+    <li><strong>प्रधानमंत्री:</strong> खान-ए-जहाँ मक़बूल।</li>
+    <li>इक्ता प्रणाली को वंशानुगत बनाया।</li>
+</ul>
+<h4>तैमूर का आक्रमण (1398 ई.)</h4>
+<ul>
+    <li>तैमूर मंगोल वंश का था।</li>
+    <li>अंतिम शासक: मुहम्मद शाह तुगलक।</li>
+</ul>
+<h3 id="sayyid-lodi">2.4 सैयद और लोदी वंश</h3>
+<h4>सैयद वंश (1414-1450 ई.)</h4>
+<ul>
+    <li><strong>संस्थापक:</strong> ख़िज़्र ख़ान (1414-1421 ई.)।</li>
+    <li>उपनाम: कुलाहदाराँ।</li>
+    <li>मुबारक शाह (1421-1434 ई.)।</li>
+    <li>मुहम्मद शाह (1434-1443 ई.)।</li>
+    <li>आलम शाह (1443-1451 ई.)।</li>
+</ul>
+<h4>लोदी वंश (1451-1526 ई.)</h4>
+<ul>
+    <li><strong>बहलोल लोदी (1451-1488 ई.):</strong> अफ़ग़ान सरदार, पंजाब में सत्ता स्थापित की।</li>
+    <li><strong>सिकंदर लोदी (1489-1517 ई.):</strong>
+        <ul>
+            <li>राजधानी: दिल्ली → आगरा।</li>
+            <li><strong>गज-ए-सिकंदरी:</strong> 32 अंगुल की नाप।</li>
+            <li>फारसी में कविताएँ लिखीं – गुलरुखी नाम से।</li>
+            <li>मोठ की मस्जिद बनवाई।</li>
+        </ul>
+    </li>
+    <li><strong>इब्राहिम लोदी (1517-1526 ई.):</strong> बाबर से पानीपत का युद्ध (1526 ई.)।</li>
+</ul>
+</section>
+<section id="administration">
+<h2>📜 3. मध्यकालीन केंद्रीय प्रशासन</h2>
+<div class="box box-term">
+    <strong>प्रमुख विभाग (दीवान):</strong><br>
+    • <strong>दीवान-ए-वजारत:</strong> वित्त विभाग।<br>
+    • <strong>दीवान-ए-अर्ज़:</strong> सेना विभाग (बलबन)।<br>
+    • <strong>दीवान-ए-इंशा:</strong> पत्राचार विभाग।<br>
+    • <strong>दीवान-ए-रसालत:</strong> न्याय अपील विभाग।<br>
+    • <strong>दीवान-ए-मुस्तखराज:</strong> बकाया वसूली विभाग (अलाउद्दीन खिलजी)।<br>
+    • <strong>दीवान-ए-रियासत:</strong> वाणिज्य विभाग।<br>
+    • <strong>दीवान-ए-कोही:</strong> कृषि विभाग (मुहम्मद बिन तुगलक)।<br>
+    • <strong>दीवान-ए-बंदगान:</strong> दास विभाग (फिरोज शाह तुगलक)।<br>
+    • <strong>दीवान-ए-खैरात:</strong> दान-पुण्य विभाग (फिरोज शाह तुगलक)।<br>
+    • <strong>दीवान-ए-इस्तियाक:</strong> पेंशन विभाग।
+</div>
+</section>
+<section id="vijayanagara-bahmani">
+<h2> 4. विजयनगर एवं बहमनी साम्राज्य</h2>
+<h3 id="vijayanagara">4.1 विजयनगर साम्राज्य</h3>
+<div class="box box-key">
+    • अर्थ: विजय का नगर।<br>
+    • हम्पी के खंडहर: कोलिन मैकेंज़ी द्वारा खोजे गए (1800 ई.)।<br>
+    • राजधानी: हम्पी (देवी पंपा देवी के नाम पर)।<br>
+    • सिक्का नाम: कर्नाटक साम्राज्य मुद्रा / नरपति।<br>
+    • प्रारंभिक शासक स्वयं को कहते थे: हिंदू सुरत्राण।<br>
+    • कुदिराई चेत्ती: स्थानीय व्यापारी समुदाय।<br>
+    • समकालीन शासक: अल्पित शासक (दक्षिण के सुल्तान); गजपति शासक (उड़ीसा)।
+</div>
+<h4>संगम वंश (1336-1485 ई.)</h4>
+<ul>
+    <li><strong>हरीहर और बुक्का (1336-1356 ई.):</strong> संस्थापक। काकतीय वंश के अधीन सामंत थे।</li>
+    <li>यात्री: इब्न बतूता (मोरक्को)।</li>
+    <li>हरीहर की उपाधि: कर्नाटक विद्या विलास।</li>
+    <li>बुक्का ने विद्यानगर का नाम बदलकर विजयनगर रखा।</li>
+    <li><strong>देव राय I:</strong> यात्री: निकोलो डे कॉन्टी (इटली)। कई बांध, टैंक और नहरें बनवाईं।</li>
+    <li><strong>देव राय II (1423-1446 ई.):</strong> यात्री: अब्दुर रज्जाक (ईरान/पारस)।</li>
+</ul>
+<h4>सालुव वंश (1486-1505 ई.)</h4>
+<ul>
+    <li><strong>सालुव नरसिंह (1486-1491 ई.):</strong> संस्थापक।</li>
+</ul>
+<h4>तुलुव वंश (1505-1570 ई.)</h4>
+<ul>
+    <li><strong>वीर नरसिंह (1505-1509 ई.):</strong> संस्थापक; पिता: नरसा नायक।</li>
+    <li><strong>कृष्णदेव राय (1509-1529 ई.):</strong>
+        <ul>
+            <li>सालुव तिमन्ना (वीर नरसिंह के मुस्लिम मंत्री) ने उसे सिंहासन पर बैठाया।</li>
+            <li><strong>निर्माण कार्य:</strong> विजय महल (हाउस ऑफ विक्टरी), हजारा राम मंदिर, वित्ठलस्वामी मंदिर।</li>
+            <li><strong>उपाधियाँ:</strong> यवनराज्य स्थापनाचार्य (बिदर राज्य की पुनर्स्थापना), अभिनव भोज, आंध्र भोज, आंध्र पितामह।</li>
+            <li>नगलापुरम की स्थापना (अपनी माँ के नाम पर)।</li>
+            <li>दोनों भाषाओं में विद्वान: तेलुगु और संस्कृत।</li>
+            <li><strong>अमुक्तमाल्यदा:</strong> (तेलुगु में राजनीति पर)।</li>
+            <li><strong>जांबवती कल्याणम्:</strong> (संस्कृत नाटक)।</li>
+            <li><strong>अमरनायक:</strong> सैन्य कमांडर प्रणाली।</li>
+            <li>यात्री: डुआर्टे बारबोसा, डोमिंगो पेस (पुर्तगाली)।</li>
+            <li>अष्टदिग्गज: दरबार के 8 विद्वान (तेनालीराम शामिल)।</li>
+            <li>अलबुकर्क को भटकल बंदरगाह पर किला बनाने की अनुमति दी।</li>
+        </ul>
+    </li>
+    <li><strong>अच्युतदेव राय:</strong> यात्री: फर्नाओ नुनीज़ (पुर्तगाली, नवनिर्माण)।</li>
+</ul>
+<h4>आरविदु वंश (1570-1650 ई.)</h4>
+<ul>
+    <li><strong>राक्षसी तंगड़ी / तालीकोटा युद्ध (1565 ई.):</strong> इस युद्ध के बाद ही आरविदु वंश की स्थापना हुई।</li>
+    <li>अलिया राम राय: दक्षिण के सुल्तानों के आंतरिक मामलों में हस्तक्षेप कर रहे थे।</li>
+    <li>बाद में राजधानी पहले पेनुकोंडा, फिर चंद्रगिरि स्थानांतरित हुई।</li>
+</ul>
+<h4>शासन व्यवस्था</h4>
+<div class="box box-term">
+    • <strong>अमरनायक:</strong> नायक (सैन्य मुख), जो राय (शासक) के अधीन होते थे।<br>
+    • <strong>अय्यंगार प्रणाली:</strong> 12 सदस्यों वाली ग्राम समिति।<br>
+    • अंतिम शासक: श्री रंग III (1678 ई.)।
+</div>
+<h4>वास्तुकला</h4>
+<div class="box box-art">
+    <strong>राजकीय कला:</strong><br>
+    • लोटस महल।<br>
+    • हाथी अस्तबल (11 हाथियों के लिए)।<br>
+    • हजारा राम मंदिर।<br>
+    • <strong>महानवमी डिब्बा:</strong> क्षेत्रफल: 11,000 वर्ग फुट; ऊँचाई: 40 फुट।<br><br>
+    <strong>धार्मिक कला:</strong><br>
+    • वित्ठलस्वामी मंदिर (निर्माता: कृष्णदेवराय)।<br>
+    • वीरपाक्ष मंदिर (हम्पी)।<br>
+    • निर्माता: लक्कन डंडेशा (देव राय II के अधीन)।<br>
+    • वीरपाक्ष मंदिर का गोपुरम (निर्माता: कृष्णदेवराय)।<br>
+    • किलाबंदी (7 परकोटों में) विवरण अब्दुर रज्जाक द्वारा।<br>
+    • कमलापुरम जलाशय (रेड टैंक) - कृष्णदेवराय द्वारा।<br>
+    • अनंतराज सागर जलाशय एवं हिरिया नहर - बनवाए गए।
+</div>
+<h3 id="bahmani">4.2 बहमनी साम्राज्य</h3>
+<h4>अलाउद्दीन हसन बहमन शाह (1347-1358 ई.)</h4>
+<ul>
+    <li>हसन गंगू के नाम से प्रसिद्ध।</li>
+    <li>बहमनी साम्राज्य की स्थापना की।</li>
+    <li>राजधानी: गुलबर्गा (प्रथम राजधानी)।</li>
+    <li>वारंगल के काकतीय शासकों को पराजित किया।</li>
+</ul>
+<h4>ताजुद्दीन फिरोज शाह (1397-1422 ई.)</h4>
+<ul>
+    <li>देव राय I को पराजित किया और उनकी पुत्री से विवाह किया।</li>
+    <li>बाद के युद्ध में पराजित हुए।</li>
+</ul>
+<h4>अहमद शाह वली (1422-1435 ई.)</h4>
+<ul>
+    <li>राजधानी गुलबर्गा से बीदर स्थानांतरित की।</li>
+    <li>बहमनी साम्राज्य को चार प्रांतों (तरफ) में विभाजित किया: गुलबर्गा, बीदर, बरार, दौलताबाद।</li>
+    <li><strong>तरफदार:</strong> प्रांत का शासक / शासक।</li>
+</ul>
+<h4>महमूद गवां</h4>
+<ul>
+    <li>बहमनी साम्राज्य में पेशवा (प्रधान मंत्री)।</li>
+    <li>हमायूँ शाह द्वारा उपाधि: मलिक-उत-तुज्जार (व्यापारियों का मुखिया)।</li>
+    <li>अन्य उपाधि: ख्वाजा-ए-जहाँ अमीर (व्यापारी वर्ग)।</li>
+    <li><strong>अफाकी / परदेसी:</strong> ईरान, इराक से आए सुन्नी मुस्लिम।</li>
+    <li><strong>दक्खनी:</strong> स्थानीय शिया मुस्लिम।</li>
+</ul>
+<h4>बहमनी साम्राज्य का विघटन</h4>
+<ul>
+    <li><strong>बरार (1484 ई.):</strong> फतहुल्लाह इमाद शाह (इमादशाही)।</li>
+    <li><strong>बीजापुर (1489 ई.):</strong> यूसुफ आदिल शाह (आदिलशाही)।</li>
+    <li><strong>अहमदनगर (1490 ई.):</strong> मलिक अहमद (निजामशाही)।</li>
+    <li><strong>गोलकोंडा (1518 ई.):</strong> कुली कुतुब शाह (कुतुबशाही)।</li>
+    <li><strong>बीदर (1526-27 ई.):</strong> अमीर अली बरीद (बरीदशाही)।</li>
+</ul>
+<h4>प्रमुख शासक एवं वास्तुकला</h4>
+<ul>
+    <li><strong>इब्राहिम आदिल शाह:</strong> दक्खनी को राजभाषा बनाया।</li>
+    <li><strong>गोल गुंबज़:</strong> "Whispering Gallery" के लिए प्रसिद्ध। वास्तुकार: याकूत ऑफ डाबुल।</li>
+    <li><strong>मोहम्मद कुली कुतुब शाह:</strong> कुतुबशाही वंश के सबसे श्रेष्ठ शासक। गोलकोंडा किला एवं चारमीनार का निर्माण कराया। हैदराबाद नगर की स्थापना की (मूल नाम: भाग्यनगर)।</li>
+</ul>
+</section>
+<section id="sufi-bhakti">
+<h2>🕌 5. सूफी एवं भक्ति आंदोलन (कालानुक्रमिक)</h2>
+<p>दिल्ली सल्तनत के काल में सूफीवाद और भक्ति आंदोलन ने भारतीय समाज को गहराई से प्रभावित किया।</p>
+<h3 id="sufi-movement">5.1 सूफी आंदोलन</h3>
+<div class="box box-key">
+    <strong>मुस्लिम विशेषताएँ:</strong><br>
+    • अनुष्ठानों और बलिदानों को नकारा गया।<br>
+    • एकेरवाद (एक ईश्वर की पूजा)।<br>
+    • ईश्वर साकार या निराकार हो सकता है।<br>
+    • साकार = सगुण (शिव भक्त - नयनार, विष्णु भक्त - आलवार)।<br>
+    • निराकार = निर्गुण।
+</div>
+<h4>सूफी का उदय</h4>
+<ul>
+    <li>काफिरों की भूमि (जहाँ केवल हिंदू रहते थे) को इस्लाम की भूमि (दार-उल-हरब) में परिवर्तित किया गया।</li>
+    <li><strong>जिहाद:</strong> धार्मिक युद्ध के माध्यम से।</li>
+    <li><strong>मुजाहिद:</strong> जो जिहाद में भाग लेता है उसे जन्नत मिलती है।</li>
+</ul>
+<h4>सूफी शब्दावली</h4>
+<div class="box box-term">
+    • <strong>तसव्वुफ:</strong> सूफीवाद।<br>
+    • <strong>शेख / पीर / मुर्शिद:</strong> आध्यात्मिक गुरु।<br>
+    • <strong>मुरीद:</strong> शिष्य।<br>
+    • <strong>खलीफा:</strong> उत्तराधिकारी।<br>
+    • <strong>खानकाह:</strong> सूफी आश्रम।<br>
+    • <strong>समा:</strong> संगीतमय भक्ति गायन।<br>
+    • <strong>रक़्स:</strong> नृत्य।<br>
+    • <strong>फना:</strong> आत्म-विलय / आत्म-लोप।<br>
+    • <strong>जियारत:</strong> सूफी संतों की मजारों की तीर्थ यात्रा।
+</div>
+<h4>प्रमुख सूफी संत</h4>
+<table>
+    <tr><th>सूफी संत</th><th>काल</th><th>सिलसिला / विशेषता</th></tr>
+    <tr>
+        <td><strong>डाटा अली हुज्वेरी</strong></td>
+        <td>11वीं शताब्दी</td>
+        <td>• डाटा गंज बख्श के नाम से प्रसिद्ध।</td>
+    </tr>
+    <tr>
+        <td><strong>शेख बहाउद्दीन ज़करिया</strong></td>
+        <td>1182-1262</td>
+        <td>• भारत में मुख़्तार खानकाह की स्थापना की (मुल्तान में)।<br>• सुहरावर्दी सिलसिले के संस्थापक।</td>
+    </tr>
+    <tr>
+        <td><strong>ख्वाजा मुइनुद्दीन चिश्ती</strong></td>
+        <td>1141-1236</td>
+        <td>• चिश्ती सिलसिले के संस्थापक।</td>
+    </tr>
+    <tr>
+        <td><strong>शेख हमीदुद्दीन नागौरी</strong></td>
+        <td>1192-1274</td>
+        <td>• चिश्ती सिलसिले के अन्य संत।</td>
+    </tr>
+    <tr>
+        <td><strong>ख्वाजा कुतुबुद्दीन बख्तियार काकी</strong></td>
+        <td>-</td>
+        <td>• कुतुबुद्दीन ऐबक ने इनके नाम पर कुतुब मीनार शुरू किया (1206)।</td>
+    </tr>
+    <tr>
+        <td><strong>बाबा फरीद (शेख फरीदुद्दीन गंज-ए-शकर)</strong></td>
+        <td>1175-1265</td>
+        <td>• सिद्ध नाम: बाबा फरीद।</td>
+    </tr>
+    <tr>
+        <td><strong>शेख निजामुद्दीन औलिया</strong></td>
+        <td>1236-1325</td>
+        <td>• सिद्ध नाम: महबूब-ए-इलाही।</td>
+    </tr>
+    <tr>
+        <td><strong>सैयद मुहम्मद गेसू दराज़</strong></td>
+        <td>-</td>
+        <td>• सिद्ध नाम: बंदा नवाज़।</td>
+    </tr>
+    <tr>
+        <td><strong>शेख नसीरुद्दीन महमूद</strong></td>
+        <td>-</td>
+        <td>• बाद में चिराग-ए-दिल्ली के नाम से प्रसिद्ध।</td>
+    </tr>
+    <tr>
+        <td><strong>शेख बदरुद्दीन समरकंदी</strong></td>
+        <td>13वीं शताब्दी</td>
+        <td>• फिरदौसी सिलसिले की स्थापना की।</td>
+    </tr>
+</table>
+<h3 id="bhakti-movement">5.2 भक्ति आंदोलन</h3>
+<h4>भक्ति दर्शन</h4>
+<div class="box box-compare">
+    <strong>विशिष्टाद्वैत:</strong> रामानुजाचार्य (आत्मा परमात्मा का एक अंश है)।<br>
+    <strong>द्वैताद्वैत / भेदाभेद:</strong> निंबार्काचार्य।<br>
+    <strong>द्वैत:</strong> मध्वाचार्य (द्वैतवाद)।<br>
+    <strong>शुद्धाद्वैत:</strong> वल्लभाचार्य।<br>
+    • संसार को वास्तविक माना।<br>
+    • मूर्ति पूजा में विश्वास।<br><br>
+    <strong>अद्वैत:</strong> शंकराचार्य।<br>
+    • जीवन और संसार मिथ्या है।<br>
+    • मूर्ति पूजा में विश्वास नहीं करते थे।
+</div>
+<h4>प्रमुख भक्ति संत</h4>
+<table>
+    <tr><th>संत</th><th>काल</th><th>विशेषता / रचना</th></tr>
+    <tr>
+        <td><strong>रामानुजाचार्य</strong></td>
+        <td>1017-1137</td>
+        <td>विशिष्टाद्वैत के संस्थापक।</td>
+    </tr>
+    <tr>
+        <td><strong>रामानंद</strong></td>
+        <td>14-15वीं शताब्दी</td>
+        <td>• निर्गुण संप्रदाय से संबंध (उत्तर भारत से)।<br>• शिष्य: कबीर दास।</td>
+    </tr>
+    <tr>
+        <td><strong>कबीर</strong></td>
+        <td>1400-1510</td>
+        <td>• कबीर के दोहे - हिंदू/इस्लामी धर्म की आलोचना करते हैं।<br>• निर्गुण संप्रदाय से संबंधित।<br>• उपदेशों का संग्रह: <strong>बीजक</strong>।</td>
+    </tr>
+    <tr>
+        <td><strong>गुरु नानक</strong></td>
+        <td>1469-1539</td>
+        <td>• निर्गुण संप्रदाय व खत्री समुदाय से संबंध।</td>
+    </tr>
+    <tr>
+        <td><strong>वल्लभाचार्य</strong></td>
+        <td>1479-1531</td>
+        <td>• शुद्धाद्वैत दर्शन और "पुष्टि मार्ग" का प्रतिपादन किया।<br>• कहा - राम और कृष्ण विष्णु के अवतार हैं।</td>
+    </tr>
+    <tr>
+        <td><strong>विद्यापति</strong></td>
+        <td>14-15वीं शताब्दी</td>
+        <td>पदावली की रचना की - राधा और कृष्ण के प्रेम गीत।</td>
+    </tr>
+    <tr>
+        <td><strong>चैतन्य</strong></td>
+        <td>1486-1533</td>
+        <td>• बंगाल वैष्णववाद - बंगाल में भक्ति आंदोलन का प्रचार।<br>• गौड़ीय वैष्णववाद के प्रवर्तक।</td>
+    </tr>
+    <tr>
+        <td><strong>पुरंदर दास</strong></td>
+        <td>1480-1564</td>
+        <td>कर्नाटक संगीत के जनक (दक्षिण भारतीय संगीत)।</td>
+    </tr>
+    <tr>
+        <td><strong>मीराबाई</strong></td>
+        <td>1498-1546</td>
+        <td>• राठौड़ राजकुमारी एवं राणा सांगा (मेवाड़) की पुत्रवधू।<br>• कृष्ण की भक्त।</td>
+    </tr>
+    <tr>
+        <td><strong>सूरदास</strong></td>
+        <td>1483-1563</td>
+        <td>• नेहीन एवं आगरा से संबंध।<br>• कृष्ण के भक्त।</td>
+    </tr>
+    <tr>
+        <td><strong>तुलसीदास</strong></td>
+        <td>1532-1623</td>
+        <td>• राम के भक्त।<br>• प्रमुख रचनाएँ - रामचरितमानस, कवितावली, गीतावली।</td>
+    </tr>
+    <tr>
+        <td><strong>दादू दयाल</strong></td>
+        <td>1544-1603</td>
+        <td>• निर्गुण संप्रदाय से संबंधित।<br>• दादू पंथ के संस्थापक।</td>
+    </tr>
+    <tr>
+        <td><strong>शंकर देव</strong></td>
+        <td>1449-1568</td>
+        <td>• असम में भक्ति आंदोलन का प्रचार।<br>• सत्रिया नृत्य के प्रवर्तक।<br>• बोरगीत दिए।</td>
+    </tr>
+</table>
+<h4>महाराष्ट्र के भक्ति संत</h4>
+<table>
+    <tr><th>संत</th><th>काल</th><th>रचना / विशेषता</th></tr>
+    <tr>
+        <td><strong>ज्ञानेश्वर / ज्ञानदेव</strong></td>
+        <td>1271-1296</td>
+        <td>• महाराष्ट्र में भक्ति आंदोलन के प्रवर्तक।<br>• रचना: भावार्थ दीपिका (भगवद गीता की व्याख्या)।</td>
+    </tr>
+    <tr>
+        <td><strong>नामदेव</strong></td>
+        <td>1270-1350</td>
+        <td>वारकरी संप्रदाय के संस्थापक।</td>
+    </tr>
+    <tr>
+        <td><strong>एकनाथ</strong></td>
+        <td>1533-1599</td>
+        <td>रचना: भावार्थ रामायण।</td>
+    </tr>
+    <tr>
+        <td><strong>तुकाराम</strong></td>
+        <td>1598-1650</td>
+        <td>रचना: अभंग (भक्ति काव्य)।</td>
+    </tr>
+    <tr>
+        <td><strong>रामदास</strong></td>
+        <td>1608-1681</td>
+        <td>• रचना: दासबोध (उनके उपदेशों का संग्रह)।</td>
+    </tr>
+    <tr>
+        <td><strong>बसवेश्वर</strong></td>
+        <td>12वीं शताब्दी</td>
+        <td>• कर्नाटक के भक्ति संत।<br>• लिंगायत / वीरशैव संप्रदाय की स्थापना की।<br>• प्रारंभ में जैन थे और 12वीं शताब्दी में चालुक्य राजा के दरबार में मंत्री थे।</td>
+    </tr>
+</table>
+<h3 id="sikh-gurus">5.3 सिख गुरु</h3>
+<table>
+    <tr><th>गुरु</th><th>काल</th><th>प्रमुख कार्य</th></tr>
+    <tr>
+        <td><strong>गुरु नानक देव</strong></td>
+        <td>1469-1539</td>
+        <td>• जन्म: तलवंडी (ननकाना साहिब)।<br>• मृत्यु: करतारपुर।<br>• लंगर प्रणाली की शुरुआत की।<br>• बाबर के समकालीन।</td>
+    </tr>
+    <tr>
+        <td><strong>गुरु अंगद देव</strong></td>
+        <td>1539-1552</td>
+        <td>• गुरमुखी लिपि की शुरुआत की।</td>
+    </tr>
+    <tr>
+        <td><strong>गुरु अमरदास साहिब</strong></td>
+        <td>1552-1574</td>
+        <td>• आनंद कारज की शुरुआत की।<br>• मंजी और पीरी प्रणाली की स्थापना की।<br>• अकबर के समकालीन।</td>
+    </tr>
+    <tr>
+        <td><strong>गुरु राम दास</strong></td>
+        <td>1574-1581</td>
+        <td>• अमृतसर के संस्थापक।<br>• हरमंदिर साहिब, अमृतसर के निर्माण की शुरुआत की।<br>• मुस्लिम सूफी मियां मीर से हरमंदिर साहिब की नींव रखने का आग्रह किया।</td>
+    </tr>
+    <tr>
+        <td><strong>गुरु अर्जन देव</strong></td>
+        <td>1581-1606</td>
+        <td>• आदि ग्रंथ का संकलन किया।<br>• श्री दरबार साहिब (हरमंदिर साहिब) का निर्माण पूर्ण किया।<br>• जहांगीर द्वारा मृत्युदंड दिया गया।</td>
+    </tr>
+    <tr>
+        <td><strong>गुरु हरगोबिंद साहिब</strong></td>
+        <td>1606-1644</td>
+        <td>• गुरु अर्जन देव के पुत्र, सैनिक संत के रूप में प्रसिद्ध।<br>• जहांगीर और शाहजहाँ के विरुद्ध युद्ध किए।<br>• अकाल तख्त की स्थापना (1609)।</td>
+    </tr>
+    <tr>
+        <td><strong>गुरु हर राय साहिब</strong></td>
+        <td>1644-1661</td>
+        <td>• दारा शिकोह को शरण दी।<br>• औरंगज़ेब के समकालीन।</td>
+    </tr>
+    <tr>
+        <td><strong>गुरु हरकृष्ण साहिब</strong></td>
+        <td>1661-1664</td>
+        <td>• सबसे छोटे गुरु (5 वर्ष की आयु में)।<br>• औरंगज़ेब के समकालीन।<br>• चेचक से मृत्यु।</td>
+    </tr>
+    <tr>
+        <td><strong>गुरु तेग बहादुर साहिब</strong></td>
+        <td>1665-1675</td>
+        <td>• आनंदपुर नगर की स्थापना की।<br>• हिंदू कश्मीरी पंडितों के जबरन धर्मांतरण का विरोध किया।<br>• औरंगज़ेब द्वारा मृत्यु दंड (1675)।</td>
+    </tr>
+    <tr>
+        <td><strong>गुरु गोबिंद सिंह</strong></td>
+        <td>1675-1708</td>
+        <td>• खालसा पंथ की स्थापना (1699)।<br>• अंतिम सिख गुरु एवं गुरु ग्रंथ साहिब को सौंपी।<br>• वज़ीर खान द्वारा भेजे गए दो अफगानों द्वारा हत्या।</td>
+    </tr>
+</table>
+</section>
+<section id="mnemonics">
+<h2> Mnemonics (याद करने की Tricks)</h2>
+<div class="box box-tip">
+<strong>🔥 1. दिल्ली सल्तनत के 5 वंश:</strong><br>
+<strong>"गुलाम-खिलजी-तुगलक-सैयद-लोदी"</strong><br>
+<em>Story: "गुलाम खिलजी तुगलक से सैयद लोदी"</em>
+</div>
+<div class="box box-tip">
+<strong>🔥 2. गुलाम वंश के शासक:</strong><br>
+<strong>"ऐ-इ-र-ब-का"</strong> → ऐबक, इल्तुतमिश, रजिया, बलबन, काईकुबाद<br>
+<em>Story: "ऐ इरब का"</em>
+</div>
+<div class="box box-tip">
+<strong>🔥 3. अलाउद्दीन खिलजी के सुधार:</strong><br>
+<strong>"दा-चे-बा-ख"</strong> → दाग, चेहरा, बाजार नियंत्रण, खराज कर<br>
+<em>Story: "दाचेबाख"</em>
+</div>
+<div class="box box-tip">
+<strong>🔥 4. तुगलक वंश के शासक:</strong><br>
+<strong>"ग-मु-फि"</strong> → गयासुद्दीन, मुहम्मद बिन, फिरोज शाह<br>
+<em>Story: "गमुफि"</em>
+</div>
+<div class="box box-tip">
+<strong> 5. सूफी सिलसिले:</strong><br>
+<strong>"चि-सु-फि"</strong> → चिश्ती, सुहरावर्दी, फिरदौसी<br>
+<em>Story: "चिसुफि"</em>
+</div>
+<div class="box box-tip">
+<strong>🔥 6. प्रमुख सूफी संत:</strong><br>
+<strong>"मु-फ-नि-चि"</strong> → मुइनुद्दीन, फरीद, निजामुद्दीन, चिराग<br>
+<em>Story: "मुफनिचि"</em>
+</div>
+<div class="box box-tip">
+<strong>🔥 7. विजयनगर के 4 वंश:</strong><br>
+<strong>"सं-सा-तु-आ"</strong> → संगम, सालुव, तुलुव, आरविदु<br>
+<em>Story: "संसातुआ"</em>
+</div>
+<div class="box box-tip">
+<strong>🔥 8. बहमनी के 5 विघटित राज्य:</strong><br>
+<strong>"ब-बी-अ-ग-बी"</strong> → बरार, बीजापुर, अहमदनगर, गोलकोंडा, बीदर<br>
+<em>Story: "बबीअगबी"</em>
+</div>
+<div class="box box-tip">
+<strong>🔥 9. भक्ति संत (महाराष्ट्र):</strong><br>
+<strong>"ज्ञा-नाम-एक-तु-राम"</strong> → ज्ञानेश्वर, नामदेव, एकनाथ, तुकाराम, रामदास<br>
+<em>Story: "ज्ञानामएकतुराम"</em>
+</div>
+<div class="box box-tip">
+<strong>🔥 10. भक्ति दर्शन:</strong><br>
+<strong>"वि-द्वै-द्वै-शु-अ"</strong> → विशिष्टाद्वैत (रामानुज), द्वैताद्वैत (निंबार्क), द्वैत (मध्व), शुद्धाद्वैत (वल्लभ), अद्वैत (शंकर)<br>
+<em>Story: "विद्वैद्वैशुअ"</em>
+</div>
+<div class="box box-tip">
+<strong>🔥 11. सिख गुरुओं का क्रम:</strong><br>
+<strong>"ना-अं-अम-रा-अर्ज-हरगो-हररा-हरकृ-तेग-गोबिंद"</strong><br>
+<em>Story: "ना अं अम रा अर्ज हरगो हररा हरकृ तेग गोबिंद"</em>
+</div>
+<div class="box box-tip">
+<strong> 12. दिल्ली सल्तनत के प्रमुख दीवान:</strong><br>
+<strong>"व-अ-इ-र-मु-रि-को-बं-खै-इस्ति"</strong><br>
+<em>Story: "वाइर मु रि को बं खै इस्ति"</em>
+</div>
+</section>
+<section id="mindmap">
+<h2>🧩 Mind Map: मध्यकालीन भारत - I</h2>
+<div class="mindmap">
+    <span class="center"> मध्यकालीन भारत - I</span>
+    <ul>
+        <li>⚔️ <strong>प्रारंभिक आक्रमण</strong>
+            <ul>
+                <li>अरब: मोहम्मद बिन कासिम (712 ई.)</li>
+                <li>तुर्क: महमूद गजनवी (17 आक्रमण), मोहम्मद गौरी (तराइन 1192)</li>
+            </ul>
+        </li>
+        <li>👑 <strong>दिल्ली सल्तनत (5 वंश)</strong>
+            <ul>
+                <li>गुलाम: ऐबक, इल्तुतमिश, रजिया, बलबन, कैकुबाद</li>
+                <li>खिलजी: अलाउद्दीन (बाजार नियंत्रण, दक्षिण विजय)</li>
+                <li>तुगलक: मुहम्मद बिन (राजधानी स्थानांतरण), फिरोज शाह</li>
+                <li>सैयद: खिज्र खान</li>
+                <li>लोदी: सिकंदर (आगरा), इब्राहिम (1526 में हार)</li>
+            </ul>
+        </li>
+        <li> <strong>प्रशासन</strong>
+            <ul>
+                <li>दीवान-ए-वजारत (वित्त), दीवान-ए-अर्ज (सेना)</li>
+                <li>इक्ता प्रथा, टंका/जिटल सिक्के</li>
+            </ul>
+        </li>
+        <li>🏰 <strong>विजयनगर एवं बहमनी</strong>
+            <ul>
+                <li>विजयनगर: हरीहर-बुक्का, कृष्णदेव राय (अष्टदिग्गज)</li>
+                <li>बहमनी: हसन गंगू, महमूद गवां, 5 राज्य</li>
+            </ul>
+        </li>
+        <li>🕌 <strong>सूफी एवं भक्ति</strong>
+            <ul>
+                <li>सूफी: चिश्ती (मुइनुद्दीन), निजामुद्दीन औलिया, अमीर खुसरो</li>
+                <li>भक्ति: रामानंद, कबीर (निरगुण), गुरु नानक (सिख धर्म)</li>
+                <li>महाराष्ट्र: ज्ञानेश्वर, तुकाराम, रामदास</li>
+                <li>सिख गुरु: नानक से गोबिंद सिंह तक (10 गुरु)</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</section>
+<section id="mistakes">
+<h2>🚫 Common Mistakes (अक्सर होने वाली गलतियाँ)</h2>
+<div class="box box-warn">
+    ❌ <strong>गलत:</strong> कुतुबमीनार का निर्माण इल्तुतमिश ने पूरा किया।<br>
+    ✅ <strong>सही:</strong> कुतुबमीनार का निर्माण <strong>कुतुबुद्दीन ऐबक</strong> ने शुरू किया और <strong>इल्तुतमिश</strong> ने पूरा किया।<br><br>
+    ❌ <strong>गलत:</strong> रजिया सुल्तान गुलाम वंश की अंतिम शासक थी।<br>
+    ✅ <strong>सही:</strong> रजिया सुल्तान गुलाम वंश की <strong>चौथी</strong> शासक थी; अंतिम शासक <strong>काईकुबाद</strong> (1287-1290 ई.) था।<br><br>
+    ❌ <strong>गलत:</strong> अलाउद्दीन खिलजी ने टोकन मुद्रा जारी की।<br>
+    ✅ <strong>सही:</strong> टोकन मुद्रा <strong>मुहम्मद बिन तुगलक</strong> ने जारी की थी।<br><br>
+    ❌ <strong>गलत:</strong> फिरोज शाह तुगलक ने दीवान-ए-रियासत स्थापित किया।<br>
+    ✅ <strong>सही:</strong> दीवान-ए-रियासत <strong>अलाउद्दीन खिलजी</strong> ने स्थापित किया; फिरोज शाह ने <strong>दीवान-ए-खैरात</strong> स्थापित किया।<br><br>
+    ❌ <strong>गलत:</strong> कबीर दास सगुण संत थे।<br>
+    ✅ <strong>सही:</strong> कबीर दास <strong>निरगुण</strong> संत थे (निराकार ईश्वर में विश्वास)।<br><br>
+    ❌ <strong>गलत:</strong> विजयनगर साम्राज्य की स्थापना कृष्णदेव राय ने की।<br>
+    ✅ <strong>सही:</strong> विजयनगर साम्राज्य की स्थापना <strong>हरीहर और बुक्का</strong> ने की थी।<br><br>
+    ❌ <strong>गलत:</strong> बहमनी साम्राज्य की स्थापना महमूद गवां ने की।<br>
+    ✅ <strong>सही:</strong> बहमनी साम्राज्य की स्थापना <strong>हसन गंगू</strong> ने की थी।<br><br>
+    ❌ <strong>गलत:</strong> गुरु गोबिंद सिंह ने आदि ग्रंथ का संकलन किया।<br>
+    ✅ <strong>सही:</strong> आदि ग्रंथ का संकलन <strong>गुरु अर्जन देव</strong> ने किया था।
+</div>
+</section>
+<section id="summary">
+<div class="summary-box">
+    <h2>📝 Chapter Summary (Quick Revision)</h2>
+    <ul>
+        <li>⚔️ मोहम्मद बिन कासिम ने 712 ई. में सिंध पर विजय प्राप्त की।</li>
+        <li>🕌 महमूद गजनवी ने 17 बार आक्रमण किया; सोमनाथ मंदिर (1025 ई.) लूटा।</li>
+        <li> द्वितीय तराइन का युद्ध (1192 ई.) में मोहम्मद गौरी ने पृथ्वीराज चौहान को हराया।</li>
+        <li>👑 कुतुबुद्दीन ऐबक ने गुलाम वंश की स्थापना की (1206 ई.)।</li>
+        <li> इल्तुतमिश ने टंका (चांदी) और जिटल (तांबा) सिक्के जारी किए।</li>
+        <li>👩 रजिया सुल्तान दिल्ली सल्तनत की प्रथम महिला शासक थी।</li>
+        <li>🩸 बलबन ने रक्त और लौह नीति अपनाई और सिजदा-पैबोस प्रथा शुरू की।</li>
+        <li>💰 अलाउद्दीन खिलजी ने बाजार नियंत्रण, दाग और चेहरा प्रथा शुरू की।</li>
+        <li>🏙️ मुहम्मद बिन तुगलक ने राजधानी दिल्ली से दौलताबाद स्थानांतरित की।</li>
+        <li>🕌 फिरोज शाह तुगलक ने दीवान-ए-खैरात और दीवान-ए-बंदगान स्थापित किए।</li>
+        <li>📏 सिकंदर लोदी ने आगरा नगर बसाया और गज-ए-सिकंदरी शुरू की।</li>
+        <li>️ 1526 ई. में पानीपत के प्रथम युद्ध में बाबर ने इब्राहिम लोदी को हराया।</li>
+        <li>🏰 विजयनगर साम्राज्य की स्थापना हरीहर और बुक्का ने की।</li>
+        <li>👑 कृष्णदेव राय तुलुव वंश का सबसे महान शासक था।</li>
+        <li>🕌 बहमनी साम्राज्य की स्थापना हसन गंगू ने की।</li>
+        <li>🕌 ख्वाजा मुइनुद्दीन चिश्ती चिश्ती सिलसिले के संस्थापक थे।</li>
+        <li>📜 अमीर खुसरो को 'तूती-ए-हिंद' कहा जाता था।</li>
+        <li>🙏 कबीर दास निर्गुण संत थे और उनकी रचना 'बीजक' है।</li>
+        <li>🙏 गुरु नानक देव ने सिख धर्म की स्थापना की (1469 ई.)।</li>
+        <li>🙏 गुरु गोबिंद सिंह ने खालसा पंथ की स्थापना की (1699 ई.)।</li>
+    </ul>
+</div>
+</section>
+<section id="refcard">
+<div class="ref-card">
+    <h2>📇 Quick Reference Card</h2>
+    <table>
+        <tr><th>विषय</th><th>तथ्य</th></tr>
+        <tr><td>सिंध पर अरब विजय</td><td>712 ई. (मोहम्मद बिन कासिम)</td></tr>
+        <tr><td>सोमनाथ मंदिर विध्वंस</td><td>1025 ई. (महमूद गजनवी)</td></tr>
+        <tr><td>द्वितीय तराइन का युद्ध</td><td>1192 ई. (गौरी विजयी)</td></tr>
+        <tr><td>गुलाम वंश की स्थापना</td><td>1206 ई. (कुतुबुद्दीन ऐबक)</td></tr>
+        <tr><td>चहलगानी प्रथा</td><td>इल्तुतमिश</td></tr>
+        <tr><td>प्रथम महिला शासक</td><td>रजिया सुल्तान</td></tr>
+        <tr><td>रक्त और लौह नीति</td><td>बलबन</td></tr>
+        <tr><td>बाजार नियंत्रण</td><td>अलाउद्दीन खिलजी</td></tr>
+        <tr><td>राजधानी स्थानांतरण</td><td>मुहम्मद बिन तुगलक</td></tr>
+        <tr><td>दीवान-ए-खैरात</td><td>फिरोज शाह तुगलक</td></tr>
+        <tr><td>आगरा की स्थापना</td><td>सिकंदर लोदी</td></tr>
+        <tr><td>पानीपत का प्रथम युद्ध</td><td>1526 ई.</td></tr>
+        <tr><td>विजयनगर संस्थापक</td><td>हरीहर और बुक्का</td></tr>
+        <tr><td>बहमनी संस्थापक</td><td>हसन गंगू</td></tr>
+        <tr><td>चिश्ती सिलसिले के संस्थापक</td><td>ख्वाजा मुइनुद्दीन चिश्ती</td></tr>
+        <tr><td>तूती-ए-हिंद</td><td>अमीर खुसरो</td></tr>
+        <tr><td>सिख धर्म के संस्थापक</td><td>गुरु नानक देव (1469 ई.)</td></tr>
+        <tr><td>खालसा पंथ के संस्थापक</td><td>गुरु गोबिंद सिंह (1699 ई.)</td></tr>
+    </table>
+</div>
+</section>
+<section id="glossary">
+<div class="glossary">
+    <h2>📚 Glossary (शब्दावली)</h2>
+    <div class="gloss-item"><strong>इक्ता प्रथा</strong> – भूमि राजस्व के अधिकार का वितरण</div>
+    <div class="gloss-item"><strong>चहलगानी</strong> – 40 अमीरों का समूह (इल्तुतमिश)</div>
+    <div class="gloss-item"><strong>टंका</strong> – चांदी का सिक्का (इल्तुतमिश)</div>
+    <div class="gloss-item"><strong>जिटल</strong> – तांबे का सिक्का (इल्तुतमिश)</div>
+    <div class="gloss-item"><strong>सिजदा</strong> – शासक के सामने सिर झुकाना</div>
+    <div class="gloss-item"><strong>पैबोस</strong> – शासक के पैरों को चूमना</div>
+    <div class="gloss-item"><strong>दाग प्रथा</strong> – घोड़ों पर निशान लगाना</div>
+    <div class="gloss-item"><strong>चेहरा प्रथा</strong> – सैनिकों की चेहरा पहचान</div>
+    <div class="gloss-item"><strong>खराज</strong> – भूमि कर</div>
+    <div class="gloss-item"><strong>जिजिया</strong> – गैर-मुस्लिमों पर कर</div>
+    <div class="gloss-item"><strong>दीवान-ए-वजारत</strong> – वित्त विभाग</div>
+    <div class="gloss-item"><strong>दीवान-ए-अर्ज</strong> – सैन्य विभाग</div>
+    <div class="gloss-item"><strong>दीवान-ए-रियासत</strong> – वाणिज्य विभाग</div>
+    <div class="gloss-item"><strong>सूफी</strong> – इस्लाम का रहस्यवादी संप्रदाय</div>
+    <div class="gloss-item"><strong>खानकाह</strong> – सूफी आश्रम</div>
+    <div class="gloss-item"><strong>निरगुण</strong> – निराकार ईश्वर की उपासना</div>
+    <div class="gloss-item"><strong>सगुण</strong> – साकार ईश्वर की उपासना</div>
+    <div class="gloss-item"><strong>अमरनायक</strong> – विजयनगर की सैन्य प्रणाली</div>
+    <div class="gloss-item"><strong>तरफदार</strong> – बहमनी साम्राज्य का प्रांतीय शासक</div>
+    <div class="gloss-item"><strong>खालसा पंथ</strong> – सिख धर्म का सैन्य-धार्मिक संगठन</div>
+    <div class="gloss-item"><strong>लंगर प्रणाली</strong> – सामुदायिक भोजन (गुरु नानक)</div>
+    <div class="gloss-item"><strong>गुरमुखी</strong> – सिख धर्म की लिपि (गुरु अंगद)</div>
+</div>
+</section>
+<div class="page-footer">
+    <p>📖 <strong>End of Chapter 4</strong> | मध्यकालीन भारत - I</p>
+    <p>Next ➜ Chapter 5: मध्यकालीन भारत - II (मुग़ल साम्राज्य, मराठा साम्राज्य)</p>
+</div>
+</main>
+<script>
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            document.querySelector('.sidebar').classList.remove('open');
+        }
+    });
+});
+window.onscroll = function() {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+</script>
+</body>
+</html>

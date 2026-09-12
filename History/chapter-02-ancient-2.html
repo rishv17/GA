@@ -1,0 +1,1337 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 2 - जैन-बौद्ध धर्म, महाजनपद, मगध, मौर्य | History Notes</title>
+<style>
+:root {
+    --primary: #1a252f;
+    --ancient: #d35400;
+    --ancient-light: #e67e22;
+    --medieval: #5DADE2;
+    --modern: #82E0AA;
+    --culture: #8e44ad;
+    --accent: #f39c12;
+    --bg: #f8f9fa;
+    --text: #2d3436;
+    --box-key: #e8f4f8;
+    --box-tip: #eafaf1;
+    --box-warn: #fdedec;
+    --box-map: #fef5e7;
+    --box-quote: #f4ecf7;
+    --box-flow: #eaf2f8;
+    --box-mind: #fdf2e9;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Segoe UI', 'Noto Sans Devanagari', 'Noto Sans', Tahoma, sans-serif;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== MENU TOGGLE BUTTON (Mobile) ===== */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px; left: 15px;
+    z-index: 200;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 300px;
+    background: var(--primary);
+    color: white;
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px 16px;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
+
+.sidebar .chap-tag {
+    text-align: center; color: var(--accent);
+    font-size: 0.75rem; letter-spacing: 3px; margin-bottom: 10px;
+    text-transform: uppercase; font-weight: bold;
+}
+
+/* Home Button */
+.sidebar .home-btn {
+    display: block; text-align: center; background: var(--accent);
+    color: white !important; font-weight: bold; padding: 10px;
+    border-radius: 8px; margin-bottom: 20px; text-decoration: none;
+    transition: 0.3s;
+}
+.sidebar .home-btn:hover { background: #d35400; transform: scale(1.02); }
+
+.sidebar h2 {
+    text-align: center; border-bottom: 2px solid #34495e;
+    padding-bottom: 12px; margin-bottom: 15px; font-size: 1.1rem; color: #bdc3c7;
+}
+
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar li { margin: 3px 0; }
+
+/* Subject Header (Clickable) */
+.sidebar .subject-header a {
+    color: var(--accent) !important; font-weight: 700; font-size: 0.95rem;
+    padding: 8px 12px; border-left: 3px solid var(--accent);
+    background: rgba(243, 156, 18, 0.1); border-radius: 0 6px 6px 0;
+    display: block; text-decoration: none; transition: 0.3s;
+    margin-top: 12px;
+}
+.sidebar .subject-header a:hover { background: rgba(243, 156, 18, 0.2); }
+
+/* Chapter Links (Indented) */
+.sidebar .chapter-link {
+    color: #dfe6e9 !important; text-decoration: none; display: block;
+    padding: 6px 12px 6px 28px; /* Indented */
+    border-radius: 6px; transition: 0.25s; font-size: 0.85rem;
+}
+.sidebar .chapter-link:hover { 
+    background: #34495e; color: white !important; transform: translateX(4px); 
+}
+
+/* Active Chapter Highlight */
+.sidebar .chapter-link.active {
+    background: var(--ancient); color: white !important; font-weight: 600;
+}
+
+/* ===== MAIN ===== */
+main { margin-left: 320px; padding: 30px 40px; max-width: 1100px; flex: 1; }
+
+/* Chapter Header */
+.ch-header {
+    background: linear-gradient(135deg, var(--ancient), var(--ancient-light));
+    color: white; padding: 30px 35px; border-radius: 12px;
+    margin-bottom: 30px; box-shadow: 0 8px 20px rgba(211,84,0,0.15);
+}
+.ch-header h1 { color: white; border: none; font-size: 2rem; margin-bottom: 8px; }
+.ch-header p { opacity: 0.95; font-size: 1.1rem; }
+.ch-header .period {
+    display: inline-block; background: rgba(255,255,255,0.2);
+    padding: 5px 16px; border-radius: 20px; margin-top: 12px; font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+
+/* Headings */
+h1 { color: var(--primary); border-bottom: 3px solid var(--primary); padding-bottom: 10px; margin-bottom: 20px; }
+h2 {
+    margin-top: 50px; padding: 14px 22px; border-radius: 8px;
+    color: white; font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: var(--ancient);
+}
+h3 {
+    color: var(--primary); border-left: 5px solid var(--ancient);
+    padding: 10px 16px; margin-top: 35px; font-size: 1.3rem;
+    background: #ecf0f1; border-radius: 0 6px 6px 0;
+}
+h4 {
+    color: #2c3e50; margin-top: 22px;
+    border-bottom: 1px dashed #bdc3c7; padding-bottom: 6px; font-size: 1.1rem;
+}
+
+/* Intro Box */
+.intro-box {
+    background: linear-gradient(135deg, #fff9e6, #fff3cd);
+    border-left: 6px solid var(--accent);
+    padding: 20px 25px; border-radius: 10px; margin: 25px 0;
+}
+.intro-box h3 { color: var(--accent); border: none; background: none; padding: 0; margin-top: 0; }
+
+/* Callout Boxes */
+.box {
+    padding: 16px 20px; border-radius: 10px; margin: 20px 0;
+    border-left: 6px solid; box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.box-key { background: var(--box-key); border-color: #2980b9; }
+.box-key::before { content: "💡 KEY CONCEPT"; font-weight: 700; color: #2980b9; display: block; margin-bottom: 8px; }
+.box-tip { background: var(--box-tip); border-color: #27ae60; }
+.box-tip::before { content: "🎯 EXAM TIP"; font-weight: 700; color: #27ae60; display: block; margin-bottom: 8px; }
+.box-warn { background: var(--box-warn); border-color: #c0392b; }
+.box-warn::before { content: "⚠️ COMMON MISTAKE"; font-weight: 700; color: #c0392b; display: block; margin-bottom: 8px; }
+.box-map { background: var(--box-map); border-color: var(--accent); }
+.box-map::before { content: "🗺️ GEOGRAPHY"; font-weight: 700; color: #e67e22; display: block; margin-bottom: 8px; }
+.box-compare { background: #f4ecf7; border-color: var(--culture); }
+.box-compare::before { content: "🔄 COMPARISON"; font-weight: 700; color: var(--culture); display: block; margin-bottom: 8px; }
+.box-quote {
+    background: var(--box-quote); border-color: var(--culture);
+    border-left: 6px solid var(--culture); font-style: italic;
+}
+.box-quote::before { content: "📜 QUOTE"; font-weight: 700; color: var(--culture); display: block; margin-bottom: 8px; font-style: normal; }
+.box-art { background: #fdf2e9; border-color: #e67e22; }
+.box-art::before { content: "🎨 ART & ARCHITECTURE"; font-weight: 700; color: #e67e22; display: block; margin-bottom: 8px; }
+.box-econ { background: #e8f8f5; border-color: #1abc9c; }
+.box-econ::before { content: "💰 ECONOMY & SOCIETY"; font-weight: 700; color: #1abc9c; display: block; margin-bottom: 8px; }
+.box-book { background: #f9ebea; border-color: #e74c3c; }
+.box-book::before { content: "📖 BOOKS & AUTHORS"; font-weight: 700; color: #e74c3c; display: block; margin-bottom: 8px; }
+.box-term { background: #f2f3f4; border-color: #7f8c8d; }
+.box-term::before { content: "📝 TERMINOLOGY"; font-weight: 700; color: #7f8c8d; display: block; margin-bottom: 8px; }
+
+/* Infographic Boxes */
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px; margin: 20px 0;
+}
+.info-card {
+    background: white; border-radius: 12px; padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;
+    border-top: 4px solid var(--ancient);
+    transition: transform 0.2s;
+}
+.info-card:hover { transform: translateY(-3px); }
+.info-card .emoji { font-size: 2rem; display: block; margin-bottom: 8px; }
+.info-card .label { font-size: 0.8rem; color: #7f8c8d; text-transform: uppercase; letter-spacing: 1px; }
+.info-card .value { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+
+/* Tables */
+table {
+    width: 100%; border-collapse: collapse; margin: 18px 0;
+    background: white; box-shadow: 0 3px 8px rgba(0,0,0,0.04); font-size: 0.9rem;
+    border-radius: 8px; overflow: hidden;
+}
+th, td { border: 1px solid #eee; padding: 12px 14px; text-align: left; vertical-align: top; }
+th { background: var(--primary); color: white; font-size: 0.85rem; font-weight: 600; }
+tr:nth-child(even) { background: #f9f9f9; }
+tr:hover { background: #f0f4f8; }
+
+/* Lists */
+ul, ol { margin: 8px 0; padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+/* Timeline */
+.timeline {
+    background: white; border-left: 4px solid var(--ancient);
+    padding: 20px; margin: 25px 0; border-radius: 0 10px 10px 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.tl-item {
+    position: relative; padding: 10px 0 10px 32px;
+    border-bottom: 1px dashed #eee;
+}
+.tl-item:last-child { border-bottom: none; }
+.tl-item::before {
+    content: "●"; color: var(--ancient);
+    position: absolute; left: -11px; font-size: 1.2rem;
+    background: white;
+}
+.tl-year { font-weight: 700; color: var(--ancient); display: inline-block; min-width: 150px; }
+
+/* Flowchart */
+.flow {
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 10px; margin: 20px 0; padding: 20px;
+    background: var(--box-flow); border-radius: 12px;
+}
+.flow-box {
+    background: white; border: 2px solid var(--ancient);
+    border-radius: 8px; padding: 10px 16px; font-weight: 600;
+    font-size: 0.9rem; text-align: center; min-width: 110px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.flow-arrow { font-size: 1.4rem; color: var(--ancient); }
+
+/* Mind Map */
+.mindmap {
+    background: var(--box-mind); border-radius: 12px;
+    padding: 25px; margin: 25px 0; font-size: 0.95rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.mindmap .center {
+    background: var(--ancient); color: white; padding: 10px 20px;
+    border-radius: 25px; display: inline-block; font-weight: 700; margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(211,84,0,0.2);
+}
+.mindmap ul { list-style: none; padding-left: 20px; }
+.mindmap > ul > li { margin: 8px 0; }
+.mindmap > ul > li::before { content: "├─ "; color: var(--ancient); font-weight: 700; }
+.mindmap ul ul li::before { content: "│  ├─ "; color: #e67e22; }
+
+/* Quick Facts */
+.qf-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0;
+}
+.qf-item {
+    background: white; padding: 12px 16px; border-radius: 8px;
+    border-left: 4px solid var(--ancient); font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    transition: transform 0.2s;
+}
+.qf-item:hover { transform: translateX(3px); }
+.qf-item strong { color: var(--ancient); }
+
+/* Summary */
+.summary-box {
+    background: linear-gradient(135deg, #e8f8f5, #d1f2eb);
+    border: 2px solid #16a085; border-radius: 12px;
+    padding: 25px 30px; margin: 40px 0;
+}
+.summary-box h2 { background: #16a085; margin-top: 0; }
+
+/* Quick Ref Card */
+.ref-card {
+    background: linear-gradient(135deg, #fef9e7, #fcf3cf);
+    border: 2px solid #f1c40f; border-radius: 12px;
+    padding: 25px 30px; margin: 30px 0;
+}
+.ref-card h2 { background: #f39c12; margin-top: 0; }
+
+/* Glossary */
+.glossary {
+    background: #f2f3f4; border-radius: 12px;
+    padding: 25px 30px; margin: 30px 0;
+}
+.glossary h2 { background: #7f8c8d; margin-top: 0; }
+.gloss-item { margin: 8px 0; font-size: 0.95rem; }
+.gloss-item strong { color: var(--primary); min-width: 160px; display: inline-block; }
+
+/* Footer */
+.page-footer {
+    text-align: center; margin-top: 50px; padding: 25px;
+    color: #7f8c8d; font-size: 0.85rem; border-top: 2px dashed #bdc3c7;
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px; right: 30px;
+    z-index: 99;
+    background: var(--ancient);
+    color: white;
+    border: none;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+#backToTop:hover { background: var(--ancient-light); transform: translateY(-3px); }
+
+/* ===== MOBILE (Phone) ===== */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .sidebar {
+        transform: translateX(-100%);
+        width: 85%;
+        max-width: 320px;
+    }
+    .sidebar.open { transform: translateX(0); }
+    main {
+        margin-left: 0 !important;
+        padding: 70px 15px 20px 15px !important;
+        max-width: 100%;
+    }
+    .qf-grid, .info-grid { grid-template-columns: 1fr; }
+    .flow { flex-direction: column; align-items: stretch; }
+    .flow-arrow { transform: rotate(90deg); align-self: center; }
+    .ch-header { padding: 25px 20px; }
+    .ch-header h1 { font-size: 1.5rem; }
+    .ch-header p { font-size: 1rem; }
+    h2 { font-size: 1.3rem; padding: 12px 18px; }
+    h3 { font-size: 1.15rem; }
+    table { font-size: 0.85rem; }
+    th, td { padding: 8px 10px; }
+    .tl-year { min-width: 120px; font-size: 0.85rem; }
+    .tl-item { font-size: 0.9rem; }
+    .box { padding: 14px 16px; }
+    .gloss-item strong { min-width: 130px; }
+    #backToTop { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 1.3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Mobile Menu Button -->
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ Menu</button>
+
+<!-- Back to Top Button -->
+<button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+<!-- ===== MASTER SIDEBAR ===== -->
+<nav class="sidebar">
+    <div class="chap-tag">GS SHORTS NOTES</div>
+    
+    <!-- Home Button -->
+    <a href="../index.html" class="home-btn">🏠 मुख्य पृष्ठ (Home)</a>
+    
+    <h2>📚 विषय सूची</h2>
+    <ul>
+        <!-- ================= HISTORY ================= -->
+        <li class="subject-header">
+            <a href="index.html">📜 इतिहास (History)</a>
+        </li>
+        <li><a href="chapter-01-ancient-1.html" class="chapter-link">1. प्राचीन भारत - I</a></li>
+        <li><a href="chapter-02-ancient-2.html" class="chapter-link active">2. प्राचीन भारत - II</a></li>
+        <li><a href="chapter-03-medieval-1.html" class="chapter-link">3. मध्यकालीन भारत - I</a></li>
+        <li><a href="chapter-04-modern-1.html" class="chapter-link">4. आधुनिक भारत - I</a></li>
+
+        <!-- ================= GEOGRAPHY ================= -->
+        <li class="subject-header">
+            <a href="../geography/index.html">🌍 भूगोल (Geography)</a>
+        </li>
+        <li><a href="../geography/chapter-01-geomorphology.html" class="chapter-link">1. भू-आकृति विज्ञान</a></li>
+        <li><a href="../geography/chapter-02-india.html" class="chapter-link">2. भारतीय भूगोल</a></li>
+
+        <!-- ================= POLITY ================= -->
+        <li class="subject-header">
+            <a href="../polity/index.html">⚖️ राजव्यवस्था (Polity)</a>
+        </li>
+        <li><a href="../polity/chapter-01-constitution.html" class="chapter-link">1. संविधान का इतिहास</a></li>
+        <li><a href="../polity/chapter-02-rights.html" class="chapter-link">2. मौलिक अधिकार</a></li>
+
+        <!-- ================= ECONOMY ================= -->
+        <li class="subject-header">
+            <a href="../economy/index.html">📈 अर्थव्यवस्था (Economy)</a>
+        </li>
+        <li><a href="../economy/chapter-01-macro.html" class="chapter-link">1. समष्टि अर्थव्यवस्था</a></li>
+    </ul>
+</nav>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main>
+
+<div class="ch-header">
+    <h1>📜 Chapter 2: प्राचीन भारत (Part II)</h1>
+    <p>जैन-बौद्ध धर्म | महाजनपद | मगध का उत्थान | मौर्य साम्राज्य | मौर्योत्तर काल</p>
+    <span class="period">⏳ काल: 600 ई.पू. – 200 ई.</span>
+</div>
+
+<!-- ===== BHUMIKA ===== -->
+<section id="intro">
+<div class="intro-box">
+    <h3>🌅 भूमिका</h3>
+    <p>यह अध्याय भारतीय इतिहास के सबसे महत्वपूर्ण काल को कवर करता है -- जब वैदिक धर्म के विरोध में जैन और बौद्ध धर्म का उदय हुआ, 16 महाजनपदों का गठन हुआ, मगध ने भारत का सबसे शक्तिशाली साम्राज्य बनाया, और चंद्रगुप्त मौर्य से लेकर अशोक तक के महान शासकों ने भारतीय इतिहास को नई दिशा दी। यह काल भारतीय राजनीति, धर्म, दर्शन और प्रशासन की नींव का निर्माण करने वाला है।</p>
+</div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section id="timeline">
+<h2>📅 कालक्रम (Timeline)</h2>
+<div class="timeline">
+    <div class="tl-item"><span class="tl-year">599 ई.पू.</span> महावीर का जन्म (कुंडग्राम, वैशाली)</div>
+    <div class="tl-item"><span class="tl-year">563 ई.पू.</span> गौतम बुद्ध का जन्म (लुम्बिनी, नेपाल)</div>
+    <div class="tl-item"><span class="tl-year">544-492 ई.पू.</span> बिंबिसार का शासन (हर्यक वंश)</div>
+    <div class="tl-item"><span class="tl-year">492-460 ई.पू.</span> अजातशत्रु का शासन</div>
+    <div class="tl-item"><span class="tl-year">468 ई.पू.</span> महावीर का निर्वाण (पावापुरी)</div>
+    <div class="tl-item"><span class="tl-year">483 ई.पू.</span> बुद्ध का परिनिर्वाण (कुशीनगर)</div>
+    <div class="tl-item"><span class="tl-year">480 ई.पू.</span> प्रथम बौद्ध संगीति (राजगृह)</div>
+    <div class="tl-item"><span class="tl-year">383 ई.पू.</span> द्वितीय बौद्ध संगीति (वैशाली)</div>
+    <div class="tl-item"><span class="tl-year">364-324 ई.पू.</span> महापद्मनंद का शासन (नंद वंश)</div>
+    <div class="tl-item"><span class="tl-year">326 ई.पू.</span> अलेक्जेंडर का आक्रमण</div>
+    <div class="tl-item"><span class="tl-year">322 ई.पू.</span> चंद्रगुप्त मौर्य की स्थापना</div>
+    <div class="tl-item"><span class="tl-year">298-272 ई.पू.</span> बिंदुसार का शासन</div>
+    <div class="tl-item"><span class="tl-year">268-232 ई.पू.</span> अशोक का शासन</div>
+    <div class="tl-item"><span class="tl-year">261 ई.पू.</span> कलिंग युद्ध</div>
+    <div class="tl-item"><span class="tl-year">250 ई.पू.</span> तृतीय बौद्ध संगीति (पाटलिपुत्र)</div>
+    <div class="tl-item"><span class="tl-year">185 ई.पू.</span> शुंग वंश की स्थापना</div>
+    <div class="tl-item"><span class="tl-year">60 ई.पू.-225 ई.</span> सातवाहन वंश</div>
+    <div class="tl-item"><span class="tl-year">57 ई.पू.</span> विक्रम संवत की शुरुआत</div>
+    <div class="tl-item"><span class="tl-year">78 ई.</span> शक संवत की शुरुआत (कनिष्क)</div>
+    <div class="tl-item"><span class="tl-year">1st-3rd शताब्दी ई.</span> कुषाण वंश (कनिष्क)</div>
+</div>
+</section>
+
+<!-- ===== QUICK FACTS ===== -->
+<section id="qfacts">
+<h2>⚡ Quick Facts (20 सबसे महत्वपूर्ण तथ्य)</h2>
+<div class="qf-grid">
+    <div class="qf-item">🙏 <strong>महावीर</strong> – 24वें तीर्थंकर, जन्म 599 ई.पू. कुंडग्राम</div>
+    <div class="qf-item">☸️ <strong>बुद्ध</strong> – जन्म 563 ई.पू. लुम्बिनी, ज्ञान बोधगया में</div>
+    <div class="qf-item">🏛️ <strong>16 महाजनपद</strong> – अंगुत्तर निकाय में उल्लेख</div>
+    <div class="qf-item">👑 <strong>बिंबिसार</strong> – हर्यक वंश के संस्थापक, 3 विवाह</div>
+    <div class="qf-item">⚔️ <strong>अजातशत्रु</strong> – पितृहत्या, वैशाली पर विजय</div>
+    <div class="qf-item">💰 <strong>महापद्मनंद</strong> – एकराट उपाधि, नंद वंश के संस्थापक</div>
+    <div class="qf-item">🦁 <strong>चंद्रगुप्त मौर्य</strong> – 322 ई.पू. में मौर्य साम्राज्य की स्थापना</div>
+    <div class="qf-item">📚 <strong>अर्थशास्त्र</strong> – कौटिल्य/चाणक्य द्वारा रचित</div>
+    <div class="qf-item">🌍 <strong>इंडिका</strong> – मेगस्थनीज द्वारा रचित</div>
+    <div class="qf-item">🏹 <strong>कलिंग युद्ध</strong> – 261 ई.पू., अशोक द्वारा</div>
+    <div class="qf-item">📜 <strong>अशोक के अभिलेख</strong> – जेम्स प्रिंसेप ने 1837 में पढ़ा</div>
+    <div class="qf-item">🐂 <strong>रामपुरवा बैल</strong> – संसद भवन में स्थापित</div>
+    <div class="qf-item">🏛️ <strong>पुष्यमित्र शुंग</strong> – मौर्य साम्राज्य का अंत, भरहुत स्तूप</div>
+    <div class="qf-item">👑 <strong>गौतमीपुत्र सातकर्णी</strong> – सातवाहन का सबसे महान शासक</div>
+    <div class="qf-item">🏆 <strong>विक्रमादित्य</strong> – 57 ई.पू. में शकों को हराया</div>
+    <div class="qf-item">👑 <strong>रुद्रदामन I</strong> – जूनागढ़ शिलालेख (संस्कृत में पहला)</div>
+    <div class="qf-item">📖 <strong>मिलिंदपन्हो</strong> – मेनांडर और नागसेन का संवाद</div>
+    <div class="qf-item">👑 <strong>कनिष्क</strong> – द्वितीय अशोक, चतुर्थ बौद्ध संगीति</div>
+    <div class="qf-item">🎨 <strong>गांधार कला</strong> – यूनानी प्रभाव, धूसर बलुआ पत्थर</div>
+    <div class="qf-item">🎨 <strong>मथुरा कला</strong> – देशज शैली, लाल बलुआ पत्थर</div>
+</div>
+</section>
+
+<!-- ==================== JAINISM ==================== -->
+<section id="jainism">
+<h2>🙏 1. जैन धर्म</h2>
+<p>जैन धर्म भारत के प्राचीनतम धर्मों में से एक है। यह वैदिक धर्म के कर्मकांडों और वर्ण व्यवस्था के विरोध में उभरा। जैन धर्म के अनुसार, इस ब्रह्मांड में <strong>24 तीर्थंकर</strong> हुए हैं।</p>
+
+<h3 id="tirthankar">1.1 तीर्थंकर</h3>
+<div class="box box-key">
+    <strong>कुल तीर्थंकर:</strong> 24<br>
+    <strong>प्रथम:</strong> ऋषभदेव (वृषभनाथ) – चिह्न: बैल, जन्म: अयोध्या<br>
+    <strong>22वें:</strong> अरिष्टनेमि (नेमिनाथ) – चिह्न: शंख<br>
+    <strong>23वें:</strong> पार्श्वनाथ – चिह्न: सर्प, जन्म: वाराणसी<br>
+    <strong>24वें:</strong> वर्धमान महावीर – चिह्न: सिंह
+</div>
+
+<h3 id="mahavira">1.2 वर्धमान महावीर (599-468 ई.पू.)</h3>
+<table>
+    <tr><th>विषय</th><th>विवरण</th></tr>
+    <tr><td>जन्म</td><td>599 ई.पू., कुंडग्राम, वैशाली (बिहार)</td></tr>
+    <tr><td>पिता</td><td>सिद्धार्थ (ज्ञातृक वंश, क्षत्रिय)</td></tr>
+    <tr><td>माता</td><td>त्रिशला</td></tr>
+    <tr><td>पत्नी</td><td>यशोदा</td></tr>
+    <tr><td>पुत्री</td><td>अनोपिया प्रियदर्शनी</td></tr>
+    <tr><td>गृहत्याग</td><td>30 वर्ष की आयु में</td></tr>
+    <tr><td>प्रथम शिष्य</td><td>जमालि (जमाई)</td></tr>
+    <tr><td>कैवल्य/ज्ञान</td><td>42 वर्ष की आयु में, शाल वृक्ष के नीचे, ऋजुपालिका नदी के तट पर</td></tr>
+    <tr><td>प्रथम उपदेश</td><td>पावा</td></tr>
+    <tr><td>अन्य नाम</td><td>जितेन्द्रिय, केवली (पूर्ण ज्ञानी)</td></tr>
+    <tr><td>निर्वाण/मृत्यु</td><td>468 ई.पू., पावापुरी (बिहार)</td></tr>
+</table>
+
+<div class="box box-tip">
+    <strong>समकालीन शासक:</strong> बिंबिसार, अजातशत्रु, चंद्रगुप्त मौर्य<br>
+    <strong>गुरु:</strong> मखली गोसाल (आजीवक संप्रदाय) – बाद में अलग हो गए
+</div>
+
+<h3 id="jain-philosophy">1.3 जैन दर्शन</h3>
+<div class="box box-key">
+    <strong>त्रिरत्न (3 रत्न):</strong><br>
+    • सम्यक ज्ञान (सही ज्ञान)<br>
+    • सम्यक दर्शन (सही विश्वास)<br>
+    • सम्यक चरित्र (सही आचरण)<br><br>
+    <strong>पंच महाव्रत (5 व्रत):</strong><br>
+    • अहिंसा (किसी भी प्रकार की हिंसा नहीं)<br>
+    • सत्य (केवल सत्य बोलना)<br>
+    • अस्तेय (चोरी न करना)<br>
+    • ब्रह्मचर्य (यौन संयम)<br>
+    • अपरिग्रह (भौतिक वस्तुओं से विरक्ति)
+</div>
+
+<h3 id="jain-sects">1.4 विभाजन</h3>
+<div class="box box-compare">
+    <strong>दिगंबर vs श्वेतांबर:</strong><br><br>
+    <strong>दिगंबर:</strong><br>
+    • वस्त्र नहीं पहनते (नग्न)<br>
+    • चंद्रगुप्त मौर्य एवं भद्रबाहु कर्नाटक (श्रवणबेलगोला) गए<br>
+    • सल्लेखना – उपवास द्वारा मृत्यु<br><br>
+    <strong>श्वेतांबर:</strong><br>
+    • श्वेत वस्त्र पहनते हैं<br>
+    • स्थूलभद्र – प्रमुख आचार्य<br><br>
+    <strong>विभाजन का कारण:</strong> मगध में अकाल (303 ई.पू.)<br>
+    <strong>भाषा:</strong> प्राकृत
+</div>
+
+<h3 id="jain-councils">1.5 जैन परिषदें</h3>
+<table>
+    <tr><th>परिषद</th><th>वर्ष</th><th>स्थान</th><th>अध्यक्ष</th><th>महत्व</th></tr>
+    <tr><td>प्रथम</td><td>298 ई.पू.</td><td>पाटलिपुत्र</td><td>स्थूलभद्र</td><td>12 अंगों का संकलन; दिगंबरों ने बहिष्कार किया</td></tr>
+    <tr><td>द्वितीय</td><td>512 ई.</td><td>वलभी, गुजरात</td><td>देवर्द्धि गणि</td><td>अंतिम संकलन</td></tr>
+</table>
+
+<h3 id="jain-architecture">1.6 जैन वास्तुकला</h3>
+<div class="box box-art">
+    <strong>प्रमुख स्मारक:</strong><br>
+    • <strong>गोमतेश्वर बाहुबली की प्रतिमा</strong> – श्रवणबेलगोला, कर्नाटक<br>
+    • <strong>हाथीगुम्फा गुफा</strong> – खारवेल, ओडिशा<br>
+    • <strong>उदयगिरि एवं खंडगिरि</strong> – ओडिशा<br>
+    • <strong>दिलवाड़ा जैन मंदिर</strong> – माउंट आबू, राजस्थान (निर्माता: वास्तुपाल बंधु)
+</div>
+</section>
+
+<!-- ==================== BUDDHISM ==================== -->
+<section id="buddhism">
+<h2>☸️ 2. बौद्ध धर्म</h2>
+<p>बौद्ध धर्म का उदय 6वीं शताब्दी ई.पू. में हुआ। यह जैन धर्म की तरह वैदिक धर्म के विरोध में उभरा, लेकिन इसने अहिंसा और मध्यम मार्ग पर जोर दिया।</p>
+
+<h3 id="buddha-life">2.1 गौतम बुद्ध का जीवन</h3>
+<table>
+    <tr><th>घटना</th><th>विवरण</th><th>प्रतीक</th></tr>
+    <tr><td>जन्म</td><td>563 ई.पू., लुम्बिनी (नेपाल)</td><td>🪷 कमल</td></tr>
+    <tr><td>पिता</td><td>शुद्धोधन (शाक्य वंश)</td><td></td></tr>
+    <tr><td>माता</td><td>महामाया (कोलिय वंश)</td><td></td></tr>
+    <tr><td>सौतेली माँ</td><td>महाप्रजापति गौतमी (प्रथम भिक्षुणी)</td><td></td></tr>
+    <tr><td>पत्नी</td><td>यशोधरा</td><td></td></tr>
+    <tr><td>पुत्र</td><td>राहुल</td><td></td></tr>
+    <tr><td>गृहत्याग</td><td>29 वर्ष की आयु में (महाभिनिष्क्रमण)</td><td>🐎 घोड़ा</td></tr>
+    <tr><td>प्रथम गुरु</td><td>आलार कालाम</td><td></td></tr>
+    <tr><td>द्वितीय गुरु</td><td>उद्दक रामपुत्र</td><td></td></tr>
+    <tr><td>ज्ञान प्राप्ति</td><td>35 वर्ष, उरुवेला, बोधगया, बोधि वृक्ष के नीचे, निरंजना नदी के तट पर</td><td>🌳 बोधि वृक्ष</td></tr>
+    <tr><td>प्रथम उपदेश</td><td>सारनाथ, वाराणसी (धर्मचक्रप्रवर्तन)</td><td>☸️ चक्र</td></tr>
+    <tr><td>परिनिर्वाण</td><td>483 ई.पू., कुशीनगर (महापरिनिर्वाण)</td><td>🛕 स्तूप</td></tr>
+</table>
+
+<h3 id="buddha-philosophy">2.2 बौद्ध दर्शन</h3>
+<div class="box box-key">
+    <strong>चार आर्य सत्य:</strong><br>
+    1. दुःख का सत्य – संसार दुःखों से भरा है<br>
+    2. दुःख के कारण का सत्य – दुःख का कारण तृष्णा (इच्छा) है<br>
+    3. दुःख की समाप्ति का सत्य – तृष्णा का त्याग<br>
+    4. दुःख से मुक्ति का मार्ग – अष्टांगिक मार्ग<br><br>
+    <strong>अष्टांगिक मार्ग:</strong><br>
+    • सम्यक दृष्टि, सम्यक संकल्प, सम्यक वाणी, सम्यक कर्म, सम्यक आजीविका, सम्यक व्यायाम, सम्यक ज्ञान, सम्यक स्मृति
+</div>
+
+<h3 id="buddhist-councils">2.3 बौद्ध परिषदें</h3>
+<table>
+    <tr><th>परिषद</th><th>वर्ष</th><th>स्थान</th><th>संरक्षक</th><th>अध्यक्ष</th><th>महत्व</th></tr>
+    <tr><td>प्रथम</td><td>480 ई.पू.</td><td>राजगृह (सप्तपर्णी गुफा)</td><td>अजातशत्रु</td><td>महाकाश्यप</td><td>विनय और सुत्त पिटक का संकलन</td></tr>
+    <tr><td>द्वितीय</td><td>383 ई.पू.</td><td>वैशाली</td><td>कालाशोक</td><td>सब्बकामी</td><td>हीनयान और महायान का विभाजन</td></tr>
+    <tr><td>तृतीय</td><td>250 ई.पू.</td><td>पाटलिपुत्र</td><td>अशोक</td><td>मोग्गलीपुत्त तिस्स</td><td>कथावत्थु का संकलन</td></tr>
+    <tr><td>चतुर्थ</td><td>72 ई.</td><td>कुंडलवन, कश्मीर</td><td>कनिष्क</td><td>वसुमित्र, अश्वघोष</td><td>महायान बौद्ध धर्म का उदय</td></tr>
+</table>
+
+<h3 id="buddhist-sects">2.4 बौद्ध धर्म का विभाजन</h3>
+<div class="box box-compare">
+    <strong>हीनयान vs महायान:</strong><br><br>
+    <strong>हीनयान (छोटा यान):</strong><br>
+    • मूर्ति पूजा नहीं<br>
+    • पालि भाषा का प्रयोग<br>
+    • बुद्ध को मानव माना<br><br>
+    <strong>महायान (बड़ा यान):</strong><br>
+    • मूर्ति पूजा<br>
+    • बुद्ध के पुनर्जन्म में विश्वास<br>
+    • संस्कृत भाषा का प्रयोग<br>
+    • बोधिसत्वों की उपासना<br><br>
+    <strong>वज्रयान:</strong> तांत्रिक बौद्ध धर्म
+</div>
+
+<h3 id="buddhist-literature">2.5 बौद्ध साहित्य</h3>
+<div class="box box-book">
+    <strong>पालि ग्रंथ (त्रिपिटक):</strong><br>
+    • <strong>सुत्त पिटक</strong> – उपदेश<br>
+    • <strong>विनय पिटक</strong> – भिक्षु नियम<br>
+    • <strong>अभिधम्म पिटक</strong> – सुत्त पिटक की व्याख्या<br><br>
+    <strong>अन्य महत्वपूर्ण ग्रंथ:</strong><br>
+    • <strong>मिलिंदपन्हो</strong> – मिलिंद (मेनांडर) और नागसेन का संवाद<br>
+    • <strong>बुद्धचरित</strong> – अश्वघोष द्वारा<br>
+    • <strong>जातक कथाएँ</strong> – बुद्ध के पूर्व जन्म<br>
+    • <strong>महावस्तु</strong> और <strong>दिव्यावदान</strong>
+</div>
+
+<h3 id="buddhist-architecture">2.6 बौद्ध वास्तुकला</h3>
+<h4>स्तूप के भाग</h4>
+<div class="box box-art">
+    • <strong>अंड</strong> – अर्ध गोलाकार गुंबद<br>
+    • <strong>हर्मिका</strong> – अंड के ऊपर<br>
+    • <strong>छत्र</strong> – शीर्ष पर तीन छत्र<br>
+    • <strong>तोरण</strong> – द्वार<br>
+    • <strong>मेधि</strong> – अंड की सीमा<br>
+    • <strong>वेदिका</strong> – बाहरी सीमा<br>
+    • <strong>दक्षिणापथ</strong> – प्रदक्षिणा मार्ग
+</div>
+
+<h4>प्रमुख स्तूप</h4>
+<table>
+    <tr><th>स्तूप</th><th>स्थान</th><th>विशेषता</th></tr>
+    <tr><td>केसरिया</td><td>बिहार</td><td>सबसे बड़ा स्तूप</td></tr>
+    <tr><td>धमेक</td><td>सारनाथ, UP</td><td>वृत्ताकार</td></tr>
+    <tr><td>रामभार</td><td>कुशीनगर, UP</td><td>महापरिनिर्वाण स्थल</td></tr>
+    <tr><td>सांची एवं भरहुत</td><td>मध्य प्रदेश</td><td>अशोक द्वारा निर्मित</td></tr>
+    <tr><td>शांति स्तूप</td><td>लद्दाख</td><td>सफेद रंग</td></tr>
+    <tr><td>चैत्य स्तूप</td><td>तक्षशिला</td><td>धर्मराज का स्तूप</td></tr>
+    <tr><td>पिपरहवा स्तूप</td><td>UP</td><td>प्रथम शाक्य द्वारा निर्मित, बाद में अशोक द्वारा</td></tr>
+    <tr><td>बोरोबुदुर</td><td>इंडोनेशिया</td><td>विश्व का सबसे बड़ा बौद्ध स्मारक</td></tr>
+</table>
+
+<h4>प्रमुख विश्वविद्यालय</h4>
+<div class="box box-key">
+    • <strong>नालंदा</strong> – कुमारगुप्त प्रथम द्वारा स्थापित (बिहार)<br>
+    • <strong>विक्रमशिला</strong> – धर्मपाल द्वारा स्थापित (बिहार)<br>
+    • <strong>ओदंतपुरी</strong> – गोपाल द्वारा स्थापित
+</div>
+
+<h4>पवित्र स्थल</h4>
+<div class="box box-map">
+    • <strong>लुम्बिनी</strong> – जन्म स्थल<br>
+    • <strong>बोधगया</strong> – ज्ञान प्राप्ति<br>
+    • <strong>सारनाथ</strong> – प्रथम उपदेश<br>
+    • <strong>कुशीनगर</strong> – परिनिर्वाण<br>
+    • <strong>राजगृह</strong> – प्रथम संगीति<br>
+    • <strong>वैशाली</strong> – द्वितीय संगीति<br>
+    • <strong>श्रावस्ती</strong> – प्रमुख विहार<br>
+    • <strong>संकाश</strong> – स्वर्ग से अवतरण
+</div>
+</section>
+
+<!-- ==================== MAHAJANAPADAS ==================== -->
+<section id="mahajanapadas">
+<h2>🏛️ 3. महाजनपद (600-300 ई.पू.)</h2>
+<p>वैदिक काल के अंत में 16 महाजनपदों का उदय हुआ। ये या तो राजशाही या गणराज्य थे।</p>
+
+<h3 id="mahajanapada-list">3.1 16 महाजनपद</h3>
+<div class="box box-key">
+    <strong>स्रोत:</strong><br>
+    • <strong>अंगुत्तर निकाय</strong> (बौद्ध) – 16 महाजनपद<br>
+    • <strong>दीघ निकाय</strong> – 12 महाजनपद<br>
+    • <strong>भगवती सूत्र</strong> (जैन) – 16 महाजनपद<br>
+    • <strong>अष्टाध्यायी</strong> – पाणिनि द्वारा 40 जनपदों का उल्लेख
+</div>
+
+<table>
+    <tr><th>महाजनपद</th><th>राजधानी</th><th>वर्तमान स्थान</th><th>विशेषता</th></tr>
+    <tr><td>अंग</td><td>चंपा</td><td>मुंगेर और भागलपुर (बिहार)</td><td></td></tr>
+    <tr><td>मगध</td><td>राजगृह/पाटलिपुत्र</td><td>गया और पटना (बिहार)</td><td>सबसे शक्तिशाली</td></tr>
+    <tr><td>काशी</td><td>वाराणसी</td><td>बनारस (UP)</td><td></td></tr>
+    <tr><td>वत्स</td><td>कौशाम्बी</td><td>इलाहाबाद (UP)</td><td></td></tr>
+    <tr><td>कोशल</td><td>श्रावस्ती/अयोध्या</td><td>पूर्वी UP</td><td></td></tr>
+    <tr><td>सुरसेन</td><td>मथुरा</td><td>मथुरा (UP)</td><td></td></tr>
+    <tr><td>पांचाल</td><td>अहिच्छत्र और कांपिल्य</td><td>पश्चिमी UP</td><td></td></tr>
+    <tr><td>कुरु</td><td>इंद्रप्रस्थ</td><td>मेरठ और दक्षिण-पूर्व हरियाणा</td><td></td></tr>
+    <tr><td>मत्स्य</td><td>विराटनगर</td><td>जयपुर (राजस्थान)</td><td></td></tr>
+    <tr><td>चेदी/चेदिय</td><td>शोथिवती/बांदा</td><td>बुंदेलखंड</td><td></td></tr>
+    <tr><td>अवन्ति</td><td>उज्जैन/माहिष्मती</td><td>मध्य प्रदेश और मालवा</td><td></td></tr>
+    <tr><td>गांधार</td><td>तक्षशिला</td><td>रावलपिंडी (पाकिस्तान)</td><td></td></tr>
+    <tr><td>कम्बोज</td><td>पुंछ</td><td>राजौरी और हजारा (कश्मीर)</td><td></td></tr>
+    <tr><td>अश्मक</td><td>प्रतिष्ठान/पैठण</td><td>गोदावरी नदी के तट पर</td><td></td></tr>
+    <tr><td>वज्जि/वृजि</td><td>वैशाली</td><td>वैशाली (बिहार)</td><td>गणराज्य</td></tr>
+    <tr><td>मल्ल</td><td>कुशीनगर</td><td>देवरिया और UP</td><td>गणराज्य</td></tr>
+</table>
+
+<div class="box box-tip">
+    <strong>गणराज्य जनपद:</strong> वज्जि, मल्ल, शाक्य, कोलिय, मौर्य<br>
+    <strong>राजशाही जनपद:</strong> मगध, कोशल, अवन्ति, वत्स
+</div>
+</section>
+
+<!-- ==================== MAGADHA ==================== -->
+<section id="magadha">
+<h2>👑 4. मगध का उत्थान</h2>
+<p>मगध भारत का सबसे शक्तिशाली महाजनपद बना। इसके उत्थान के कई कारण थे।</p>
+
+<h3 id="magadha-reasons">4.1 मगध के उत्थान के कारण</h3>
+<div class="box box-key">
+    • <strong>अनुकूल भौगोलिक स्थिति:</strong> राजधानी राजगृह (5 पहाड़ियों से घिरा) और पाटलिपुत्र (गंगा और सोन के संगम पर)<br>
+    • <strong>हाथियों की बड़ी संख्या</strong><br>
+    • <strong>महान नेता:</strong> बिंबिसार, अजातशत्रु, महापद्मनंद<br>
+    • <strong>लोहे की खानें:</strong> झारखंड क्षेत्र में
+</div>
+
+<h3 id="haryanka">4.2 हर्यक वंश (544-413 ई.पू.)</h3>
+<h4>बिंबिसार (544-492 ई.पू.)</h4>
+<ul>
+    <li>हर्यक वंश के संस्थापक</li>
+    <li><strong>3 विवाह:</strong> कोसल की राजकुमारी (कोशल राजा की पुत्री), वैशाली की राजकुमारी (लिच्छवि), मद्रा कुल (पंजाब)</li>
+    <li>अंग पर विजय</li>
+    <li>अपने वैद्य जीवक को उज्जैन भेजा (प्रद्योत राजा को पीलिया था)</li>
+    <li>बौद्ध धर्म का संरक्षण</li>
+</ul>
+
+<h4>अजातशत्रु (492-460 ई.पू.)</h4>
+<ul>
+    <li>बिंबिसार का पुत्र (पितृहत्या की)</li>
+    <li>लिच्छवि को हराया</li>
+    <li>कोशल को हराया (राजा की बेटी से विवाह)</li>
+    <li><strong>प्रथम बौद्ध संगीति का संरक्षण</strong> (480 ई.पू.)</li>
+    <li>वैशाली को युद्धयंत्र/कंटकशाला से हराया</li>
+    <li>राजधानी राजगृह से पाटलिपुत्र स्थानांतरित की</li>
+</ul>
+
+<h3 id="shishunaga">4.3 शिशुनाग वंश (413-345 ई.पू.)</h3>
+<ul>
+    <li>शिशुनाग – अवन्ति को हराकर मगध में मिलाया</li>
+    <li><strong>कालाशोक</strong> – द्वितीय बौद्ध संगीति का संरक्षण (383 ई.पू.)</li>
+</ul>
+
+<h3 id="nanda">4.4 नंद वंश (345-322 ई.पू.)</h3>
+<ul>
+    <li><strong>महापद्मनंद</strong> – उपाधि: एकराट (साम्राज्य निर्माता), सर्वक्षत्रियक (क्षत्रियों का विनाशक)</li>
+    <li><strong>धनानंद</strong> – अलेक्जेंडर का भारत पर आक्रमण (326 ई.पू.)</li>
+    <li>हाइडेस्पीज युद्ध (अलेक्जेंडर और पोरस)</li>
+</ul>
+</section>
+
+<!-- ==================== MAURYA EMPIRE ==================== -->
+<section id="maurya">
+<h2>🦁 5. मौर्य साम्राज्य (322-185 ई.पू.)</h2>
+<p>मौर्य साम्राज्य भारत का प्रथम विशाल साम्राज्य था। इसने पूरे भारतीय उपमहाद्वीप को एक सूत्र में पिरोया।</p>
+
+<h3 id="maurya-sources">5.1 स्रोत</h3>
+<div class="box box-book">
+    <strong>साहित्यिक स्रोत:</strong><br>
+    • <strong>अर्थशास्त्र</strong> – कौटिल्य/चाणक्य/विष्णुगुप्त<br>
+    • <strong>मुद्राराक्षस</strong> – विशाखदत्त (गुप्त काल)<br>
+    • <strong>इंडिका</strong> – मेगस्थनीज (यूनानी यात्री)<br>
+    • <strong>बौद्ध साहित्य</strong> – जातक, दीपवंश/महावंश, दिव्यावदान<br><br>
+    <strong>चंद्रगुप्त मौर्य का संबंध:</strong><br>
+    • मुद्राराक्षस – वृषाल/कुलहीन (निम्न कुल)<br>
+    • पुराण – शूद्र<br>
+    • जूनागढ़ शिलालेख – वैश्य
+</div>
+
+<h3 id="chandragupta">5.2 चंद्रगुप्त मौर्य (322-298 ई.पू.)</h3>
+<ul>
+    <li>कौटिल्य की सहायता से धनानंद को पराजित किया</li>
+    <li>322 ई.पू. में मौर्य साम्राज्य की स्थापना</li>
+    <li><strong>सेल्यूकस निकेटर</strong> (सेल्यूकिड साम्राज्य) को हराया</li>
+    <li>हेलेना (पुत्री) से विवाह किया</li>
+    <li>जैन धर्म अपनाया, श्रवणबेलगोला, कर्नाटक गए</li>
+    <li><strong>सल्लेखना</strong> – उपवास द्वारा मृत्यु</li>
+</ul>
+
+<h3 id="bindusara">5.3 बिंदुसार (298-272 ई.पू.)</h3>
+<ul>
+    <li>यूनानियों द्वारा <strong>अमित्रघात</strong> के नाम से जाना गया</li>
+    <li>सीरिया के एंटिओकस प्रथम से मीठी शराब, सूखे अंजीर और दार्शनिक की मांग की</li>
+    <li>दो समुद्रों के बीच का क्षेत्र विजित किया</li>
+    <li>आजीवक संप्रदाय का संरक्षण किया</li>
+    <li>यात्री – डेमाकस</li>
+</ul>
+
+<h3 id="ashoka">5.4 अशोक (268-232 ई.पू.)</h3>
+<div class="box box-key">
+    <strong>महत्वपूर्ण तथ्य:</strong><br>
+    • राधगुप्त की सहायता से सिंहासन पर बैठा<br>
+    • 268-232 ई.पू. तक शासन किया<br>
+    • <strong>कलिंग विजय</strong> – 261 ई.पू.<br>
+    • 12 वर्ष युद्धों में और उसके बाद बौद्ध धर्म अपनाया<br>
+    • भेरीघोष (भौतिक विजय) को धम्मघोष (सांस्कृतिक विजय) में बदला<br>
+    • धम्म महामात्र स्थापित किए<br>
+    • पुत्र – महेंद्र एवं पुत्री – संघमित्रा बौद्ध धर्म के प्रचार हेतु श्रीलंका भेजे<br>
+    • अंतिम शासक – बृहद्रथ (पुष्यमित्र शुंग द्वारा पराजित)
+</div>
+
+<h3 id="ashoka-inscriptions">5.5 अशोक के अभिलेख</h3>
+<h4>शिलालेख</h4>
+<ul>
+    <li><strong>मुख्य शिलालेख:</strong> 14, लघु शिलालेख: 15</li>
+    <li><strong>जेम्स प्रिंसेप</strong> ने 1837 में इन्हें पढ़ा और 1838 में प्रकाशित किया</li>
+    <li><strong>3 भाषाएँ:</strong> प्राकृत, यूनानी, अरामिक (Aramaic)</li>
+    <li><strong>4 लिपियाँ:</strong> ब्राह्मी, खरोष्ठी, यूनानी, अरामिक (Aramaic)</li>
+    <li><strong>देवानांप्रियदशी</strong> – अशोक (देवों का प्रिय)</li>
+</ul>
+
+<h4>स्तंभ लेख</h4>
+<ul>
+    <li><strong>कुल:</strong> 7</li>
+    <li>प्राकृत भाषा – ब्राह्मी लिपि</li>
+    <li><strong>दिल्ली-टोपरा स्तंभ</strong> – केवल 7 अभिलेखों के साथ</li>
+    <li><strong>लौरिया अराज़</strong> और <strong>लौरिया नंदनगढ़</strong> (बिहार)</li>
+</ul>
+
+<h4>प्रमुख स्तंभ</h4>
+<div class="box box-art">
+    • <strong>रामपुरवा बैल</strong> – संसद भवन में स्थापित<br>
+    • <strong>सांची स्तंभ</strong> – चारों दिशाओं में सिंह<br>
+    • <strong>वैशाली स्तंभ</strong> – एकल सिंह<br>
+    • <strong>सारनाथ स्तंभ</strong> – चार सिंह (भारत का राष्ट्रीय चिह्न)
+</div>
+
+<h4>गुफाएँ</h4>
+<div class="box box-art">
+    • <strong>बाराबर पहाड़ी की गुफाएँ</strong> – बिहार (अशोक द्वारा बौद्धों हेतु)<br>
+    • <strong>लोमस ऋषि गुफा</strong> – बिहार<br>
+    • <strong>नागार्जुनी गुफा</strong> – बिहार (दशरथ मौर्य द्वारा)
+</div>
+
+<h4>अन्य अभिलेख</h4>
+<ul>
+    <li><strong>निगाली सागर शिलालेख</strong> – नेपाल</li>
+    <li><strong>रुम्मेई/लुम्बिनी स्तंभ लेख</strong> – नेपाल</li>
+</ul>
+
+<h3 id="maurya-administration">5.6 मौर्य प्रशासन</h3>
+<h4>सप्तांग सिद्धांत (कौटिल्य द्वारा)</h4>
+<div class="box box-key">
+    <strong>राज्य के 7 अंग:</strong><br>
+    1. <strong>राजा</strong> – King<br>
+    2. <strong>अमात्य</strong> – सचिव<br>
+    3. <strong>जनपद</strong> – भू-क्षेत्र/प्रजा<br>
+    4. <strong>दुर्ग</strong> – किला<br>
+    5. <strong>कोष</strong> – खजाना<br>
+    6. <strong>सेना</strong> – सैन्य बल<br>
+    7. <strong>मित्र</strong> – सहयोगी/मित्र राष्ट्र
+</div>
+
+<h4>प्रांत</h4>
+<div class="box box-map">
+    • <strong>उत्तरपथ</strong> (पूर्व) – तक्षशिला<br>
+    • <strong>अवन्तीपथ</strong> (पश्चिम) – उज्जैन<br>
+    • <strong>दक्षिणापथ</strong> (दक्षिण) – सुवर्णगिरि<br>
+    • <strong>राजधानी</strong> – पाटलिपुत्र
+</div>
+
+<h4>न्यायालय प्रणाली</h4>
+<ul>
+    <li><strong>सिविल</strong> – धर्मस्थीय न्यायालय (व्यवहारक)</li>
+    <li><strong>क्रिमिनल</strong> – कांटकशोधन न्यायालय (दंडिक)</li>
+</ul>
+
+<h4>अर्थव्यवस्था और कर</h4>
+<div class="box box-econ">
+    <strong>प्रमुख कर:</strong><br>
+    • <strong>भाग</strong> – उत्पादन का 1/6 भाग<br>
+    • <strong>भोग</strong> – राजा को फल, फूल, इत्यादि की आपूर्ति (कृषि कर)<br>
+    • <strong>बलि</strong> – कठोर/अत्याचारी कर<br>
+    • <strong>उपरकर</strong> – अतिरिक्त कर<br>
+    • <strong>विष्टि</strong> – अनिवार्य श्रम (Forced Labour)<br>
+    • <strong>हलिकरक</strong> – हल रखने वालों पर कर<br>
+    • <strong>उदकभाग</strong> – जल पर कर<br>
+    • <strong>हिरण्य</strong> – विशेष कार्य हेतु कर (सोने में दिया जाने वाला)<br>
+    • <strong>पिंडकार</strong> – गाँवों द्वारा वस्तु रूप में दिया गया कर<br>
+    • <strong>सेनाभक्त</strong> – सेना भरण-पोषण हेतु कर<br>
+    • <strong>पार्श्विक</strong> – अधिभार/अतिरिक्त कर<br>
+    • ⚠️ <strong>बली</strong> – लुम्बिनी के लोगों पर नहीं लगाया गया<br><br>
+    <strong>बंदरगाह:</strong><br>
+    • पश्चिमी – भड़ौच, सुपारा<br>
+    • पूर्वी – ताम्रलिप्ति
+</div>
+
+<h4>प्रमुख अधिकारी</h4>
+<table>
+    <tr><th>पद</th><th>कार्य</th></tr>
+    <tr><td>समर्ता</td><td>प्रमुख कोषाध्यक्ष</td></tr>
+    <tr><td>संहर्ता</td><td>राजस्व का महा-संग्राहक</td></tr>
+    <tr><td>गोप</td><td>लेखा का उत्तरदायी अधिकारी</td></tr>
+    <tr><td>अष्टादशपटल</td><td>लेखा महाधिकारी</td></tr>
+    <tr><td>नगरक</td><td>नगर प्रशासन का उत्तरदायी</td></tr>
+    <tr><td>सीताध्यक्ष</td><td>कृषि का उत्तरदायी</td></tr>
+    <tr><td>संस्थानाध्यक्ष</td><td>बाजारों का उत्तरदायी</td></tr>
+    <tr><td>नावध्यक्ष</td><td>जहाज़ों का उत्तरदायी</td></tr>
+    <tr><td>अश्वाध्यक्ष</td><td>अश्व सेना (घुड़सवार सेना) का अधिकारी</td></tr>
+    <tr><td>शुल्काध्यक्ष</td><td>चुंगी (टोल टैक्स) का उत्तरदायी</td></tr>
+    <tr><td>धर्म महामात्र</td><td>धर्म का पालन देखने हेतु (अशोक द्वारा नियुक्त)</td></tr>
+</table>
+
+<div class="box box-tip">
+    <strong>मेगस्थनीज के अनुसार:</strong><br>
+    • नगर प्रशासन – 6 समितियाँ (प्रत्येक में 5 सदस्य)<br>
+    • सेना – 6 समितियाँ (प्रत्येक में 5 सदस्य)
+</div>
+
+<h3 id="maurya-society">5.7 मौर्य समाज</h3>
+<div class="box box-econ">
+    <strong>समाज (मेगस्थनीज के अनुसार 7 वर्ग):</strong><br>
+    1. दार्शनिक (Philosophers)<br>
+    2. कृषक (Cultivators/Farmers)<br>
+    3. शिकारी एवं चरवाहे (Hunters & Shepherds)<br>
+    4. व्यापारी (Traders)<br>
+    5. योद्धा (Warriors)<br>
+    6. गुप्तचर/निरीक्षक (Overseers)<br>
+    7. मंत्री/सलाहकार (Councillors)<br><br>
+    • 4 वर्ण व्यवस्था<br>
+    • कोई दासता नहीं थी<br>
+    • विवाह के 8 प्रकार<br>
+    • महिलाओं को सेना में उच्च पद प्राप्त थे<br><br>
+    <strong>अर्थव्यवस्था:</strong><br>
+    • <strong>मृद्भांड:</strong> उत्तर काले पॉलिश वाले पात्र (NBPW)<br>
+    • <strong>मुद्रा:</strong> छेदित चाँदी का सिक्का – पण/कार्षापण<br>
+    • <strong>शिल्पकार और व्यापारी:</strong> संघ/श्रेणियाँ<br>
+    • <strong>शिल्प कला:</strong> पैतृक होती थी<br>
+    • <strong>लौह हल:</strong> कृषि अधिशेष<br>
+    • हड़प्पा के बाद दूसरी नगरीकरण
+</div>
+</section>
+
+<!-- ==================== POST-MAURYA ==================== -->
+<section id="post-maurya">
+<h2>🏛️ 6. उत्तर मौर्य काल (185 ई.पू. – 300 ई.)</h2>
+
+<h3 id="shunga">6.1 शुंग वंश (185-73 ई.पू.)</h3>
+<ul>
+    <li><strong>पुष्यमित्र शुंग</strong> – संस्थापक, मौर्य सेनापति</li>
+    <li>राजधानी – विदिशा (मध्य प्रदेश)</li>
+    <li>हिंदू धर्म का पालन</li>
+    <li>बौद्ध धर्म को संरक्षण – भरहुत स्तूप (मध्य प्रदेश)</li>
+    <li>पुत्र – अग्निमित्र</li>
+    <li><strong>मालविकाग्निमित्रम्</strong> – कालिदास द्वारा रचित (अग्निमित्र और मालविका की प्रेम कथा)</li>
+    <li><strong>महाभाष्य</strong> – पतंजलि द्वारा रचित</li>
+    <li>पुष्यमित्र ने दो अश्वमेध यज्ञ किए</li>
+    <li>पतंजलि पुष्यमित्र के समकालीन थे</li>
+    <li>अंतिम शासक – देवभूति, वध – वासुदेव द्वारा</li>
+</ul>
+
+<h3 id="kanva">6.2 कण्व वंश (73-28 ई.पू.)</h3>
+<ul>
+    <li>संस्थापक – वासुदेव</li>
+    <li>शुंगभृत्य (शुंगों के सेवक) के नाम से प्रसिद्ध</li>
+    <li>राजधानी – पाटलिपुत्र</li>
+</ul>
+
+<h3 id="satavahana">6.3 सातवाहन वंश (60 ई.पू. – 225 ई.)</h3>
+<div class="box box-key">
+    <strong>महत्वपूर्ण तथ्य:</strong><br>
+    • वर्तमान महाराष्ट्र में<br>
+    • राजधानी – पैठन/प्रतिष्ठान<br>
+    • अन्य नाम – आंध्र/आंध्रभृत्य<br>
+    • संस्थापक – सिमुक सातवाहन<br>
+    • भाषा – प्राकृत
+</div>
+
+<h4>गौतमीपुत्र सातकर्णी (106-130 ई.)</h4>
+<ul>
+    <li>सबसे महान शासक</li>
+    <li>उपाधि – एकाब्राह्मण</li>
+    <li>शक शासक नहपान को हराया</li>
+    <li>जानकारी – नासिक अभिलेख से</li>
+    <li>ब्राह्मण धर्म को अपनाया</li>
+    <li>समाज – पितृसत्ताक (वर्ण व्यवस्था एवं राजशाही आधारित), मातृवंश परंपरा (नामकरण में माता का नाम)</li>
+    <li>भूमि दान की परंपरा आरंभ की (ब्राह्मणों एवं बौद्ध भिक्षुओं को)</li>
+    <li>सीसा मुद्रा का प्रचलन</li>
+</ul>
+
+<div class="box box-art">
+    <strong>वास्तुकला:</strong><br>
+    • अनेक चैत्य एवं विहारों की शिलाओं को काटकर निर्मित किया गया<br>
+    • जैसे – नासिक, कार्ले गुफाएं, काला चैत्य<br>
+    • अजंता गुफाओं का निर्माण<br>
+    • मुख्य स्तूप – अमरावती एवं नागार्जुनकोंडा (आंध्र देश)
+</div>
+
+<h3 id="chedi">6.4 छेदि वंश (1st शताब्दी ई.पू.)</h3>
+<ul>
+    <li>कलिंग के कुछ भागों पर शासन</li>
+    <li>महानतम शासक – <strong>खारवेल</strong> (जैन धर्म अनुयायी)</li>
+    <li><strong>हाथीगुम्फा अभिलेख</strong> (भुवनेश्वर)</li>
+</ul>
+
+<h3 id="indo-greek">6.5 इंडो-ग्रीक (100 ई.पू. – 200 ई.)</h3>
+<div class="box box-key">
+    <strong>महत्वपूर्ण तथ्य:</strong><br>
+    • हिंदूकुश पार करने वाले पहले – इंडो-ग्रीक<br>
+    • प्रथम शासक – अपोलोडोटस<br>
+    • सबसे प्रसिद्ध शासक – <strong>मीनेंडर/मिलिंद</strong><br>
+    • <strong>मिलिंदपन्हो</strong> – मिलिंद (राजा) द्वारा नागसेन (बौद्ध भिक्षु) से संवाद<br>
+    • बौद्ध धर्म में परिवर्तित<br>
+    • पहली बार प्रचलन में लाया<br>
+    • सोने की मुद्रा<br>
+    • शासकों के नाम वाली मुद्रा<br>
+    • हेलेनिस्टिक कला – गांधार कला (उत्तर-पश्चिमी भारत)
+</div>
+
+<h3 id="saka">6.6 शक वंश (Scythians)</h3>
+<ul>
+    <li>5 शाखाएँ – एक शाखा पश्चिमी भारत में बसी, जिसने चौथी शताब्दी ई. तक शासन किया</li>
+    <li>सत्रापी प्रणाली की शुरुआत (क्षेत्रीय उप-शासक)</li>
+    <li><strong>विक्रमादित्य परमार</strong> – 57 ई.पू. में शकों को पराजित किया, विक्रम संवत की शुरुआत की (हिंदू पंचांग), राजधानी – उज्जैन</li>
+</ul>
+
+<h4>रुद्रदामन I (130-150 ई.)</h4>
+<ul>
+    <li><strong>जूनागढ़ शिलालेख</strong> (संस्कृत) – जिसे गिरनार (गुजरात) भी कहते हैं</li>
+    <li>सुदर्शन झील का पुनर्निर्माण – जिसे मौर्य काल में पुष्यगुप्त वैश्य ने बनवाया था</li>
+</ul>
+
+<h3 id="parthian">6.7 पार्थियन</h3>
+<ul>
+    <li>शक के बाद आए</li>
+    <li>गोंडोफेरेस के समय सेंट थॉमस भारत आए थे</li>
+</ul>
+
+<h3 id="kushan">6.8 कुषाण वंश (1st-3rd शताब्दी ई.)</h3>
+<div class="box box-key">
+    <strong>महत्वपूर्ण तथ्य:</strong><br>
+    • अन्य नाम – यूची (Yuezhis)/तोचारियन<br>
+    • राजधानी – पहले पेशावर, फिर मथुरा<br>
+    • उपाधि – देवपुत्र, राजाधिराज<br>
+    • कडफिसेस I – प्रथम शासक
+</div>
+
+<h4>कनिष्क (द्वितीय अशोक)</h4>
+<ul>
+    <li>सबसे शक्तिशाली शासक</li>
+    <li><strong>चतुर्थ बौद्ध परिषद</strong> का संरक्षण किया</li>
+    <li><strong>रबताक अभिलेख</strong> – अफगानिस्तान (2nd सदी ई.) – कनिष्क के बारे में जानकारी</li>
+    <li>सिल्क रूट पर नियंत्रण</li>
+    <li>शुद्धतम स्वर्ण मुद्राओं का प्रचलन</li>
+    <li><strong>शक संवत</strong> की शुरुआत (भारत सरकार द्वारा आज भी अपनाया गया) – 78 ई.</li>
+    <li>वासुदेव I – दीनार मुद्रा की शुरुआत</li>
+</ul>
+
+<div class="box box-art">
+    <strong>भारतीय समाज पर प्रभाव:</strong><br>
+    • मिट्टी के बर्तन – रेड वेयर<br>
+    • नई तकनीक – घुड़सवार प्रणाली<br>
+    • पगड़ी, शेरवानी<br>
+    • राजनीतिक संस्थापन प्रणाली – सैन्य जनरल (यूनानी में मेटेजोस)<br>
+    • धार्मिक रूप से – शिव और बुद्ध की पूजा<br><br>
+    <strong>साहित्य:</strong><br>
+    • बुद्धचरित – अश्वघोष<br>
+    • महावस्तु एवं दिव्यावदान<br>
+    • कामसूत्र – वात्स्यायन<br><br>
+    <strong>विज्ञान:</strong><br>
+    • चिकित्सा – चरकसंहिता (चरक द्वारा)<br>
+    • सुश्रुत – शल्य चिकित्सा के जनक
+</div>
+
+<h3 id="gandhara-mathura">6.9 गांधार और मथुरा कला शैली</h3>
+<div class="box box-compare">
+    <strong>गांधार कला शैली:</strong><br>
+    • विकास – यूनानियों द्वारा<br>
+    • विषय – मुख्यतः बौद्ध धर्म<br>
+    • बुद्ध के पीछे आभामंडल – कम विकसित<br>
+    • सामग्री – ग्रे सैंडस्टोन (धूसर बलुआ पत्थर)<br><br>
+    <strong>मथुरा कला शैली:</strong><br>
+    • विकास – कुषाणों द्वारा (देशज शैली)<br>
+    • विषय – हिंदू, बौद्ध और जैन धर्म<br>
+    • बुद्ध के पीछे आभामंडल – अच्छी तरह विकसित<br>
+    • सामग्री – लाल बलुआ पत्थर
+</div>
+</section>
+
+<!-- ===== MNEMONICS ===== -->
+<section id="mnemonics">
+<h2>🧠 Mnemonics (याद करने की Tricks)</h2>
+
+<div class="box box-tip">
+<strong>🔥 1. बौद्ध परिषदें (स्थान):</strong><br>
+<strong>"रा-वै-पा-क"</strong> → राजगृह, वैशाली, पाटलिपुत्र, कश्मीर<br>
+<em>Story: "राजा वैशाली में पाकिस्तान (कश्मीर) गया"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 2. 4 सबसे शक्तिशाली महाजनपद:</strong><br>
+<strong>"म-को-अ-व"</strong> → मगध, कोशल, अवन्ति, वत्स<br>
+<em>Story: "मगध को अवन्ति वत्स"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 3. मगध के राजवंशों का क्रम:</strong><br>
+<strong>"हर-शि-न-मौ"</strong> → हर्यक, शिशुनाग, नंद, मौर्य<br>
+<em>Story: "हरिश न मौ" (हरिश ने मौका दिया)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 4. अशोक के अभिलेख पढ़ने वाले:</strong><br>
+<strong>"जेम्स प्रिंसेप 1837"</strong><br>
+<em>याद रखें: "JP 1837" = James Prinsep 1837</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 5. मौर्य प्रशासन के 7 अंग (सप्तांग):</strong><br>
+<strong>"रा-अ-ज-दु-को-से-मि"</strong> → राजा, अमात्य, जनपद, दुर्ग, कोष, सेना, मित्र<br>
+<em>Story: "राजा अजन दुको से मित्र"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 6. उत्तर मौर्य काल के वंश:</strong><br>
+<strong>"शु-क-सा"</strong> → शुंग, कण्व, सातवाहन<br>
+<em>Story: "शुकसा"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 7. कुषाण शासकों का क्रम:</strong><br>
+<strong>"कड-कनि-वासु"</strong> → कडफिसेस I, कनिष्क, वासुदेव I<br>
+<em>Story: "कड़क वासु" (कड़क वासुदेव)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 8. बौद्ध धर्म के प्रतीक:</strong><br>
+<strong>"क-घो-बो-च-स"</strong> → कमल, घोड़ा, बोधि वृक्ष, चक्र, स्तूप<br>
+<em>Story: "कघबोचस"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 9. प्रमुख जैन तीर्थंकर:</strong><br>
+<strong>"ऋ-पा-म"</strong> → ऋषभदेव (1st), पार्श्वनाथ (23rd), महावीर (24th)<br>
+<em>Story: "ऋपम"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 10. मौर्य सम्राटों का क्रम:</strong><br>
+<strong>"चं-बि-अशो"</strong> → चंद्रगुप्त, बिंदुसार, अशोक<br>
+<em>Story: "चंबी अशोक"</em>
+</div>
+</section>
+
+<!-- ===== MIND MAP ===== -->
+<section id="mindmap">
+<h2>🧩 Mind Map: प्राचीन भारत - II</h2>
+<div class="mindmap">
+    <span class="center">🏛️ प्राचीन भारत - II</span>
+    <ul>
+        <li>🙏 <strong>जैन धर्म</strong>
+            <ul>
+                <li>24 तीर्थंकर → महावीर (24वें)</li>
+                <li>त्रिरत्न + पंच महाव्रत</li>
+                <li>विभाजन: दिगंबर vs श्वेतांबर</li>
+                <li>2 परिषदें: पाटलिपुत्र, वलभी</li>
+            </ul>
+        </li>
+        <li>☸️ <strong>बौद्ध धर्म</strong>
+            <ul>
+                <li>गौतम बुद्ध → 4 आर्य सत्य + अष्टांगिक मार्ग</li>
+                <li>4 परिषदें: राजगृह, वैशाली, पाटलिपुत्र, कश्मीर</li>
+                <li>विभाजन: हीनयान vs महायान vs वज्रयान</li>
+                <li>स्तूप: सांची, सारनाथ, बोरोबुदुर</li>
+            </ul>
+        </li>
+        <li>🏛️ <strong>महाजनपद</strong>
+            <ul>
+                <li>16 महाजनपद → मगध सबसे शक्तिशाली</li>
+                <li>गणराज्य: वज्जि, मल्ल</li>
+            </ul>
+        </li>
+        <li>👑 <strong>मगध</strong>
+            <ul>
+                <li>हर्यक → बिंबिसार, अजातशत्रु</li>
+                <li>शिशुनाग → कालाशोक</li>
+                <li>नंद → महापद्मनंद, धनानंद</li>
+            </ul>
+        </li>
+        <li>🦁 <strong>मौर्य साम्राज्य</strong>
+            <ul>
+                <li>चंद्रगुप्त → सेल्यूकस को हराया</li>
+                <li>बिंदुसार → अमित्रघात</li>
+                <li>अशोक → कलिंग युद्ध, धम्म, अभिलेख</li>
+                <li>प्रशासन: सप्तांग, 4 प्रांत</li>
+            </ul>
+        </li>
+        <li>🏛️ <strong>मौर्योत्तर</strong>
+            <ul>
+                <li>शुंग → पुष्यमित्र</li>
+                <li>सातवाहन → गौतमीपुत्र सातकर्णी</li>
+                <li>कुषाण → कनिष्क, गांधार कला</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</section>
+
+<!-- ===== COMMON MISTAKES ===== -->
+<section id="mistakes">
+<h2>🚫 Common Mistakes (अक्सर होने वाली गलतियाँ)</h2>
+<div class="box box-warn">
+    ❌ <strong>गलत:</strong> महावीर बौद्ध धर्म के संस्थापक थे।<br>
+    ✅ <strong>सही:</strong> महावीर जैन धर्म के 24वें तीर्थंकर थे; बौद्ध धर्म के संस्थापक गौतम बुद्ध थे।<br><br>
+    ❌ <strong>गलत:</strong> अशोक ने कलिंग युद्ध के पहले बौद्ध धर्म अपनाया।<br>
+    ✅ <strong>सही:</strong> अशोक ने कलिंग युद्ध (261 ई.पू.) के बाद बौद्ध धर्म अपनाया।<br><br>
+    ❌ <strong>गलत:</strong> गांधार कला में लाल बलुआ पत्थर का उपयोग होता था।<br>
+    ✅ <strong>सही:</strong> गांधार कला में ग्रे सैंडस्टोन (धूसर बलुआ पत्थर) का उपयोग होता था; मथुरा कला में लाल बलुआ पत्थर।<br><br>
+    ❌ <strong>गलत:</strong> कनिष्क ने प्रथम बौद्ध परिषद का संरक्षण किया।<br>
+    ✅ <strong>सही:</strong> कनिष्क ने चतुर्थ बौद्ध परिषद का संरक्षण किया; प्रथम परिषद अजातशत्रु ने करवाई।<br><br>
+    ❌ <strong>गलत:</strong> मौर्य साम्राज्य का अंत अशोक की मृत्यु के साथ हुआ।<br>
+    ✅ <strong>सही:</strong> मौर्य साम्राज्य का अंत बृहद्रथ की हत्या के बाद पुष्यमित्र शुंग द्वारा किया गया।<br><br>
+    ❌ <strong>गलत:</strong> सातवाहन वंश उत्तर भारत में था।<br>
+    ✅ <strong>सही:</strong> सातवाहन वंश दक्षिण भारत (महाराष्ट्र/आंध्र) में था।<br><br>
+    ❌ <strong>गलत:</strong> विक्रम संवत कनिष्क ने शुरू किया।<br>
+    ✅ <strong>सही:</strong> विक्रम संवत (57 ई.पू.) विक्रमादित्य परमार ने शुरू किया; कनिष्क ने शक संवत (78 ई.) शुरू किया।
+</div>
+</section>
+
+<!-- ===== SUMMARY ===== -->
+<section id="summary">
+<div class="summary-box">
+    <h2>📝 Chapter Summary (Quick Revision)</h2>
+    <ul>
+        <li>🙏 जैन धर्म – 24 तीर्थंकर, महावीर 24वें, त्रिरत्न + पंच महाव्रत</li>
+        <li>☸️ बौद्ध धर्म – गौतम बुद्ध, 4 आर्य सत्य, अष्टांगिक मार्ग</li>
+        <li>📚 बौद्ध परिषदें – राजगृह, वैशाली, पाटलिपुत्र, कश्मीर</li>
+        <li>🏛️ 16 महाजनपद – अंगुत्तर निकाय में उल्लेख</li>
+        <li>👑 मगध – हर्यक, शिशुनाग, नंद वंश</li>
+        <li>🦁 मौर्य साम्राज्य – चंद्रगुप्त, बिंदुसार, अशोक</li>
+        <li>📜 अशोक के अभिलेख – जेम्स प्रिंसेप ने 1837 में पढ़ा</li>
+        <li>🏛️ सप्तांग सिद्धांत – राज्य के 7 अंग</li>
+        <li>⚔️ शुंग वंश – पुष्यमित्र शुंग</li>
+        <li>👑 सातवाहन – गौतमीपुत्र सातकर्णी</li>
+        <li>🏆 विक्रमादित्य – 57 ई.पू. में शकों को हराया</li>
+        <li>👑 कनिष्क – चतुर्थ बौद्ध परिषद, शक संवत 78 ई.</li>
+        <li>🎨 गांधार कला – यूनानी प्रभाव, ग्रे सैंडस्टोन</li>
+        <li>🎨 मथुरा कला – देशज शैली, लाल बलुआ पत्थर</li>
+        <li>📖 अर्थशास्त्र – कौटिल्य/चाणक्य</li>
+        <li>🌍 इंडिका – मेगस्थनीज</li>
+    </ul>
+</div>
+</section>
+
+<!-- ===== QUICK REFERENCE CARD ===== -->
+<section id="refcard">
+<div class="ref-card">
+    <h2>📇 Quick Reference Card</h2>
+    <table>
+        <tr><th>विषय</th><th>तथ्य</th></tr>
+        <tr><td>महावीर का जन्म</td><td>599 ई.पू., कुंडग्राम</td></tr>
+        <tr><td>बुद्ध का जन्म</td><td>563 ई.पू., लुम्बिनी</td></tr>
+        <tr><td>कलिंग युद्ध</td><td>261 ई.पू.</td></tr>
+        <tr><td>मौर्य साम्राज्य स्थापना</td><td>322 ई.पू.</td></tr>
+        <tr><td>अशोक के अभिलेख पढ़ने वाले</td><td>जेम्स प्रिंसेप (1837)</td></tr>
+        <tr><td>अर्थशास्त्र के रचयिता</td><td>कौटिल्य/चाणक्य</td></tr>
+        <tr><td>इंडिका के रचयिता</td><td>मेगस्थनीज</td></tr>
+        <tr><td>शुंग वंश संस्थापक</td><td>पुष्यमित्र शुंग</td></tr>
+        <tr><td>सातवाहन सबसे महान</td><td>गौतमीपुत्र सातकर्णी</td></tr>
+        <tr><td>विक्रम संवत</td><td>57 ई.पू.</td></tr>
+        <tr><td>शक संवत</td><td>78 ई. (कनिष्क)</td></tr>
+        <tr><td>गांधार कला सामग्री</td><td>ग्रे सैंडस्टोन</td></tr>
+        <tr><td>मथुरा कला सामग्री</td><td>लाल बलुआ पत्थर</td></tr>
+        <tr><td>कनिष्क की उपाधि</td><td>द्वितीय अशोक</td></tr>
+    </table>
+</div>
+</section>
+
+<!-- ===== GLOSSARY ===== -->
+<section id="glossary">
+<div class="glossary">
+    <h2>📚 Glossary (शब्दावली)</h2>
+    <div class="gloss-item"><strong>तीर्थंकर</strong> – जैन धर्म के आध्यात्मिक शिक्षक</div>
+    <div class="gloss-item"><strong>कैवल्य</strong> – पूर्ण ज्ञान (जैन धर्म)</div>
+    <div class="gloss-item"><strong>सल्लेखना</strong> – उपवास द्वारा मृत्यु (जैन)</div>
+    <div class="gloss-item"><strong>त्रिरत्न</strong> – जैन धर्म के 3 रत्न</div>
+    <div class="gloss-item"><strong>महाभिनिष्क्रमण</strong> – गृहत्याग (बुद्ध)</div>
+    <div class="gloss-item"><strong>धर्मचक्रप्रवर्तन</strong> – प्रथम उपदेश (बुद्ध)</div>
+    <div class="gloss-item"><strong>परिनिर्वाण</strong> – अंतिम मुक्ति (बुद्ध)</div>
+    <div class="gloss-item"><strong>त्रिपिटक</strong> – बौद्ध धर्म के 3 ग्रंथ</div>
+    <div class="gloss-item"><strong>हीनयान</strong> – बौद्ध धर्म की छोटी शाखा</div>
+    <div class="gloss-item"><strong>महायान</strong> – बौद्ध धर्म की बड़ी शाखा</div>
+    <div class="gloss-item"><strong>वज्रयान</strong> – तांत्रिक बौद्ध धर्म</div>
+    <div class="gloss-item"><strong>स्तूप</strong> – बौद्ध धर्म का पवित्र स्मारक</div>
+    <div class="gloss-item"><strong>चैत्य</strong> – प्रार्थना कक्ष</div>
+    <div class="gloss-item"><strong>विहार</strong> – भिक्षुओं का निवास</div>
+    <div class="gloss-item"><strong>महाजनपद</strong> – 16 प्राचीन राज्य</div>
+    <div class="gloss-item"><strong>गणराज्य</strong> – गणतंत्रात्मक राज्य</div>
+    <div class="gloss-item"><strong>सप्तांग सिद्धांत</strong> – राज्य के 7 अंग</div>
+    <div class="gloss-item"><strong>धम्म महामात्र</strong> – अशोक के धर्म अधिकारी</div>
+    <div class="gloss-item"><strong>NBPW</strong> – उत्तर काले पॉलिश वाले पात्र</div>
+    <div class="gloss-item"><strong>सत्रापी</strong> – क्षेत्रीय उप-शासक (शक)</div>
+    <div class="gloss-item"><strong>गांधार कला</strong> – यूनानी-बौद्ध कला</div>
+    <div class="gloss-item"><strong>मथुरा कला</strong> – देशज भारतीय कला</div>
+</div>
+</section>
+
+<div class="page-footer">
+    <p>📖 <strong>End of Chapter 2</strong> | प्राचीन भारत (Part II)</p>
+    <p>Next ➜ Chapter 3: संगम युग, गुप्त साम्राज्य एवं उत्तर-गुप्त काल (दक्षिण के राजवंश, हर्षवर्धन, त्रिकूट संघर्ष)</p>
+</div>
+</main>
+
+<script>
+// Close sidebar when clicking on a link (mobile)
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            document.querySelector('.sidebar').classList.remove('open');
+        }
+    });
+});
+
+// Back to Top Button Logic
+window.onscroll = function() {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+</script>
+
+</body>
+</html>

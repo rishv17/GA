@@ -1,0 +1,926 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 7 - आधुनिक भारत - II | History Notes</title>
+<style>
+:root {
+    --primary: #1a252f;
+    --ancient: #d35400;
+    --medieval: #5DADE2;
+    --modern: #27ae60;
+    --modern-light: #2ecc71;
+    --culture: #8e44ad;
+    --accent: #f39c12;
+    --bg: #f8f9fa;
+    --text: #2d3436;
+    --box-key: #e8f8f5;
+    --box-tip: #eafaf1;
+    --box-warn: #fdedec;
+    --box-map: #fef5e7;
+    --box-quote: #f4ecf7;
+    --box-flow: #eaf2f8;
+    --box-mind: #fdf2e9;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Segoe UI', 'Noto Sans Devanagari', 'Noto Sans', Tahoma, sans-serif;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    display: flex;
+    min-height: 100vh;
+}
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px; left: 15px;
+    z-index: 200;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.sidebar {
+    width: 300px;
+    background: var(--primary);
+    color: white;
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px 16px;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
+.sidebar .chap-tag {
+    text-align: center; color: var(--accent);
+    font-size: 0.75rem; letter-spacing: 3px; margin-bottom: 10px;
+    text-transform: uppercase; font-weight: bold;
+}
+.sidebar .home-btn {
+    display: block; text-align: center; background: var(--accent);
+    color: white !important; font-weight: bold; padding: 10px;
+    border-radius: 8px; margin-bottom: 20px; text-decoration: none;
+    transition: 0.3s;
+}
+.sidebar .home-btn:hover { background: #d35400; transform: scale(1.02); }
+.sidebar h2 {
+    text-align: center; border-bottom: 2px solid #34495e;
+    padding-bottom: 12px; margin-bottom: 15px; font-size: 1.1rem; color: #bdc3c7;
+}
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar li { margin: 3px 0; }
+.sidebar .subject-header a {
+    color: var(--accent) !important; font-weight: 700; font-size: 0.95rem;
+    padding: 8px 12px; border-left: 3px solid var(--accent);
+    background: rgba(243, 156, 18, 0.1); border-radius: 0 6px 6px 0;
+    display: block; text-decoration: none; transition: 0.3s;
+    margin-top: 12px;
+}
+.sidebar .subject-header a:hover { background: rgba(243, 156, 18, 0.2); }
+.sidebar .chapter-link {
+    color: #dfe6e9 !important; text-decoration: none; display: block;
+    padding: 6px 12px 6px 28px;
+    border-radius: 6px; transition: 0.25s; font-size: 0.85rem;
+}
+.sidebar .chapter-link:hover { 
+    background: #34495e; color: white !important; transform: translateX(4px); 
+}
+.sidebar .chapter-link.active {
+    background: var(--modern); color: white !important; font-weight: 600;
+}
+main { margin-left: 320px; padding: 30px 40px; max-width: 1100px; flex: 1; }
+.ch-header {
+    background: linear-gradient(135deg, var(--modern), var(--modern-light));
+    color: white; padding: 30px 35px; border-radius: 12px;
+    margin-bottom: 30px; box-shadow: 0 8px 20px rgba(39,174,96,0.2);
+}
+.ch-header h1 { color: white; border: none; font-size: 2rem; margin-bottom: 8px; }
+.ch-header p { opacity: 0.95; font-size: 1.1rem; }
+.ch-header .period {
+    display: inline-block; background: rgba(255,255,255,0.2);
+    padding: 5px 16px; border-radius: 20px; margin-top: 12px; font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+h1 { color: var(--primary); border-bottom: 3px solid var(--primary); padding-bottom: 10px; margin-bottom: 20px; }
+h2 {
+    margin-top: 50px; padding: 14px 22px; border-radius: 8px;
+    color: white; font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: var(--modern);
+}
+h3 {
+    color: var(--primary); border-left: 5px solid var(--modern);
+    padding: 10px 16px; margin-top: 35px; font-size: 1.3rem;
+    background: #ecf0f1; border-radius: 0 6px 6px 0;
+}
+h4 {
+    color: #2c3e50; margin-top: 22px;
+    border-bottom: 1px dashed #bdc3c7; padding-bottom: 6px; font-size: 1.1rem;
+}
+.intro-box {
+    background: linear-gradient(135deg, #fff9e6, #fff3cd);
+    border-left: 6px solid var(--accent);
+    padding: 20px 25px; border-radius: 10px; margin: 25px 0;
+}
+.intro-box h3 { color: var(--accent); border: none; background: none; padding: 0; margin-top: 0; }
+.box {
+    padding: 16px 20px; border-radius: 10px; margin: 20px 0;
+    border-left: 6px solid; box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.box-key { background: var(--box-key); border-color: #27ae60; }
+.box-key::before { content: "💡 KEY CONCEPT"; font-weight: 700; color: #27ae60; display: block; margin-bottom: 8px; }
+.box-tip { background: var(--box-tip); border-color: #2980b9; }
+.box-tip::before { content: "🎯 KEY FACT"; font-weight: 700; color: #2980b9; display: block; margin-bottom: 8px; }
+.box-warn { background: var(--box-warn); border-color: #c0392b; }
+.box-warn::before { content: "⚠️ COMMON MISTAKE"; font-weight: 700; color: #c0392b; display: block; margin-bottom: 8px; }
+.box-map { background: var(--box-map); border-color: var(--accent); }
+.box-map::before { content: "🗺️ GEOGRAPHY"; font-weight: 700; color: #e67e22; display: block; margin-bottom: 8px; }
+.box-compare { background: #f4ecf7; border-color: var(--culture); }
+.box-compare::before { content: "🔄 COMPARISON"; font-weight: 700; color: var(--culture); display: block; margin-bottom: 8px; }
+.box-quote {
+    background: var(--box-quote); border-color: var(--culture);
+    border-left: 6px solid var(--culture); font-style: italic;
+}
+.box-quote::before { content: "📜 QUOTE"; font-weight: 700; color: var(--culture); display: block; margin-bottom: 8px; font-style: normal; }
+.box-art { background: #fdf2e9; border-color: #e67e22; }
+.box-art::before { content: "🎨 ART & ARCHITECTURE"; font-weight: 700; color: #e67e22; display: block; margin-bottom: 8px; }
+.box-econ { background: #e8f8f5; border-color: #1abc9c; }
+.box-econ::before { content: "💰 ECONOMY & SOCIETY"; font-weight: 700; color: #1abc9c; display: block; margin-bottom: 8px; }
+.box-book { background: #f9ebea; border-color: #e74c3c; }
+.box-book::before { content: "📖 BOOKS & AUTHORS"; font-weight: 700; color: #e74c3c; display: block; margin-bottom: 8px; }
+.box-term { background: #f2f3f4; border-color: #7f8c8d; }
+.box-term::before { content: "📝 TERMINOLOGY"; font-weight: 700; color: #7f8c8d; display: block; margin-bottom: 8px; }
+table {
+    width: 100%; border-collapse: collapse; margin: 18px 0;
+    background: white; box-shadow: 0 3px 8px rgba(0,0,0,0.04); font-size: 0.9rem;
+    border-radius: 8px; overflow: hidden;
+}
+th, td { border: 1px solid #eee; padding: 12px 14px; text-align: left; vertical-align: top; }
+th { background: var(--primary); color: white; font-size: 0.85rem; font-weight: 600; }
+tr:nth-child(even) { background: #f9f9f9; }
+tr:hover { background: #f0f4f8; }
+ul, ol { margin: 8px 0; padding-left: 22px; }
+li { margin-bottom: 6px; }
+.timeline {
+    background: white; border-left: 4px solid var(--modern);
+    padding: 20px; margin: 25px 0; border-radius: 0 10px 10px 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.tl-item {
+    position: relative; padding: 10px 0 10px 32px;
+    border-bottom: 1px dashed #eee;
+}
+.tl-item:last-child { border-bottom: none; }
+.tl-item::before {
+    content: "●"; color: var(--modern);
+    position: absolute; left: -11px; font-size: 1.2rem;
+    background: white;
+}
+.tl-year { font-weight: 700; color: #27ae60; display: inline-block; min-width: 150px; }
+.qf-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0;
+}
+.qf-item {
+    background: white; padding: 12px 16px; border-radius: 8px;
+    border-left: 4px solid var(--modern); font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    transition: transform 0.2s;
+}
+.qf-item:hover { transform: translateX(3px); }
+.qf-item strong { color: #27ae60; }
+.mindmap {
+    background: var(--box-mind); border-radius: 12px;
+    padding: 25px; margin: 25px 0; font-size: 0.95rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.mindmap .center {
+    background: var(--modern); color: white; padding: 10px 20px;
+    border-radius: 25px; display: inline-block; font-weight: 700; margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(39,174,96,0.2);
+}
+.mindmap ul { list-style: none; padding-left: 20px; }
+.mindmap > ul > li { margin: 8px 0; }
+.mindmap > ul > li::before { content: "├─ "; color: var(--modern); font-weight: 700; }
+.mindmap ul ul li::before { content: "│  ├─ "; color: #2ecc71; }
+.summary-box {
+    background: linear-gradient(135deg, #e8f8f5, #d1f2eb);
+    border: 2px solid #16a085; border-radius: 12px;
+    padding: 25px 30px; margin: 40px 0;
+}
+.summary-box h2 { background: #16a085; margin-top: 0; color: white; padding: 10px 15px; border-radius: 6px; }
+.ref-card {
+    background: linear-gradient(135deg, #fef9e7, #fcf3cf);
+    border: 2px solid #f1c40f; border-radius: 12px;
+    padding: 25px 30px; margin: 30px 0;
+}
+.ref-card h2 { background: #f39c12; margin-top: 0; color: white; padding: 10px 15px; border-radius: 6px; }
+.glossary {
+    background: #f2f3f4; border-radius: 12px;
+    padding: 25px 30px; margin: 30px 0;
+}
+.glossary h2 { background: #7f8c8d; margin-top: 0; color: white; padding: 10px 15px; border-radius: 6px; }
+.gloss-item { margin: 8px 0; font-size: 0.95rem; }
+.gloss-item strong { color: var(--primary); min-width: 160px; display: inline-block; }
+.page-footer {
+    text-align: center; margin-top: 50px; padding: 25px;
+    color: #7f8c8d; font-size: 0.85rem; border-top: 2px dashed #bdc3c7;
+}
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px; right: 30px;
+    z-index: 99;
+    background: var(--modern);
+    color: white;
+    border: none;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+#backToTop:hover { background: var(--modern-light); transform: translateY(-3px); }
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .sidebar {
+        transform: translateX(-100%);
+        width: 85%;
+        max-width: 320px;
+    }
+    .sidebar.open { transform: translateX(0); }
+    main {
+        margin-left: 0 !important;
+        padding: 70px 15px 20px 15px !important;
+        max-width: 100%;
+    }
+    .qf-grid { grid-template-columns: 1fr; }
+    .ch-header { padding: 25px 20px; }
+    .ch-header h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.3rem; padding: 12px 18px; }
+    h3 { font-size: 1.15rem; }
+    table { font-size: 0.85rem; }
+    th, td { padding: 8px 10px; }
+    .tl-year { min-width: 120px; font-size: 0.85rem; }
+    .box { padding: 14px 16px; }
+    .gloss-item strong { min-width: 130px; }
+    #backToTop { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 1.3rem; }
+}
+</style>
+</head>
+<body>
+
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ Menu</button>
+<button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+<nav class="sidebar">
+    <div class="chap-tag">GS SHORTS NOTES</div>
+    <a href="../index.html" class="home-btn">🏠 मुख्य पृष्ठ (Home)</a>
+    <h2>📚 विषय सूची</h2>
+    <ul>
+        <li class="subject-header"><a href="index.html">📜 इतिहास (History)</a></li>
+        <li><a href="chapter-01-ancient-1.html" class="chapter-link">1. प्राचीन भारत - I</a></li>
+        <li><a href="chapter-02-ancient-2.html" class="chapter-link">2. प्राचीन भारत - II</a></li>
+        <li><a href="chapter-03-ancient-3.html" class="chapter-link">3. प्राचीन भारत - III</a></li>
+        <li><a href="chapter-04-medieval-1.html" class="chapter-link">4. मध्यकालीन भारत - I</a></li>
+        <li><a href="chapter-05-medieval-2.html" class="chapter-link">5. मध्यकालीन भारत - II</a></li>
+        <li><a href="chapter-06-modern-1.html" class="chapter-link">6. आधुनिक भारत - I</a></li>
+        <li><a href="chapter-07-modern-2.html" class="chapter-link active">7. आधुनिक भारत - II</a></li>
+        <li class="subject-header"><a href="../geography/index.html">🌍 भूगोल (Geography)</a></li>
+        <li class="subject-header"><a href="../polity/index.html">⚖️ राजव्यवस्था (Polity)</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<div class="ch-header">
+    <h1>🇮🇳 Chapter 7: आधुनिक भारत - II</h1>
+    <p>गांधी युग | स्वतंत्रता संग्राम | कांग्रेस अधिवेशन | वायसराय | अंतिम पड़ाव (1915 - 1947)</p>
+    <span class="period">⏳ काल: 1915 ई. – 1947 ई.</span>
+</div>
+
+<section id="intro">
+<div class="intro-box">
+    <h3> भूमिका</h3>
+    <p>भारतीय स्वतंत्रता संग्राम का यह अंतिम और सबसे निर्णायक चरण है। 1915 में महात्मा गांधी के भारत लौटने के बाद, राष्ट्रीय आंदोलन एक जन-आंदोलन में परिवर्तित हो गया। असहयोग से लेकर भारत छोड़ो आंदोलन तक, और साइमन कमीशन के विरोध से लेकर गोलमेज सम्मेलनों तक, इस काल में भारतीयों ने ब्रिटिश साम्राज्य की नींव हिला दी। अंततः, द्वितीय विश्व युद्ध के बाद के परिवर्तित वैश्विक परिदृश्य ने 1947 में भारत को स्वतंत्रता दिलाई।</p>
+</div>
+</section>
+
+<section id="timeline">
+<h2>📅 कालक्रम (Timeline)</h2>
+<div class="timeline">
+    <div class="tl-item"><span class="tl-year">1915 ई.</span> महात्मा गांधी का भारत आगमन (9 जनवरी)</div>
+    <div class="tl-item"><span class="tl-year">1916 ई.</span> लखनऊ समझौता और होम रूल लीग की स्थापना</div>
+    <div class="tl-item"><span class="tl-year">1917 ई.</span> चंपारण सत्याग्रह (गांधी का पहला सत्याग्रह)</div>
+    <div class="tl-item"><span class="tl-year">1919 ई.</span> रौलट एक्ट, जलियांवाला बाग हत्याकांड, मोंटेग्यू-चेम्सफोर्ड सुधार</div>
+    <div class="tl-item"><span class="tl-year">1920 ई.</span> असहयोग आंदोलन और खिलाफत आंदोलन की शुरुआत</div>
+    <div class="tl-item"><span class="tl-year">1922 ई.</span> चौरी-चौरा कांड और असहयोग आंदोलन की वापसी</div>
+    <div class="tl-item"><span class="tl-year">1923 ई.</span> स्वराज पार्टी की स्थापना</div>
+    <div class="tl-item"><span class="tl-year">1927 ई.</span> साइमन कमीशन का भारत आगमन</div>
+    <div class="tl-item"><span class="tl-year">1928 ई.</span> नेहरू रिपोर्ट और जवाहरलाल नेहरू की अध्यक्षता</div>
+    <div class="tl-item"><span class="tl-year">1929 ई.</span> लाहौर अधिवेशन (पूर्ण स्वराज की घोषणा)</div>
+    <div class="tl-item"><span class="tl-year">1930 ई.</span> दांडी मार्च और सविनय अवज्ञा आंदोलन</div>
+    <div class="tl-item"><span class="tl-year">1931 ई.</span> गांधी-इरविन समझौता और कराची अधिवेशन</div>
+    <div class="tl-item"><span class="tl-year">1932 ई.</span> साम्प्रदायिक पुरस्कार और पूना पैक्ट</div>
+    <div class="tl-item"><span class="tl-year">1935 ई.</span> भारत सरकार अधिनियम 1935</div>
+    <div class="tl-item"><span class="tl-year">1937 ई.</span> प्रांतीय चुनाव और कांग्रेस मंत्रिमंडल का गठन</div>
+    <div class="tl-item"><span class="tl-year">1939 ई.</span> द्वितीय विश्व युद्ध और कांग्रेस मंत्रिमंडल का इस्तीफा</div>
+    <div class="tl-item"><span class="tl-year">1942 ई.</span> क्रिप्स मिशन, भारत छोड़ो आंदोलन और आजाद हिंद फौज</div>
+    <div class="tl-item"><span class="tl-year">1946 ई.</span> कैबिनेट मिशन योजना और संविधान सभा का गठन</div>
+    <div class="tl-item"><span class="tl-year">1947 ई.</span> माउंटबेटन योजना और भारतीय स्वतंत्रता अधिनियम</div>
+</div>
+</section>
+
+<section id="qfacts">
+<h2> Quick Facts (30 सबसे महत्वपूर्ण तथ्य)</h2>
+<div class="qf-grid">
+    <div class="qf-item">🇳 <strong>गांधी वापसी:</strong> 9 जनवरी 1915 (दक्षिण अफ्रीका से)</div>
+    <div class="qf-item">🤝 <strong>लखनऊ समझौता:</strong> 1916 (कांग्रेस और मुस्लिम लीग)</div>
+    <div class="qf-item">🌾 <strong>चंपारण:</strong> 1917, तिन्नकठिया प्रथा के खिलाफ</div>
+    <div class="qf-item">️ <strong>रौलट एक्ट:</strong> 1919 (बिना मुकदमे गिरफ्तारी)</div>
+    <div class="qf-item"> <strong>जलियांवाला बाग:</strong> 13 अप्रैल 1919, जनरल डायर</div>
+    <div class="qf-item"> <strong>असहयोग आंदोलन:</strong> 1920-1922</div>
+    <div class="qf-item">🔥 <strong>चौरी-चौरा:</strong> 5 फरवरी 1922, आंदोलन वापस लिया</div>
+    <div class="qf-item">🏛️ <strong>स्वराज पार्टी:</strong> 1923, सी.आर. दास और मोतीलाल नेहरू</div>
+    <div class="qf-item">👎 <strong>साइमन कमीशन:</strong> 1927, कोई भारतीय सदस्य नहीं</div>
+    <div class="qf-item">📋 <strong>नेहरू रिपोर्ट:</strong> 1928, मोतीलाल नेहरू</div>
+    <div class="qf-item">🚩 <strong>लाहौर अधिवेशन:</strong> 1929, पूर्ण स्वराज, जवाहरलाल नेहरू</div>
+    <div class="qf-item">🧂 <strong>दांडी मार्च:</strong> 12 मार्च - 6 अप्रैल 1930</div>
+    <div class="qf-item">🤝 <strong>गांधी-इरविन:</strong> 1931, सविनय अवज्ञा समाप्त</div>
+    <div class="qf-item">🌍 <strong>गोलमेज सम्मेलन:</strong> 3 बार (1930, 1931, 1932)</div>
+    <div class="qf-item">✊ <strong>पूना पैक्ट:</strong> 1932, गांधी और अंबेडकर</div>
+    <div class="qf-item">⚖️ <strong>GoI Act 1935:</strong> प्रांतीय स्वायत्तता, संघीय ढांचा</div>
+    <div class="qf-item">🗳️ <strong>1937 चुनाव:</strong> कांग्रेस ने 7 प्रांतों में सरकार बनाई</div>
+    <div class="qf-item">🌍 <strong>विश्व युद्ध II:</strong> 1939, वायसराय लिनलिथगो</div>
+    <div class="qf-item">📢 <strong>अगस्त प्रस्ताव:</strong> 1940, व्यक्तिगत सत्याग्रह</div>
+    <div class="qf-item">️ <strong>क्रिप्स मिशन:</strong> 1942, डोमिनियन स्टेटस का प्रस्ताव</div>
+    <div class="qf-item"> <strong>भारत छोड़ो:</strong> 8 अगस्त 1942, "करो या मरो"</div>
+    <div class="qf-item">⚔️ <strong>आजाद हिंद फौज:</strong> मोहन सिंह, बाद में सुभाष चंद्र बोस</div>
+    <div class="qf-item">🏛️ <strong>अस्थायी सरकार:</strong> 1943, सिंगापुर</div>
+    <div class="qf-item">🕊️ <strong>कैबिनेट मिशन:</strong> 1946, 3 सदस्यीय</div>
+    <div class="qf-item">📅 <strong>प्रत्यक्ष कार्रवाई:</strong> 16 अगस्त 1946</div>
+    <div class="qf-item">✂️ <strong>माउंटबेटन योजना:</strong> 3 जून 1947</div>
+    <div class="qf-item">🇮 <strong>स्वतंत्रता अधिनियम:</strong> 18 जुलाई 1947</div>
+    <div class="qf-item">🎉 <strong>स्वतंत्रता दिवस:</strong> 15 अगस्त 1947</div>
+    <div class="qf-item">📖 <strong>माई एक्सपेरिमेंट्स विथ ट्रुथ:</strong> गांधी की आत्मकथा</div>
+    <div class="qf-item">📖 <strong>इंडिया विन्स फ्रीडम:</strong> अबुल कलाम आजाद</div>
+</div>
+</section>
+
+<section id="gandhi-early">
+<h2>🌱 1. गांधी युग की शुरुआत (1915-1918)</h2>
+
+<h3 id="arrival">1.1 भारत आगमन और प्रारंभिक सत्याग्रह</h3>
+<div class="box box-key">
+    <strong>महात्मा गांधी:</strong> दक्षिण अफ्रीका से 9 जनवरी 1915 को भारत लौटे।<br>
+    <strong>गुरु:</strong> गोपाल कृष्ण गोखले (राजनीतिक गुरु)।<br>
+    <strong>आश्रम:</strong> कोचरब आश्रम (अहमदाबाद) और बाद में साबरमती आश्रम।<br>
+    <strong>पहला सत्याग्रह:</strong> चंपारण सत्याग्रह (1917) - बिहार में किसानों के लिए।<br>
+    <strong>दूसरा सत्याग्रह:</strong> अहमदाबाद मिल हड़ताल (1918) - मिल मजदूरों के लिए।<br>
+    <strong>तीसरा सत्याग्रह:</strong> खेड़ा सत्याग्रह (1918) - गुजरात में किसानों के लिए।
+</div>
+
+<h3 id="home-rule">1.2 होम रूल आंदोलन</h3>
+<ul>
+    <li><strong>बाल गंगाधर तिलक:</strong> अप्रैल 1916 में पुणे में 'इंडियन होम रूल लीग' की स्थापना की।</li>
+    <li><strong>एनी बेसेंट:</strong> सितंबर 1916 में मद्रास में 'होम रूल लीग' की स्थापना की।</li>
+    <li>उद्देश्य: भारत को ब्रिटिश साम्राज्य के भीतर स्वशासन (Dominion Status) दिलाना।</li>
+</ul>
+</section>
+
+<section id="rowlatt-jallianwala">
+<h2> 2. रौलट एक्ट और जलियांवाला बाग (1919)</h2>
+
+<h3 id="rowlatt">2.1 रौलट एक्ट (काला कानून)</h3>
+<ul>
+    <li>सिडनी रौलट की अध्यक्षता वाले समिति की सिफारिशों पर आधारित।</li>
+    <li>बिना मुकदमे और वकील के किसी भी भारतीय को गिरफ्तार करने और जेल में डालने का अधिकार।</li>
+    <li>गांधी ने इसके विरोध में 'रौलट सत्याग्रह' शुरू किया।</li>
+</ul>
+
+<h3 id="jallianwala">2.2 जलियांवाला बाग हत्याकांड</h3>
+<div class="box box-warn">
+    <strong>दिनांक:</strong> 13 अप्रैल 1919 (बैसाखी का त्योहार)।<br>
+    <strong>स्थान:</strong> अमृतसर, पंजाब।<br>
+    <strong>दोषी:</strong> ब्रिगेडियर जनरल रेजिनाल्ड डायर।<br>
+    <strong>प्रतिक्रिया:</strong><br>
+    • रवींद्रनाथ टैगोर ने 'नाइटहुड' की उपाधि लौटाई।<br>
+    • गांधी ने 'कैसर-ए-हिंद' की उपाधि लौटाई।<br>
+    • उधम सिंह ने 1940 में लंदन में माइकल ओ'डायर की हत्या की।<br>
+    • जांच के लिए हंटर आयोग गठित।
+</div>
+
+<h3 id="montagu-chelmsford">2.3 मोंटेग्यू-चेम्सफोर्ड सुधार (1919)</h3>
+<ul>
+    <li>भारत सरकार अधिनियम 1919 के रूप में लागू।</li>
+    <li>केंद्र में द्विसदनीय विधायिका की शुरुआत।</li>
+    <li>प्रांतों में द्वैध शासन (Dyarchy) की शुरुआत।</li>
+    <li>मुस्लिमों के लिए पृथक निर्वाचन की व्यवस्था।</li>
+</ul>
+</section>
+
+<section id="non-cooperation">
+<h2>✊ 3. असहयोग आंदोलन (1920-1922)</h2>
+
+<h3 id="khilafat">3.1 खिलाफत आंदोलन</h3>
+<ul>
+    <li>प्रथम विश्व युद्ध के बाद तुर्की के सुल्तान के साथ ब्रिटिश व्यवहार के विरोध में।</li>
+    <li>नेतृत्व: मौलाना मोहम्मद अली और मौलाना शौकत अली (अली बंधु)।</li>
+    <li>गांधी ने इसे असहयोग आंदोलन के साथ जोड़ दिया।</li>
+</ul>
+
+<h3 id="non-cooperation-movement">3.2 असहयोग आंदोलन</h3>
+<div class="box box-key">
+    <strong>शुरुआत:</strong> 1920 (कलकत्ता विशेष अधिवेशन)।<br>
+    <strong>कार्यक्रम:</strong><br>
+    • सरकारी उपाधियों का त्याग।<br>
+    • सरकारी स्कूलों, कॉलेजों और अदालतों का बहिष्कार।<br>
+    • विदेशी वस्तुओं (विशेषकर कपड़ों) का बहिष्कार।<br>
+    • चुनावों का बहिष्कार।
+</div>
+
+<h3 id="chauri-chaura">3.3 चौरी-चौरा कांड और आंदोलन की वापसी</h3>
+<ul>
+    <li><strong>दिनांक:</strong> 5 फरवरी 1922।</li>
+    <li><strong>स्थान:</strong> गोरखपुर, उत्तर प्रदेश।</li>
+    <li>प्रदर्शनकारियों ने पुलिस स्टेशन को आग लगा दी, जिससे 22 पुलिसकर्मियों की मृत्यु हो गई।</li>
+    <li>हिंसा देखकर गांधी ने 12 फरवरी 1922 को असहयोग आंदोलन वापस ले लिया।</li>
+</ul>
+</section>
+
+<section id="swaraj-party">
+<h2>🏛️ 4. स्वराज पार्टी (1923)</h2>
+<div class="box box-key">
+    <strong>स्थापना:</strong> 1 जनवरी 1923।<br>
+    <strong>संस्थापक:</strong> सी.आर. दास (अध्यक्ष) और मोतीलाल नेहरू (सचिव)।<br>
+    <strong>उद्देश्य:</strong> विधान परिषदों में प्रवेश करके अंदर से विरोध करना (Council Entry)।<br>
+    <strong>विभाजन:</strong> 'नो-चेंजर्स' (गांधी, राजेंद्र प्रसाद) और 'प्रो-चेंजर्स' (दास, नेहरू)।
+</div>
+</section>
+
+<section id="simon-commission">
+<h2>👎 5. साइमन कमीशन (1927)</h2>
+<ul>
+    <li><strong>अध्यक्ष:</strong> जॉन साइमन।</li>
+    <li><strong>सदस्य:</strong> 7 सदस्यीय आयोग (सभी गोरे, कोई भारतीय नहीं)।</li>
+    <li><strong>विरोध:</strong> "साइमन गो बैक" के नारे के साथ पूरे भारत में विरोध प्रदर्शन।</li>
+    <li><strong>लाला लाजपत राय:</strong> लाहौर में लाठीचार्ज के दौरान गंभीर रूप से घायल हुए और बाद में उनकी मृत्यु हो गई।</li>
+</ul>
+</section>
+
+<section id="nehru-report">
+<h2>📋 6. नेहरू रिपोर्ट (1928)</h2>
+<ul>
+    <li><strong>अध्यक्ष:</strong> मोतीलाल नेहरू।</li>
+    <li>भारत के लिए डोमिनियन स्टेटस और संसदीय प्रणाली की सिफारिश की।</li>
+    <li>मुहम्मद अली जिन्ना ने इसके जवाब में '14 सूत्री मांगें' रखीं।</li>
+</ul>
+</section>
+
+<section id="lahore-session">
+<h2>🚩 7. लाहौर अधिवेशन (1929)</h2>
+<ul>
+    <li><strong>अध्यक्ष:</strong> जवाहरलाल नेहरू।</li>
+    <li><strong>घोषणा:</strong> 'पूर्ण स्वराज' (Complete Independence) को कांग्रेस का लक्ष्य घोषित किया गया।</li>
+    <li>26 जनवरी 1930 को पहला 'स्वतंत्रता दिवस' मनाया गया।</li>
+    <li>31 दिसंबर 1930 को रवि नदी के किनारे झंडा फहराया गया।</li>
+</ul>
+</section>
+
+<section id="civil-disobedience">
+<h2>✊ 8. सविनय अवज्ञा आंदोलन (1930-1934)</h2>
+
+<h3 id="dandi-march">8.1 दांडी मार्च</h3>
+<div class="box box-key">
+    <strong>शुरुआत:</strong> 12 मार्च 1930; समापन: 6 अप्रैल 1930।<br>
+    <strong>मार्ग:</strong> साबरमती से दांडी तक (240 मील)।<br>
+    <strong>उद्देश्य:</strong> नमक कानून तोड़ना।<br>
+    <strong>साथी:</strong> 78 प्रतिनिधि।<br>
+    <strong>4 मई:</strong> गांधीजी जेल में।
+</div>
+
+<h3 id="leaders-civil-disobedience">8.2 अन्य नेता</h3>
+<ul>
+    <li><strong>तमिलनाडु:</strong> सी. राजगोपालाचारी</li>
+    <li><strong>मालाबार:</strong> के. केलप्पन</li>
+    <li><strong>ओडिशा:</strong> गोपालबंधु चौधरी</li>
+    <li><strong>बिहार:</strong> अंबिका कांत सिन्हा</li>
+    <li><strong>पेशावर:</strong> खान अब्दुल गफ्फार खान</li>
+    <li><strong>धरसाना:</strong> सरोजिनी नायडू</li>
+    <li><strong>मणिपुर और नागालैंड:</strong> रानी गाइदिनल्यू</li>
+</ul>
+
+<h3 id="gandhi-irwin">8.3 गांधी-इरविन समझौता</h3>
+<ul>
+    <li><strong>दिनांक:</strong> 14 फरवरी 1931।</li>
+    <li><strong>इरविन की मांग:</strong> सविनय अवज्ञा आंदोलन को निलंबित करना और दूसरे गोलमेज सम्मेलन में भाग लेना।</li>
+    <li><strong>गांधी की मांग:</strong> हिंसा के दोषी नहीं ऐसे बंदियों को रिहा करना, जब्त किए गए संपत्ति को लौटाया जाए, नमक निर्माण का अधिकार उपभोग के लिए मिले।</li>
+</ul>
+
+<h3 id="karachi-session">8.4 कराची अधिवेशन (1931)</h3>
+<ul>
+    <li><strong>अध्यक्ष:</strong> सरदार पटेल।</li>
+    <li>कांग्रेस ने दूसरे गोलमेज सम्मेलन में भाग लिया।</li>
+    <li>सविनय अवज्ञा आंदोलन निलंबित किया गया।</li>
+    <li>पूर्ण स्वराज का अर्थ किया गया।</li>
+    <li>2 प्रस्ताव: मौलिक अधिकार और राष्ट्रीय आर्थिक नीति।</li>
+</ul>
+</section>
+
+<section id="round-table">
+<h2>🌍 9. गोलमेज सम्मेलन</h2>
+<table>
+    <tr><th>सम्मेलन</th><th>वर्ष</th><th>कांग्रेस की भागीदारी</th><th>प्रमुख परिणाम</th></tr>
+    <tr><td>प्रथम</td><td>1930</td><td>बहिष्कार किया</td><td>कोई ठोस परिणाम नहीं</td></tr>
+    <tr><td>द्वितीय</td><td>1931</td><td>गांधीजी ने भाग लिया</td><td>गांधी-इरविन समझौता के बाद</td></tr>
+    <tr><td>तृतीय</td><td>1932</td><td>बहिष्कार किया</td><td>बी.आर. अंबेडकर ने सभी में भाग लिया</td></tr>
+</table>
+</section>
+
+<section id="communal-award">
+<h2> 10. साम्प्रदायिक पुरस्कार और पूना पैक्ट</h2>
+
+<h3 id="communal-award">10.1 साम्प्रदायिक पुरस्कार (1932)</h3>
+<ul>
+    <li><strong>प्रधानमंत्री:</strong> रामसे मैकडोनाल्ड।</li>
+    <li>अछूत वर्ग के लिए पृथक निर्वाचन की घोषणा।</li>
+    <li>पहली बार अंबेडकर ने गोलमेज सम्मेलन में उठाया।</li>
+</ul>
+
+<h3 id="poona-pact">10.2 पूना समझौता (1932)</h3>
+<ul>
+    <li><strong>पक्ष:</strong> अंबेडकर और गांधी / मदन मोहन मालवीय के बीच।</li>
+    <li>साम्प्रदायिक पुरस्कार को वापस लेने तक आमरण अनशन।</li>
+    <li>गांधी यरवदा जेल, पूना में।</li>
+    <li>अखिल भारतीय अछूतता विरोधी लीग की स्थापना।</li>
+    <li>हरिजन (साप्ताहिक) और हरिजन सेवक संघ (1932)।</li>
+</ul>
+</section>
+
+<section id="govt-act-1935">
+<h2>⚖️ 11. भारत सरकार अधिनियम 1935</h2>
+<ul>
+    <li>प्रांतों में द्वैध शासन समाप्त।</li>
+    <li>केंद्र में द्वैध शासन प्रारंभ।</li>
+    <li>द्विसदनीय विधानमंडल - 11 में से 6 प्रांतों में।</li>
+    <li>अखिल भारतीय संघ (लागू नहीं हो सका)।</li>
+</ul>
+</section>
+
+<section id="congress-sessions">
+<h2>🏛️ 12. कांग्रेस अधिवेशन</h2>
+<table>
+    <tr><th>वर्ष</th><th>स्थान</th><th>अध्यक्ष</th><th>प्रमुख निर्णय/घटना</th></tr>
+    <tr><td>1916</td><td>लखनऊ</td><td>अंबिका चरण मजूमदार</td><td>कांग्रेस का पुनः एकीकरण एवं लखनऊ समझौता</td></tr>
+    <tr><td>1917</td><td>कलकत्ता</td><td>एनी बेसेंट</td><td>कांग्रेस की पहली महिला अध्यक्ष</td></tr>
+    <tr><td>1924</td><td>बेलगांव</td><td>महात्मा गांधी</td><td>-</td></tr>
+    <tr><td>1925</td><td>कानपुर</td><td>सरोजिनी नायडू</td><td>कांग्रेस की पहली भारतीय महिला अध्यक्ष</td></tr>
+    <tr><td>1929</td><td>लाहौर</td><td>जवाहरलाल नेहरू</td><td>26 जनवरी 1930 - प्रथम स्वतंत्रता दिवस</td></tr>
+    <tr><td>1931</td><td>कराची</td><td>सरदार पटेल</td><td>मौलिक अधिकार और राष्ट्रीय आर्थिक नीति</td></tr>
+    <tr><td>1937</td><td>फैजपुर</td><td>जवाहरलाल नेहरू</td><td>पहली बार गाँव में अधिवेशन आयोजित हुआ</td></tr>
+    <tr><td>1938</td><td>हरिपुरा</td><td>सुभाष चंद्र बोस</td><td>राष्ट्रीय योजना समिति (1938)</td></tr>
+    <tr><td>1939</td><td>त्रिपुरी</td><td>सुभाष चंद्र बोस</td><td>पट्टाभि सीतारमैया बनाम सुभाष चंद्र बोस (बोस विजेता)</td></tr>
+    <tr><td>1946</td><td>मेरठ</td><td>जे.बी. कृपलानी</td><td>अंतिम अधिवेशन</td></tr>
+</table>
+</section>
+
+<section id="viceroys">
+<h2>👑 13. प्रमुख वायसराय</h2>
+<table>
+    <tr><th>नाम</th><th>काल</th><th>प्रमुख घटनाएं</th></tr>
+    <tr><td>चेम्सफोर्ड</td><td>1916-1921</td><td>भारत सरकार अधिनियम, 1919; रौलट एक्ट; जलियांवाला बाग हत्याकांड</td></tr>
+    <tr><td>रीडिंग</td><td>1921-1926</td><td>चौरी-चौरा कांड; स्वराज पार्टी का गठन</td></tr>
+    <tr><td>इरविन</td><td>1926-1931</td><td>साइमन कमीशन; गांधी-इरविन समझौता; प्रथम गोलमेज सम्मेलन</td></tr>
+    <tr><td>विलिंगडन</td><td>1931-1936</td><td>द्वितीय और तृतीय गोलमेज सम्मेलन; पूना पैक्ट; GoI Act 1935</td></tr>
+    <tr><td>लिनलिथगो</td><td>1936-1944</td><td>1937 चुनाव; द्वितीय विश्व युद्ध; अगस्त प्रस्ताव; भारत छोड़ो आंदोलन</td></tr>
+    <tr><td>वेवेल</td><td>1944-1947</td><td>शिमला सम्मेलन (1945); कैबिनेट मिशन योजना</td></tr>
+    <tr><td>माउंटबेटन</td><td>1947-1948</td><td>3 जून योजना; स्वतंत्रता; पहले गवर्नर जनरल</td></tr>
+</table>
+</section>
+
+<section id="august-offer">
+<h2> 14. अगस्त प्रस्ताव और व्यक्तिगत सत्याग्रह (1940)</h2>
+<ul>
+    <li>डोमिनियन स्टेटस अस्वीकार किया गया।</li>
+    <li><strong>व्यक्तिगत सत्याग्रह:</strong><br>
+        • प्रथम: विनोबा भावे<br>
+        • द्वितीय: जवाहरलाल नेहरू<br>
+        • तृतीय: ब्रज दत्त
+    </li>
+</ul>
+</section>
+
+<section id="cripps-mission">
+<h2>️ 15. क्रिप्स मिशन (1942)</h2>
+<ul>
+    <li><strong>प्रस्तावक:</strong> स्टैफड क्रिप्स।</li>
+    <li>डोमिनियन स्टेटस अस्वीकार किया गया।</li>
+    <li><strong>प्रस्ताव:</strong><br>
+        • संविधान सभा का गठन<br>
+        • डोमिनियन स्टेटस के साथ भारतीय संघ<br>
+        • नए संविधान को स्वीकार करना<br>
+        • ब्रिटिश अधिकार जारी रहना
+    </li>
+</ul>
+</section>
+
+<section id="quit-india">
+<h2>🔥 16. भारत छोड़ो आंदोलन (1942)</h2>
+<ul>
+    <li><strong>दिनांक:</strong> 9 अगस्त 1942; नेता-विहीन आंदोलन।</li>
+    <li><strong>अध्यक्ष:</strong> आसफ अली (कांग्रेस कार्य समिति की अ)।</li>
+    <li><strong>भूमिगत रेडियो:</strong> उषा मेहता (बंबई में)।</li>
+    <li><strong>समानांतर सरकार:</strong><br>
+        • बलिया - चित्तू पांडे<br>
+        • तमलुक - जातीय सरकार<br>
+        • सातारा - प्रति सरकार
+    </li>
+</ul>
+</section>
+
+<section id="ina">
+<h2>️ 17. आजाद हिंद फौज</h2>
+<ul>
+    <li><strong>स्थापना:</strong> मोहन सिंह द्वारा; सिंगापुर में (1942)।</li>
+    <li><strong>बाद में नेता:</strong> रास बिहारी बोस।</li>
+    <li><strong>अगला नेता:</strong> सुभाष चंद्र बोस (1943 में)।</li>
+    <li><strong>महिला रेजीमेंट:</strong> रानी लक्ष्मीबाई के नाम पर।</li>
+    <li><strong>15 अगस्त:</strong> जापान ने आत्मसमर्पण किया।</li>
+    <li><strong>पहला मुकदमा:</strong> प्रेम कुमार सहगल, शाहनवाज खान और गुरबख्श सिंह ढिल्लों पर।</li>
+</ul>
+</section>
+
+<section id="cabinet-mission">
+<h2>️ 18. कैबिनेट मिशन योजना (1946)</h2>
+<ul>
+    <li><strong>प्रधानमंत्री:</strong> क्लेमेंट एटली (ब्रिटेन के)।</li>
+    <li><strong>3 सदस्यीय:</strong> स्टैफड क्रिप्स, ए.वी. अलेक्जेंडर, पैथिक लॉरेंस।</li>
+    <li><strong>डायरेक्ट एक्शन डे:</strong> जिन्ना द्वारा (16 अगस्त 1946)।</li>
+</ul>
+</section>
+
+<section id="independence-act">
+<h2>🇳 19. भारतीय स्वतंत्रता अधिनियम, 1947</h2>
+<ul>
+    <li><strong>माउंटबेटन योजना/विभाजन योजना</strong> के नाम से जाना गया।</li>
+    <li>माउंटबेटन द्वारा।</li>
+    <li>पश्चिम पाकिस्तान का पूर्व पाकिस्तान से अलग होना (1971) - इंदिरा गांधी (तत्कालीन प्रधानमंत्री) के समय।</li>
+</ul>
+</section>
+
+<section id="revolutionary-movements">
+<h2>💥 20. क्रांतिकारी आंदोलन</h2>
+
+<h3 id="early-revolutionaries">20.1 प्रारंभिक क्रांतिकारी</h3>
+<ul>
+    <li><strong>1879:</strong> रामोसी किसान सेना की स्थापना - महाराष्ट्र में (वसुदेव बलवंत फड़के द्वारा)।</li>
+    <li><strong>1890:</strong> शिवाजी एवं गणपति उत्सवों का आयोजन।</li>
+    <li><strong>1897:</strong> चापेकर बंधु (दामोदर व बलकृष्ण) ने प्लेग कमिश्नर डब्ल्यू.सी. रैंड की हत्या की।</li>
+    <li><strong>1899:</strong> मित्र मेला की स्थापना - पुणे में (सावरकर बंधुओं द्वारा)।</li>
+    <li><strong>1902:</strong> अनुशीलन समिति की स्थापना - बंगाल में (सतीश चंद्र बसु, जितेंद्रनाथ बनर्जी, और बरिंद्र कुमार घोष द्वारा)।</li>
+    <li><strong>1904:</strong> मित्र मेला का विलय अभिनव भारत सोसाइटी में - विनायक दामोदर सावरकर द्वारा।</li>
+    <li><strong>1905:</strong> इंडियन होम रूल सोसायटी और इंडियन हाउस की स्थापना (श्यामजी कृष्ण वर्मा द्वारा)।</li>
+    <li><strong>1907:</strong> मैडम भीकाजी कामा ने जर्मनी के स्टटगार्ट में भारतीय झंडा फहराया।</li>
+    <li><strong>1908:</strong> अलीपुर बम/मणिंद्रनाथ बम षड्यंत्र (फुल चंकी, खुदीराम बोस, क्ഷেত্রपाल दत्त, अरविंदो घोष द्वारा)।</li>
+    <li><strong>1909:</strong> मदन लाल ींगरा ने कर्जन वाइली की हत्या की; ए.एम.टी. जैसन की हत्या - अनंत लक्ष्मण कांहेरे द्वारा।</li>
+    <li><strong>1913:</strong> ग़दर पार्टी की स्थापना - सैन फ्रांसिस्को (USA) (लाला हरदयाल, सोहन सिंह भकना, बरकतुल्लाह, परमानंद और करतार सिंह द्वारा)।</li>
+    <li><strong>1914:</strong> कोमागाटा मारु घटना (जापानी जहाज)।</li>
+    <li><strong>1915:</strong> बिल्वन समिति की स्थापना - वीर नाथ चट्टोपाध्याय द्वारा; डिफेंस ऑफ इंडिया एक्ट (बाद में रौलट एक्ट द्वारा प्रतिस्थापित)।</li>
+</ul>
+
+<h3 id="hsra">20.2 हिंदुस्तान सोशलिस्ट रिपब्लिकन एसोसिएशन</h3>
+<ul>
+    <li><strong>स्थापना:</strong> 1928 में फिरोजशाह कोटला में (शेखर आज़ाद, भगत सिंह, सुखदेव द्वारा)।</li>
+    <li><strong>1928:</strong> सॉन्डर्स की हत्या - 23 मार्च 1931 को फांसी दी गई।</li>
+    <li><strong>1929:</strong> विधान सभा में बम फेंका (भगत सिंह और बटुकेश्वर दत्त द्वारा)।</li>
+    <li><strong>1930:</strong> बंगाल में चितगांव शस्त्रागार कांड - सूर्य सेन द्वारा।</li>
+</ul>
+</section>
+
+<section id="socialism">
+<h2> 21. समाजवाद और दलों की स्थापना</h2>
+<ul>
+    <li><strong>कारण:</strong> रूसी क्रांति (1917)।</li>
+    <li><strong>कम्युनिस्ट पार्टी ऑफ इंडिया (1920):</strong> एम.एन. रॉय द्वारा; ताशकंद, उज्बेकिस्तान में।</li>
+    <li><strong>कानपुर बोल्शेविक षड्यंत्र केस (1924):</strong> एस.ए. डांगे, मुज़फ्फर अहमद, शौकत, उस्मानी।</li>
+    <li><strong>अखिल भारतीय ट्रेड यूनियन कांग्रेस (1920):</strong> एन.एम. जोशी, लाला लाजपत राय, दीवान चमनलाल, जोसेफ बप्टिस्टो।</li>
+    <li><strong>ट्रेड यूनियन के जनक:</strong> एन.एम. लोखंडे; बॉम्बे मिल एसोसिएशन की स्थापना।</li>
+</ul>
+</section>
+
+<section id="caste-movements">
+<h2>✊ 22. जाति आंदोलन</h2>
+<ul>
+    <li><strong>आत्मसम्मान आंदोलन (1924):</strong> ई.वी. रामास्वामी नायकर द्वारा।</li>
+    <li><strong>महाड़ सत्याग्रह (1927):</strong> डॉ. बी.आर. अंबेडकर द्वारा।</li>
+</ul>
+</section>
+
+<section id="books-authors">
+<h2>📖 23. उपन्यास और पुस्तकें</h2>
+<div class="box box-book">
+    <strong>बंदी जीवन</strong> - सचिन सान्याल द्वारा<br>
+    <strong>पथेर दाबी</strong> - शरतचंद्र चट्टोपाध्याय द्वारा<br>
+    <strong>फिलॉसफी ऑफ बम</strong> - बी.सी. वोहरा द्वारा
+</div>
+</section>
+
+<section id="mnemonics">
+<h2>🧠 Mnemonics (याद करने की Tricks)</h2>
+
+<div class="box box-tip">
+<strong> 1. गांधी के प्रारंभिक सत्याग्रह:</strong><br>
+<strong>"चं-अह-खे"</strong> → चंपारण, अहमदाबाद, खेड़ा<br>
+<em>Story: "चंदा अहमदाबाद में खेती करता है"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 2. कांग्रेस के विभाजन और एकता:</strong><br>
+<strong>"सूरत-लखनऊ"</strong><br>
+<em>Story: "सूरत में टूटे, लखनऊ में जुड़े"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 3. वायसरायों का क्रम (स्वतंत्रता संग्राम):</strong><br>
+<strong>"चे-री-इ-वि-लिन-वे-माउ"</strong><br>
+<em>Story: "चेरी इविन विलिन वे माउस"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 4. गोलमेज सम्मेलन और कांग्रेस:</strong><br>
+<strong>"रौ-गांधी-अंबेडकर"</strong><br>
+<em>Story: "पहले में कोई नहीं (बहिष्कार), दूसरे में गांधी गए, तीसरे में अंबेडकर गए"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 5. स्वतंत्रता की ओर अंतिम योजनाएं:</strong><br>
+<strong>"वेवेल-कैबिनेट-माउंटबेटन"</strong><br>
+<em>Story: "वेवेल ने कैबिनेट भेजी, माउंटबेटन ने आजादी दी"</em>
+</div>
+</section>
+
+<section id="mindmap">
+<h2>🧩 Mind Map: आधुनिक भारत - II</h2>
+<div class="mindmap">
+    <span class="center">🇮🇳 स्वतंत्रता संग्राम</span>
+    <ul>
+        <li>🌱 <strong>गांधी युग की शुरुआत</strong>
+            <ul>
+                <li>चंपारण, अहमदाबाद, खेड़ा</li>
+                <li>होम रूल लीग (तिलक, बेसेंट)</li>
+            </ul>
+        </li>
+        <li>🩸 <strong>1919 की घटनाएं</strong>
+            <ul>
+                <li>रौलट एक्ट</li>
+                <li>जलियांवाला बाग हत्याकांड</li>
+            </ul>
+        </li>
+        <li>✊ <strong>असहयोग आंदोलन (1920-22)</strong>
+            <ul>
+                <li>खिलाफत आंदोलन</li>
+                <li>चौरी-चौरा कांड (वापसी)</li>
+            </ul>
+        </li>
+        <li>🏛️ <strong>सविनय अवज्ञा (1930-34)</strong>
+            <ul>
+                <li>लाहौर अधिवेशन (पूर्ण स्वराज)</li>
+                <li>दांडी मार्च</li>
+                <li>पूना पैक्ट (1932)</li>
+            </ul>
+        </li>
+        <li>🔥 <strong>भारत छोड़ो और INA (1942)</strong>
+            <ul>
+                <li>"करो या मरो"</li>
+                <li>सुभाष चंद्र बोस, आजाद हिंद फौज</li>
+            </ul>
+        </li>
+        <li>🕊️ <strong>अंतिम पड़ाव (1946-47)</strong>
+            <ul>
+                <li>कैबिनेट मिशन</li>
+                <li>माउंटबेटन योजना</li>
+                <li>स्वतंत्रता (15 अगस्त 1947)</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</section>
+
+<section id="mistakes">
+<h2> Common Mistakes (अक्सर होने वाली गलतियाँ)</h2>
+<div class="box box-warn">
+    ❌ <strong>गलत:</strong> जलियांवाला बाग हत्याकांड 1920 में हुआ।<br>
+    ✅ <strong>सही:</strong> जलियांवाला बाग हत्याकांड <strong>13 अप्रैल 1919</strong> को हुआ।<br><br>
+     <strong>गलत:</strong> साइमन कमीशन में कुछ भारतीय सदस्य थे।<br>
+    ✅ <strong>सही:</strong> साइमन कमीशन में <strong>कोई भी भारतीय सदस्य नहीं</strong> था।<br><br>
+    ❌ <strong>गलत:</strong> लाहौर अधिवेशन (1929) के अध्यक्ष मोतीलाल नेहरू थे।<br>
+    ✅ <strong>सही:</strong> लाहौर अधिवेशन (1929) के अध्यक्ष <strong>जवाहरलाल नेहरू</strong> थे।<br><br>
+    ❌ <strong>गलत:</strong> भारत छोड़ो आंदोलन 1947 में शुरू हुआ।<br>
+    ✅ <strong>सही:</strong> भारत छोड़ो आंदोलन <strong>8 अगस्त 1942</strong> को शुरू हुआ।<br><br>
+    ❌ <strong>गलत:</strong> पूना पैक्ट गांधी और जिन्ना के बीच हुआ था।<br>
+    ✅ <strong>सही:</strong> पूना पैक्ट <strong>गांधी और बी.आर. अंबेडकर</strong> के बीच हुआ था।
+</div>
+</section>
+
+<section id="summary">
+<div class="summary-box">
+    <h2>📝 Chapter Summary (Quick Revision)</h2>
+    <ul>
+        <li>🇳 गांधी 9 जनवरी 1915 को दक्षिण अफ्रीका से भारत लौटे।</li>
+        <li>🤝 लखनऊ समझौता (1916) ने कांग्रेस और मुस्लिम लीग को एक साथ लाया।</li>
+        <li>🌾 चंपारण सत्याग्रह (1917) गांधी का पहला सत्याग्रह था।</li>
+        <li>⚖️ रौलट एक्ट (1919) को 'काला कानून' कहा गया।</li>
+        <li>🩸 जलियांवाला बाग हत्याकांड (13 अप्रैल 1919) ने भारतीयों को ब्रिटिश शासन के खिलाफ कर दिया।</li>
+        <li>✊ असहयोग आंदोलन (1920) चौरी-चौरा कांड (1922) के बाद वापस लिया गया।</li>
+        <li>🏛️ स्वराज पार्टी (1923) ने विधान परिषदों में प्रवेश किया।</li>
+        <li>👎 साइमन कमीशन (1927) का विरोध "साइमन गो बैक" नारों के साथ हुआ।</li>
+        <li>🚩 लाहौर अधिवेशन (1929) में 'पूर्ण स्वराज' की घोषणा की गई।</li>
+        <li>🧂 दांडी मार्च (1930) ने सविनय अवज्ञा आंदोलन की शुरुआत की।</li>
+        <li> पूना पैक्ट (1932) ने अछूतों के लिए आरक्षित सीटों का रास्ता बनाया।</li>
+        <li>️ भारत सरकार अधिनियम 1935 ने प्रांतीय स्वायत्तता दी।</li>
+        <li> भारत छोड़ो आंदोलन (1942) में "करो या मरो" का नारा लगा।</li>
+        <li>⚔️ सुभाष चंद्र बोस ने आजाद हिंद फौज का नेतृत्व किया।</li>
+        <li>🕊️ कैबिनेट मिशन (1946) ने संविधान सभा का मार्ग प्रशस्त किया।</li>
+        <li>✂️ माउंटबेटन योजना (1947) के तहत भारत का विभाजन हुआ।</li>
+        <li>🇮 15 अगस्त 1947 को भारत स्वतंत्र हुआ।</li>
+    </ul>
+</div>
+</section>
+
+<section id="refcard">
+<div class="ref-card">
+    <h2> Quick Reference Card</h2>
+    <table>
+        <tr><th>विषय</th><th>तथ्य</th></tr>
+        <tr><td>गांधी की भारत वापसी</td><td>9 जनवरी 1915</td></tr>
+        <tr><td>लखनऊ समझौता</td><td>1916</td></tr>
+        <tr><td>जलियांवाला बाग</td><td>13 अप्रैल 1919</td></tr>
+        <tr><td>असहयोग आंदोलन</td><td>1920-1922</td></tr>
+        <tr><td>चौरी-चौरा कांड</td><td>5 फरवरी 1922</td></tr>
+        <tr><td>स्वराज पार्टी</td><td>1923 (दास, नेहरू)</td></tr>
+        <tr><td>साइमन कमीशन</td><td>1927 (कोई भारतीय नहीं)</td></tr>
+        <tr><td>लाहौर अधिवेशन</td><td>1929 (पूर्ण स्वराज)</td></tr>
+        <tr><td>दांडी मार्च</td><td>1930</td></tr>
+        <tr><td>पूना पैक्ट</td><td>1932 (गांधी-अंबेडकर)</td></tr>
+        <tr><td>भारत छोड़ो आंदोलन</td><td>8 अगस्त 1942</td></tr>
+        <tr><td>आजाद हिंद फौज</td><td>1942 (सिंगापुर)</td></tr>
+        <tr><td>कैबिनेट मिशन</td><td>1946</td></tr>
+        <tr><td>स्वतंत्रता अधिनियम</td><td>18 जुलाई 1947</td></tr>
+        <tr><td>स्वतंत्रता दिवस</td><td>15 अगस्त 1947</td></tr>
+    </table>
+</div>
+</section>
+
+<section id="glossary">
+<div class="glossary">
+    <h2>📚 Glossary (शब्दावली)</h2>
+    <div class="gloss-item"><strong>डोमिनियन स्टेटस</strong> – ब्रिटिश साम्राज्य के भीतर स्वशासन</div>
+    <div class="gloss-item"><strong>सत्याग्रह</strong> – सत्य और अहिंसा पर आधारित प्रतिरोध</div>
+    <div class="gloss-item"><strong>सविनय अवज्ञा</strong> – कानून का अहिंसक उल्लंघन</div>
+    <div class="gloss-item"><strong>पूर्ण स्वराज</strong> – पूर्ण स्वतंत्रता</div>
+    <div class="gloss-item"><strong>साम्प्रदायिक पुरस्कार</strong> – अलग निर्वाचन मंडल की योजना</div>
+    <div class="gloss-item"><strong>द्वैध शासन</strong> – प्रांतों में दोहरी व्यवस्था</div>
+    <div class="gloss-item"><strong>संविधान सभा</strong> – संविधान बनाने वाली सभा</div>
+    <div class="gloss-item"><strong>विभाजन</strong> – भारत और पाकिस्तान का बंटवारा</div>
+    <div class="gloss-item"><strong>गवर्नर जनरल</strong> – स्वतंत्र भारत का प्रमुख (माउंटबेटन, राजगोपालाचारी)</div>
+    <div class="gloss-item"><strong>वायसराय</strong> – ब्रिटिश सम्राट का प्रतिनिधि</div>
+</div>
+</section>
+
+<div class="page-footer">
+    <p>📖 <strong>End of Chapter 7</strong> | आधुनिक भारत - II (स्वतंत्रता संग्राम)</p>
+</div>
+
+</main>
+
+<script>
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            document.querySelector('.sidebar').classList.remove('open');
+        }
+    });
+});
+
+window.onscroll = function() {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+</script>
+
+</body>
+</html>

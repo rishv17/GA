@@ -1,0 +1,1306 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 1 - प्राचीन भारत (Part I) | History Notes</title>
+<style>
+:root {
+    --primary: #1a252f;
+    --ancient: #d35400;
+    --ancient-light: #e67e22;
+    --medieval: #5DADE2;
+    --modern: #82E0AA;
+    --culture: #8e44ad;
+    --accent: #f39c12;
+    --bg: #f8f9fa;
+    --text: #2d3436;
+    --box-key: #e8f4f8;
+    --box-tip: #eafaf1;
+    --box-warn: #fdedec;
+    --box-map: #fef5e7;
+    --box-quote: #f4ecf7;
+    --box-flow: #eaf2f8;
+    --box-mind: #fdf2e9;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Segoe UI', 'Noto Sans Devanagari', 'Noto Sans', Tahoma, sans-serif;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== MENU TOGGLE BUTTON (Mobile) ===== */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px; left: 15px;
+    z-index: 200;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 300px;
+    background: var(--primary);
+    color: white;
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px 16px;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
+
+.sidebar .chap-tag {
+    text-align: center; color: var(--accent);
+    font-size: 0.75rem; letter-spacing: 3px; margin-bottom: 10px;
+    text-transform: uppercase; font-weight: bold;
+}
+
+/* Home Button */
+.sidebar .home-btn {
+    display: block; text-align: center; background: var(--accent);
+    color: white !important; font-weight: bold; padding: 10px;
+    border-radius: 8px; margin-bottom: 20px; text-decoration: none;
+    transition: 0.3s;
+}
+.sidebar .home-btn:hover { background: #d35400; transform: scale(1.02); }
+
+.sidebar h2 {
+    text-align: center; border-bottom: 2px solid #34495e;
+    padding-bottom: 12px; margin-bottom: 15px; font-size: 1.1rem; color: #bdc3c7;
+}
+
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar li { margin: 3px 0; }
+
+/* Subject Header (Clickable) */
+.sidebar .subject-header a {
+    color: var(--accent) !important; font-weight: 700; font-size: 0.95rem;
+    padding: 8px 12px; border-left: 3px solid var(--accent);
+    background: rgba(243, 156, 18, 0.1); border-radius: 0 6px 6px 0;
+    display: block; text-decoration: none; transition: 0.3s;
+    margin-top: 12px;
+}
+.sidebar .subject-header a:hover { background: rgba(243, 156, 18, 0.2); }
+
+/* Chapter Links (Indented) */
+.sidebar .chapter-link {
+    color: #dfe6e9 !important; text-decoration: none; display: block;
+    padding: 6px 12px 6px 28px; /* Indented */
+    border-radius: 6px; transition: 0.25s; font-size: 0.85rem;
+}
+.sidebar .chapter-link:hover { 
+    background: #34495e; color: white !important; transform: translateX(4px); 
+}
+
+/* Active Chapter Highlight */
+.sidebar .chapter-link.active {
+    background: var(--ancient); color: white !important; font-weight: 600;
+}
+
+/* ===== MAIN ===== */
+main { margin-left: 320px; padding: 30px 40px; max-width: 1100px; flex: 1; }
+
+/* Chapter Header */
+.ch-header {
+    background: linear-gradient(135deg, var(--ancient), var(--ancient-light));
+    color: white; padding: 30px 35px; border-radius: 12px;
+    margin-bottom: 30px; box-shadow: 0 8px 20px rgba(211,84,0,0.15);
+}
+.ch-header h1 { color: white; border: none; font-size: 2rem; margin-bottom: 8px; }
+.ch-header p { opacity: 0.95; font-size: 1.1rem; }
+.ch-header .period {
+    display: inline-block; background: rgba(255,255,255,0.2);
+    padding: 5px 16px; border-radius: 20px; margin-top: 12px; font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+
+/* Headings */
+h1 { color: var(--primary); border-bottom: 3px solid var(--primary); padding-bottom: 10px; margin-bottom: 20px; }
+h2 {
+    margin-top: 50px; padding: 14px 22px; border-radius: 8px;
+    color: white; font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); background: var(--ancient);
+}
+h3 {
+    color: var(--primary); border-left: 5px solid var(--ancient);
+    padding: 10px 16px; margin-top: 35px; font-size: 1.3rem;
+    background: #ecf0f1; border-radius: 0 6px 6px 0;
+}
+h4 {
+    color: #2c3e50; margin-top: 22px;
+    border-bottom: 1px dashed #bdc3c7; padding-bottom: 6px; font-size: 1.1rem;
+}
+
+/* Intro Box */
+.intro-box {
+    background: linear-gradient(135deg, #fff9e6, #fff3cd);
+    border-left: 6px solid var(--accent);
+    padding: 20px 25px; border-radius: 10px; margin: 25px 0;
+}
+.intro-box h3 { color: var(--accent); border: none; background: none; padding: 0; margin-top: 0; }
+
+/* Callout Boxes */
+.box {
+    padding: 16px 20px; border-radius: 10px; margin: 20px 0;
+    border-left: 6px solid; box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.box-key { background: var(--box-key); border-color: #2980b9; }
+.box-key::before { content: "💡 KEY CONCEPT"; font-weight: 700; color: #2980b9; display: block; margin-bottom: 8px; }
+.box-tip { background: var(--box-tip); border-color: #27ae60; }
+.box-tip::before { content: "🎯 EXAM TIP"; font-weight: 700; color: #27ae60; display: block; margin-bottom: 8px; }
+.box-warn { background: var(--box-warn); border-color: #c0392b; }
+.box-warn::before { content: "⚠️ COMMON MISTAKE"; font-weight: 700; color: #c0392b; display: block; margin-bottom: 8px; }
+.box-map { background: var(--box-map); border-color: var(--accent); }
+.box-map::before { content: "🗺️ GEOGRAPHY"; font-weight: 700; color: #e67e22; display: block; margin-bottom: 8px; }
+.box-compare { background: #f4ecf7; border-color: var(--culture); }
+.box-compare::before { content: "🔄 COMPARISON"; font-weight: 700; color: var(--culture); display: block; margin-bottom: 8px; }
+.box-quote {
+    background: var(--box-quote); border-color: var(--culture);
+    border-left: 6px solid var(--culture); font-style: italic;
+}
+.box-quote::before { content: "📜 QUOTE"; font-weight: 700; color: var(--culture); display: block; margin-bottom: 8px; font-style: normal; }
+.box-art { background: #fdf2e9; border-color: #e67e22; }
+.box-art::before { content: "🎨 ART & ARCHITECTURE"; font-weight: 700; color: #e67e22; display: block; margin-bottom: 8px; }
+.box-econ { background: #e8f8f5; border-color: #1abc9c; }
+.box-econ::before { content: "💰 ECONOMY & SOCIETY"; font-weight: 700; color: #1abc9c; display: block; margin-bottom: 8px; }
+.box-book { background: #f9ebea; border-color: #e74c3c; }
+.box-book::before { content: "📖 BOOKS & AUTHORS"; font-weight: 700; color: #e74c3c; display: block; margin-bottom: 8px; }
+.box-term { background: #f2f3f4; border-color: #7f8c8d; }
+.box-term::before { content: "📝 TERMINOLOGY"; font-weight: 700; color: #7f8c8d; display: block; margin-bottom: 8px; }
+
+/* Infographic Boxes */
+.info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px; margin: 20px 0;
+}
+.info-card {
+    background: white; border-radius: 12px; padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;
+    border-top: 4px solid var(--ancient);
+    transition: transform 0.2s;
+}
+.info-card:hover { transform: translateY(-3px); }
+.info-card .emoji { font-size: 2rem; display: block; margin-bottom: 8px; }
+.info-card .label { font-size: 0.8rem; color: #7f8c8d; text-transform: uppercase; letter-spacing: 1px; }
+.info-card .value { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+
+/* Tables */
+table {
+    width: 100%; border-collapse: collapse; margin: 18px 0;
+    background: white; box-shadow: 0 3px 8px rgba(0,0,0,0.04); font-size: 0.9rem;
+    border-radius: 8px; overflow: hidden;
+}
+th, td { border: 1px solid #eee; padding: 12px 14px; text-align: left; vertical-align: top; }
+th { background: var(--primary); color: white; font-size: 0.85rem; font-weight: 600; }
+tr:nth-child(even) { background: #f9f9f9; }
+tr:hover { background: #f0f4f8; }
+
+/* Lists */
+ul, ol { margin: 8px 0; padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+/* Timeline */
+.timeline {
+    background: white; border-left: 4px solid var(--ancient);
+    padding: 20px; margin: 25px 0; border-radius: 0 10px 10px 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.tl-item {
+    position: relative; padding: 10px 0 10px 32px;
+    border-bottom: 1px dashed #eee;
+}
+.tl-item:last-child { border-bottom: none; }
+.tl-item::before {
+    content: "●"; color: var(--ancient);
+    position: absolute; left: -11px; font-size: 1.2rem;
+    background: white;
+}
+.tl-year { font-weight: 700; color: var(--ancient); display: inline-block; min-width: 150px; }
+
+/* Flowchart */
+.flow {
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 10px; margin: 20px 0; padding: 20px;
+    background: var(--box-flow); border-radius: 12px;
+}
+.flow-box {
+    background: white; border: 2px solid var(--ancient);
+    border-radius: 8px; padding: 10px 16px; font-weight: 600;
+    font-size: 0.9rem; text-align: center; min-width: 110px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.flow-arrow { font-size: 1.4rem; color: var(--ancient); }
+
+/* Mind Map */
+.mindmap {
+    background: var(--box-mind); border-radius: 12px;
+    padding: 25px; margin: 25px 0; font-size: 0.95rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.mindmap .center {
+    background: var(--ancient); color: white; padding: 10px 20px;
+    border-radius: 25px; display: inline-block; font-weight: 700; margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(211,84,0,0.2);
+}
+.mindmap ul { list-style: none; padding-left: 20px; }
+.mindmap > ul > li { margin: 8px 0; }
+.mindmap > ul > li::before { content: "├─ "; color: var(--ancient); font-weight: 700; }
+.mindmap ul ul li::before { content: "│  ├─ "; color: #e67e22; }
+
+/* Quick Facts */
+.qf-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0;
+}
+.qf-item {
+    background: white; padding: 12px 16px; border-radius: 8px;
+    border-left: 4px solid var(--ancient); font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    transition: transform 0.2s;
+}
+.qf-item:hover { transform: translateX(3px); }
+.qf-item strong { color: var(--ancient); }
+
+/* Summary */
+.summary-box {
+    background: linear-gradient(135deg, #e8f8f5, #d1f2eb);
+    border: 2px solid #16a085; border-radius: 12px;
+    padding: 25px 30px; margin: 40px 0;
+}
+.summary-box h2 { background: #16a085; margin-top: 0; }
+
+/* Quick Ref Card */
+.ref-card {
+    background: linear-gradient(135deg, #fef9e7, #fcf3cf);
+    border: 2px solid #f1c40f; border-radius: 12px;
+    padding: 25px 30px; margin: 30px 0;
+}
+.ref-card h2 { background: #f39c12; margin-top: 0; }
+
+/* Glossary */
+.glossary {
+    background: #f2f3f4; border-radius: 12px;
+    padding: 25px 30px; margin: 30px 0;
+}
+.glossary h2 { background: #7f8c8d; margin-top: 0; }
+.gloss-item { margin: 8px 0; font-size: 0.95rem; }
+.gloss-item strong { color: var(--primary); min-width: 160px; display: inline-block; }
+
+/* Footer */
+.page-footer {
+    text-align: center; margin-top: 50px; padding: 25px;
+    color: #7f8c8d; font-size: 0.85rem; border-top: 2px dashed #bdc3c7;
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px; right: 30px;
+    z-index: 99;
+    background: var(--ancient);
+    color: white;
+    border: none;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+#backToTop:hover { background: var(--ancient-light); transform: translateY(-3px); }
+
+/* ===== MOBILE (Phone) ===== */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .sidebar {
+        transform: translateX(-100%);
+        width: 85%;
+        max-width: 320px;
+    }
+    .sidebar.open { transform: translateX(0); }
+    main {
+        margin-left: 0 !important;
+        padding: 70px 15px 20px 15px !important;
+        max-width: 100%;
+    }
+    .qf-grid, .info-grid { grid-template-columns: 1fr; }
+    .flow { flex-direction: column; align-items: stretch; }
+    .flow-arrow { transform: rotate(90deg); align-self: center; }
+    .ch-header { padding: 25px 20px; }
+    .ch-header h1 { font-size: 1.5rem; }
+    .ch-header p { font-size: 1rem; }
+    h2 { font-size: 1.3rem; padding: 12px 18px; }
+    h3 { font-size: 1.15rem; }
+    table { font-size: 0.85rem; }
+    th, td { padding: 8px 10px; }
+    .tl-year { min-width: 120px; font-size: 0.85rem; }
+    .tl-item { font-size: 0.9rem; }
+    .box { padding: 14px 16px; }
+    .gloss-item strong { min-width: 130px; }
+    #backToTop { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 1.3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Mobile Menu Button -->
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ Menu</button>
+
+<!-- Back to Top Button -->
+<button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+<!-- ===== MASTER SIDEBAR ===== -->
+<nav class="sidebar">
+    <div class="chap-tag">GS SHORTS NOTES</div>
+    
+    <!-- Home Button -->
+    <a href="../index.html" class="home-btn">🏠 मुख्य पृष्ठ (Home)</a>
+    
+    <h2>📚 विषय सूची</h2>
+    <ul>
+        <!-- ================= HISTORY ================= -->
+        <li class="subject-header">
+            <a href="index.html">📜 इतिहास (History)</a>
+        </li>
+        <li><a href="chapter-01-ancient-1.html" class="chapter-link active">1. प्राचीन भारत - I</a></li>
+        <li><a href="chapter-02-ancient-2.html" class="chapter-link">2. प्राचीन भारत - II</a></li>
+        <li><a href="chapter-03-medieval-1.html" class="chapter-link">3. मध्यकालीन भारत - I</a></li>
+        <li><a href="chapter-04-modern-1.html" class="chapter-link">4. आधुनिक भारत - I</a></li>
+
+        <!-- ================= GEOGRAPHY ================= -->
+        <li class="subject-header">
+            <a href="../geography/index.html">🌍 भूगोल (Geography)</a>
+        </li>
+        <li><a href="../geography/chapter-01-geomorphology.html" class="chapter-link">1. भू-आकृति विज्ञान</a></li>
+        <li><a href="../geography/chapter-02-india.html" class="chapter-link">2. भारतीय भूगोल</a></li>
+
+        <!-- ================= POLITY ================= -->
+        <li class="subject-header">
+            <a href="../polity/index.html">⚖️ राजव्यवस्था (Polity)</a>
+        </li>
+        <li><a href="../polity/chapter-01-constitution.html" class="chapter-link">1. संविधान का इतिहास</a></li>
+        <li><a href="../polity/chapter-02-rights.html" class="chapter-link">2. मौलिक अधिकार</a></li>
+
+        <!-- ================= ECONOMY ================= -->
+        <li class="subject-header">
+            <a href="../economy/index.html">📈 अर्थव्यवस्था (Economy)</a>
+        </li>
+        <li><a href="../economy/chapter-01-macro.html" class="chapter-link">1. समष्टि अर्थव्यवस्था</a></li>
+    </ul>
+</nav>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main>
+
+<div class="ch-header">
+    <h1>📜 Chapter 1: प्राचीन भारत (Part I)</h1>
+    <p>पाषाण युग | सिंधु घाटी सभ्यता | वैदिक युग</p>
+    <span class="period">⏳ काल: 5 लाख ई.पू. – 600 ई.पू.</span>
+</div>
+
+<!-- ===== BHUMIKA ===== -->
+<section id="intro">
+<div class="intro-box">
+    <h3>🌅 भूमिका</h3>
+    <p>भारतीय इतिहास का यह प्रारंभिक अध्याय मानव सभ्यता के विकास की कथा कहता है -- जब मानव ने पहली बार पत्थर के औज़ार बनाए, अग्नि की खोज की, खेती शुरू की, विश्व की प्राचीनतम नगरीय सभ्यताओं में से एक का निर्माण किया, और वैदिक ज्ञान की नींव रखी। यह काल भारतीय संस्कृति, धर्म, समाज और राजनीति की जड़ों को समझने के लिए आधारभूत है।</p>
+</div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section id="timeline">
+<h2>📅 कालक्रम (Timeline)</h2>
+<div class="timeline">
+    <div class="tl-item"><span class="tl-year">5 लाख – 50,000 ई.पू.</span> निचला पुरापाषाण काल (Hand-axe संस्कृति)</div>
+    <div class="tl-item"><span class="tl-year">50,000 – 40,000 ई.पू.</span> मध्य पुरापाषाण (Flake तकनीक)</div>
+    <div class="tl-item"><span class="tl-year">40,000 – 10,000 ई.पू.</span> ऊपरी पुरापाषाण (होमो सेपियंस)</div>
+    <div class="tl-item"><span class="tl-year">12,000 – 10,000 ई.पू.</span> मध्यपाषाण (Microliths, पशु घरेलूकरण)</div>
+    <div class="tl-item"><span class="tl-year">7,000 – 1,000 ई.पू.</span> नवपाषाण (कृषि, स्थायी बस्तियाँ)</div>
+    <div class="tl-item"><span class="tl-year">3,500 – 1,000 ई.पू.</span> ताम्रपाषाण (तांबे की खोज)</div>
+    <div class="tl-item"><span class="tl-year">3,000 – 2,600 ई.पू.</span> प्रारंभिक हड़प्पा काल</div>
+    <div class="tl-item"><span class="tl-year">2,600 – 1,900 ई.पू.</span> परिपक्व हड़प्पा काल (IVC का शिखर)</div>
+    <div class="tl-item"><span class="tl-year">1,900 – 1,700 ई.पू.</span> उत्तर हड़प्पा काल (पतन)</div>
+    <div class="tl-item"><span class="tl-year">1,500 – 1,000 ई.पू.</span> प्रारंभिक वैदिक / ऋग्वैदिक काल</div>
+    <div class="tl-item"><span class="tl-year">1,000 – 600 ई.पू.</span> उत्तर वैदिक काल</div>
+</div>
+</section>
+
+<!-- ===== QUICK FACTS ===== -->
+<section id="qfacts">
+<h2>⚡ Quick Facts (15 सबसे महत्वपूर्ण तथ्य)</h2>
+<div class="qf-grid">
+    <div class="qf-item">🪨 <strong>भीमबेटका</strong> – V.S. वाकणकर, 1957, शैलचित्र गुफाएं (MP)</div>
+    <div class="qf-item">🐕 <strong>बागोर</strong> (राजस्थान) – पशुओं का प्राचीनतम घरेलूकरण</div>
+    <div class="qf-item">🌾 <strong>मेहरगढ़</strong> (बलूचिस्तान) – घरों और फसलों का प्राचीनतम साक्ष्य</div>
+    <div class="qf-item">🐶 <strong>बुरजहोम</strong> (कश्मीर) – कुत्तों को मालिकों के साथ दफन</div>
+    <div class="qf-item">🍚 <strong>लाहुरादेवा</strong> (UP) – चावल की खेती का प्राचीनतम साक्ष्य</div>
+    <div class="qf-item">🏛️ <strong>हड़प्पा</strong> – दयाराम साहनी, 1921 (प्रथम खोज)</div>
+    <div class="qf-item">🏊 <strong>मोहनजोदड़ो</strong> – आर.डी. बनर्जी, 1922 (विशाल स्नानागार)</div>
+    <div class="qf-item">⚓ <strong>लोथल</strong> (गुजरात) – प्राचीन बंदरगाह एवं गोदी</div>
+    <div class="qf-item">🌾 <strong>कालीबंगा</strong> (राजस्थान) – हल के निशान, 7 अग्निवेदियाँ</div>
+    <div class="qf-item">🏙️ <strong>धोलावीरा</strong> (गुजरात) – 3 भागों में विभाजित, साइनबोर्ड</div>
+    <div class="qf-item">📏 <strong>राखीगढ़ी</strong> (हरियाणा) – भारत का सबसे बड़ा IVC स्थल</div>
+    <div class="qf-item">📖 <strong>ऋग्वेद</strong> – सबसे प्राचीन, 10 मंडल, 1028 सूक्त</div>
+    <div class="qf-item">🙏 <strong>गायत्री मंत्र</strong> – ऋग्वेद, 3रा मंडल, सवित्र देवता</div>
+    <div class="qf-item">🎵 <strong>सामवेद</strong> – संगीत की जड़, केन उपनिषद</div>
+    <div class="qf-item">📜 <strong>शतपथ ब्राह्मण</strong> – सबसे बड़ा ब्राह्मण (यजुर्वेद)</div>
+</div>
+</section>
+
+<!-- ==================== STONE AGE ==================== -->
+<section id="stone">
+<h2>🪨 1. पाषाण युग (Stone Age)</h2>
+<p>पाषाण युग मानव इतिहास का सबसे लंबा काल है, जो लगभग 5 लाख वर्ष पूर्व से 1000 ई.पू. तक फैला है। इस काल में मानव ने पत्थर के औज़ारों से लेकर कृषि और धातु तक की खोज की।</p>
+
+<div class="flow">
+    <div class="flow-box">🪨 पुरापाषाण<br><small>5 लाख–10,000 ई.पू.</small></div>
+    <span class="flow-arrow">➜</span>
+    <div class="flow-box">🔬 मध्यपाषाण<br><small>12,000–10,000 ई.पू.</small></div>
+    <span class="flow-arrow">➜</span>
+    <div class="flow-box">🌾 नवपाषाण<br><small>7,000–1,000 ई.पू.</small></div>
+    <span class="flow-arrow">➜</span>
+    <div class="flow-box">🔶 ताम्रपाषाण<br><small>3,500–1,000 ई.पू.</small></div>
+</div>
+
+<h3 id="paleo">1.1 पुरापाषाण काल (Paleolithic Age)</h3>
+<p>यह काल <strong>प्लीस्टोसीन युग</strong> (बर्फ़ युग) से संबंधित है। मानव शिकारी एवं खाद्य संग्राहक था। अग्नि का ज्ञान प्रारंभिक चरण में नहीं था।</p>
+
+<h4>(A) निचला/प्रारंभिक पुरापाषाण (5 लाख – 50,000 ई.पू.)</h4>
+<ul>
+    <li>🪨 <strong>औज़ार:</strong> बड़े क्वार्टजाइट पत्थर – Hand-axes, Cleavers, Choppers</li>
+    <li>🧑 <strong>मानव:</strong> होमो इरेक्टस (Homo Erectus)</li>
+    <li>🏕️ <strong>जीवन:</strong> शिकार एवं खाद्य संग्रह; अग्नि का ज्ञान नहीं</li>
+</ul>
+<table>
+    <tr><th>स्थल</th><th>राज्य</th><th>विशेषता</th></tr>
+    <tr><td>सोन/सोहन घाटी</td><td>पंजाब</td><td>प्रारंभिक पुरापाषाण के प्रमुख औज़ार</td></tr>
+    <tr><td>बेलन घाटी</td><td>उत्तर प्रदेश</td><td>गुफा/शैलचित्र साक्ष्य</td></tr>
+    <tr><td>डीडवाना</td><td>राजस्थान</td><td>रेगिस्तानी क्षेत्र में पाषाण औज़ार</td></tr>
+    <tr><td>नेवासे</td><td>महाराष्ट्र</td><td>प्रारंभिक मानव बस्तियाँ</td></tr>
+    <tr><td>हुंसी/हूणसगी</td><td>कर्नाटक</td><td>दक्षिण भारत का प्रमुख स्थल</td></tr>
+    <tr><td>पहलगाम</td><td>कश्मीर</td><td>ऊँचाई वाला पाषाण स्थल</td></tr>
+    <tr><td><strong>पटने</strong></td><td>महाराष्ट्र</td><td>⭐ <strong>शुतुरमुर्ग के अंडों के खोल</strong> का प्रथम साक्ष्य</td></tr>
+</table>
+
+<h4>(B) मध्य पुरापाषाण (50,000 – 40,000 ई.पू.)</h4>
+<ul>
+    <li>🔬 <strong>तकनीक:</strong> फ्लेक (पत्थर के टुकड़ों) तकनीक</li>
+    <li>🏕️ <strong>जीवन:</strong> शिकार एवं खाद्य संग्राहक</li>
+</ul>
+<table>
+    <tr><th>स्थल</th><th>राज्य</th><th>विशेषता</th></tr>
+    <tr><td>इनामगांव, नेवासा</td><td>महाराष्ट्र</td><td>मध्य पुरापाषाण साक्ष्य</td></tr>
+    <tr><td>डीडवाना</td><td>राजस्थान</td><td>लगातार निवास के प्रमाण</td></tr>
+    <tr><td><strong>भीमबेटका</strong></td><td>मध्य प्रदेश (भोपाल से 45 किमी)</td><td>⭐ <strong>गुफाएं एवं शैलचित्र</strong></td></tr>
+</table>
+<div class="box box-key">
+    <strong>होमो इरेक्टस की खोपड़ी</strong> – हाथनौरा (मध्य प्रदेश, नर्मदा नदी के पास) से प्राप्त।<br>
+    <strong>V.S. वाकणकर</strong> ने 1957 में भीमबेटका की शैलचित्र गुफाओं की खोज की। वे मध्य भारत में शैलचित्रों की पहचान करने वाले प्रथम विद्वान थे।
+</div>
+
+<h4>(C) ऊपरी पुरापाषाण (40,000 – 10,000 ई.पू.)</h4>
+<ul>
+    <li>⏳ <strong>काल:</strong> प्लीस्टोसीन युग का अंतिम चरण</li>
+    <li>🧑 <strong>मानव:</strong> <strong>होमो सेपियंस</strong> (आधुनिक मानव) का उदय</li>
+    <li>🪨 <strong>औज़ार:</strong> चकमक पत्थर का प्रयोग शुरू</li>
+</ul>
+
+<h3 id="meso">1.2 मध्यपाषाण / सूक्ष्म पाषाण काल (Mesolithic)</h3>
+<p><strong>काल:</strong> 12,000 – 10,000 ई.पू. | जलवायु गर्म हुई; वनस्पति और जीव-जंतुओं में वृद्धि।</p>
+<ul>
+    <li>🔬 <strong>औज़ार:</strong> <strong>Microliths</strong> (सूक्ष्म पाषाण) – बड़े और छोटे दोनों</li>
+    <li>🐄 <strong>प्रमुख विशेषता:</strong> पशुओं का <strong>प्रथम घरेलूकरण</strong> इसी काल में</li>
+</ul>
+<table>
+    <tr><th>स्थल</th><th>राज्य</th><th>विशेषता</th></tr>
+    <tr><td>लांघनज</td><td>गुजरात (मेहसाणा)</td><td>मध्यपाषाण का प्रमुख स्थल</td></tr>
+    <tr><td>संदनकट्टू</td><td>कर्नाटक</td><td>सूक्ष्म पाषाण औज़ार</td></tr>
+    <tr><td>भीमबेटका</td><td>मध्य प्रदेश (भोपाल)</td><td>शैलचित्रों की बहुलता</td></tr>
+    <tr><td>चोपानी मंडो</td><td>उत्तर प्रदेश (इलाहाबाद)</td><td>नवपाषाण से संबंधित</td></tr>
+    <tr><td>बीरभानपुर</td><td>पश्चिम बंगाल (बांकुड़ा)</td><td>पूर्वी भारत का प्रमुख स्थल</td></tr>
+    <tr><td><strong>बागोर</strong></td><td>राजस्थान</td><td>⭐ <strong>पशुओं के प्राचीनतम घरेलूकरण</strong></td></tr>
+    <tr><td>तूतुकुड़ी</td><td>दक्षिण तमिलनाडु</td><td>दक्षिणी तटीय स्थल</td></tr>
+    <tr><td>आदमगढ़</td><td>मध्य प्रदेश</td><td>सूक्ष्म पाषाण औज़ार</td></tr>
+</table>
+
+<h3 id="neo">1.3 नवपाषाण युग (Neolithic Age)</h3>
+<p><strong>काल:</strong> 7,000 – 1,000 ई.पू.</p>
+<div class="box box-key">
+    <strong>क्रांतिकारी परिवर्तन:</strong><br>
+    • मानव <strong>भोजन उत्पादक</strong> बना (कृषि क्रांति)<br>
+    • <strong>संपत्ति</strong> की अवधारणा का आरंभ<br>
+    • स्थायी बस्तियाँ, मिट्टी के बर्तन (काले और लाल रंग)<br>
+    • पशुपालन प्रारंभ
+</div>
+<table>
+    <tr><th>स्थल</th><th>क्षेत्र</th><th>विशेषता</th></tr>
+    <tr><td><strong>मेहरगढ़</strong></td><td>बलूचिस्तान (पाकिस्तान)</td><td>⭐ घरों और फसलों के <strong>प्राचीनतम प्रमाण</strong></td></tr>
+    <tr><td><strong>बुरजहोम</strong></td><td>कश्मीर (श्रीनगर से 16 किमी पश्चिम)</td><td>⭐ <strong>कुत्तों को मालिकों के साथ दफन</strong>; पीट-ड्वेलिंग; हड्डी के हथियार</td></tr>
+    <tr><td>गुफकराल</td><td>कश्मीर (श्रीनगर से 41 किमी दक्षिण-पश्चिम)</td><td>कुआर की गुफा</td></tr>
+    <tr><td>चीरांद</td><td>बिहार</td><td>हड्डी के औज़ार</td></tr>
+    <tr><td>संगनकल्लू</td><td>कर्नाटक</td><td>बाजरा की खेती</td></tr>
+    <tr><td>किल्दीहाल/हल्लूर</td><td>कर्नाटक</td><td>प्राचीन कृषि साक्ष्य</td></tr>
+    <tr><td><strong>लाहुरादेवा</strong></td><td>उत्तर प्रदेश</td><td>⭐ <strong>चावल की खेती का प्राचीनतम साक्ष्य</strong></td></tr>
+    <tr><td>कोल्दीहाल</td><td>उत्तर प्रदेश (इलाहाबाद)</td><td>चावल की खेती</td></tr>
+    <tr><td>बुद्धिहाल, उटूर</td><td>आंध्र प्रदेश</td><td>प्राचीनतम कृषि स्थल</td></tr>
+    <tr><td>नागार्जुनकोंडा</td><td>आंध्र प्रदेश</td><td>भीमा, कृष्णा, तुंगभद्रा नदियों के आसपास</td></tr>
+    <tr><td>पैयम्पल्ली, कावेरी</td><td>तमिलनाडु</td><td>दक्षिण भारतीय नवपाषाण</td></tr>
+    <tr><td>कोल्हीहवा, महगड़ा</td><td>बेलन घाटी, UP</td><td>नवपाषाण साक्ष्य</td></tr>
+    <tr><td>गारो हिल्स</td><td>मेघालय</td><td>पूर्वोत्तर भारत</td></tr>
+    <tr><td><strong>दोजाली हाजोंग</strong></td><td>असम</td><td>⭐ <strong>जेडाइट (Jade) पत्थर</strong> के औज़ार</td></tr>
+    <tr><td>चतल होयुक</td><td>तुर्की</td><td>विश्व का प्राचीन नगर (तुलनात्मक अध्ययन)</td></tr>
+</table>
+
+<h3 id="chalco">1.4 ताम्रपाषाण युग (Chalcolithic Age)</h3>
+<p><strong>काल:</strong> 3,500 – 1,000 ई.पू.</p>
+<div class="box box-key">
+    <strong>प्रमुख विशेषताएं:</strong><br>
+    • मानव द्वारा खोजी गई <strong>पहली धातु – तांबा</strong><br>
+    • ग्रामीण समुदायों का विकास<br>
+    • <strong>अस्थि-कलश</strong> में दफ़नाने की प्रथा<br>
+    • ⚠️ <strong>घोड़े और पकी हुई ईंटों की जानकारी नहीं</strong> थी<br>
+    • मिट्टी के बर्तन – काले और लाल रंग के
+</div>
+<table>
+    <tr><th>क्षेत्र</th><th>प्रमुख स्थल</th><th>विशेषता</th></tr>
+    <tr><td>पश्चिम महाराष्ट्र</td><td><strong>जोर्वे</strong> (सबसे बड़ा), नेवासे, दैमाबाद, चांदोली, इनामगांव, नासिक, नवदाटोली</td><td>जोर्वे = पश्चिमी भारत का सबसे बड़ा ताम्रपाषाण स्थल</td></tr>
+    <tr><td>दक्षिण-पूर्व राजस्थान</td><td><strong>आहड़</strong> (प्राचीनतम), गिलुंड</td><td>बनास घाटी संस्कृति; आहड़ = सबसे प्राचीन</td></tr>
+    <tr><td>पश्चिम मध्य प्रदेश</td><td>मालवा, कायथा, एरण</td><td>मालवा संस्कृति</td></tr>
+    <tr><td>पूर्व भारत</td><td>चिरांद (बिहार), बांकुड़ा/मिदनापुर (प. बंगाल)</td><td>पूर्वी विस्तार</td></tr>
+</table>
+<div class="box box-tip">
+    <strong>याद रखें:</strong> जोर्वे (महाराष्ट्र) = सबसे बड़ा | आहड़ (राजस्थान) = सबसे प्राचीन
+</div>
+
+<h3 id="stone-econ">💰 पाषाण युग: अर्थव्यवस्था एवं समाज</h3>
+<div class="box box-econ">
+    <strong>पुरापाषाण:</strong> शिकार-संग्राहक अर्थव्यवस्था। कोई उत्पादन नहीं, कोई संपत्ति नहीं। छोटे-छोटे घुमंतू समूह।<br><br>
+    <strong>मध्यपाषाण:</strong> पशु घरेलूकरण शुरू। मछली पकड़ना। अर्ध-स्थायी बस्तियाँ।<br><br>
+    <strong>नवपाषाण:</strong> कृषि क्रांति। गेहूँ, जौ, चावल, बाजरा की खेती। पशुपालन (गाय, बैल, भेड़, बकरी)। स्थायी गाँव। संपत्ति की अवधारणा।<br><br>
+    <strong>ताम्रपाषाण:</strong> तांबे के औज़ार + कृषि। ग्रामीण अर्थव्यवस्था। विनिमय प्रणाली (barter)।
+</div>
+
+<h3 id="stone-art">🎨 पाषाण युग: कला एवं वास्तुकला</h3>
+<div class="box box-art">
+    <strong>शैलचित्र (Rock Paintings):</strong><br>
+    • <strong>भीमबेटका</strong> (MP) – 700+ गुफाएं, UNESCO विश्व धरोहर। शिकार, नृत्य, युद्ध, दैनिक जीवन के चित्र।<br>
+    • रंग: लाल (हीमेटाइट), सफेद (चूना पत्थर), हरा, पीला।<br>
+    • काल: पुरापाषाण से मध्यकाल तक (सबसे पुराने चित्र ~30,000 वर्ष पुराने)।<br><br>
+    <strong>मृद्भांड (Pottery):</strong><br>
+    • नवपाषाण: काले और लाल रंग के हाथ से बने बर्तन<br>
+    • ताम्रपाषाण: चाक पर बने बर्तन, चित्रित डिज़ाइन
+</div>
+</section>
+
+<!-- ==================== IVC ==================== -->
+<section id="ivc">
+<h2>🏛️ 2. सिंधु घाटी सभ्यता (Indus Valley Civilization)</h2>
+<p>विश्व की <strong>4 प्राचीनतम नगरीय सभ्यताओं</strong> में से एक (मेसोपोटामिया, मिस्र, चीन के साथ)। यह कांस्य युग (Bronze Age) की सभ्यता थी जो अपनी उत्कृष्ट नगर योजना के लिए प्रसिद्ध है।</p>
+
+<div class="info-grid">
+    <div class="info-card"><span class="emoji">📅</span><span class="label">काल</span><span class="value">2500–1750 ई.पू.</span></div>
+    <div class="info-card"><span class="emoji">📏</span><span class="label">विस्तार (उ-द)</span><span class="value">1,600 किमी</span></div>
+    <div class="info-card"><span class="emoji">📏</span><span class="label">विस्तार (पू-प)</span><span class="value">1,400 किमी</span></div>
+    <div class="info-card"><span class="emoji">🏙️</span><span class="label">प्रमुख नगर</span><span class="value">1,000+</span></div>
+</div>
+
+<h3 id="ivc-ext">2.1 विस्तार एवं काल</h3>
+<div class="box box-key">
+    <strong>नामकरण:</strong> <strong>जॉन मार्शल</strong> (ASI के महानिदेशक) द्वारा।<br>
+    <strong>काल विभाजन:</strong><br>
+    • प्रारंभिक हड़प्पा: 3000–2600 ई.पू.<br>
+    • परिपक्व हड़प्पा: 2600–1900 ई.पू. (शिखर काल)<br>
+    • उत्तर हड़प्पा: 1900–1700 ई.पू. (पतन)
+</div>
+<table>
+    <tr><th>दिशा</th><th>स्थल</th><th>राज्य</th></tr>
+    <tr><td>🔼 उत्तर</td><td>मांडा</td><td>जम्मू-कश्मीर</td></tr>
+    <tr><td>▶️ पूर्व</td><td>आलमगीरपुर</td><td>उत्तर प्रदेश</td></tr>
+    <tr><td>◀️ पश्चिम</td><td>सुतकागंडोर</td><td>बलूचिस्तान</td></tr>
+    <tr><td>🔽 दक्षिण</td><td>दैमाबाद</td><td>महाराष्ट्र</td></tr>
+</table>
+<div class="box box-map">
+    <strong>भारत में:</strong> पंजाब, हरियाणा, राजस्थान, पश्चिमी उत्तर प्रदेश, गुजरात।<br>
+    <strong>पाकिस्तान में:</strong> पंजाब, सिंध, बलूचिस्तान।
+</div>
+
+<h3 id="ivc-town">2.2 नगर योजना (Town Planning)</h3>
+<div class="box box-key">
+    <strong>IVC की नगर योजना विश्व में अद्वितीय थी:</strong><br>
+    • नगर <strong>दो भागों</strong> में – <strong>दुर्ग/गढ़</strong> (पश्चिमी, ऊँचा, शासक वर्ग) + <strong>निचला नगर</strong> (पूर्वी, सामान्य जनता)<br>
+    • <strong>ग्रिड पद्धति</strong> – सड़कें समकोण (90°) पर काटती हैं<br>
+    • <strong>पकी हुई ईंटें</strong> (अनुपात 1:2:4)<br>
+    • उत्कृष्ट <strong>ढकी हुई जल निकासी प्रणाली</strong><br>
+    • <strong>सेसपिट/गबरबंद</strong> – ठोस कचरे की सफाई हेतु गड्ढे<br>
+    • <strong>चूना पत्थर</strong> का ढालन<br>
+    • अधिकांश घरों में अपना कुआँ और स्नानागार<br>
+    • <strong>गबरबंद/नाला</strong> – बलूचिस्तान में जल संचयन हेतु
+</div>
+<div class="box box-tip">
+    <strong>कपास</strong> का प्रथम उत्पादन/वस्त्र IVC में ही हुआ। यूनानियों ने इसे <strong>"सिन्डोन"</strong> कहा। मेसोपोटामियाई IVC को <strong>"मेलुहा"</strong> कहते थे।
+</div>
+
+<h3 id="ivc-sites">2.3 प्रमुख स्थल एवं उनके साक्ष्य</h3>
+<table>
+    <tr><th>स्थल</th><th>नदी/राज्य</th><th>खोजकर्ता</th><th>⭐ प्रमुख साक्ष्य</th></tr>
+    <tr><td><strong>हड़प्पा</strong></td><td>रावी, पंजाब (पाकि.)</td><td>दयाराम साहनी (1921)</td><td>6 कोठार (अनाज भंडार), ताबूत दफन, लाल पत्थर की मूर्ति, अग्नि वेदी</td></tr>
+    <tr><td><strong>मोहनजोदड़ो</strong></td><td>सिंधु, सिंध (पाकि.)</td><td>आर.डी. बनर्जी (1922)</td><td>⭐ विशाल स्नानागार, विशाल कोठार, कांस्य नर्तकी (10.5 सेमी), स्टीटाइट दाढ़ी वाला पुरुष (17.5 सेमी), मातृ देवी, <strong>पशुपति मुहर</strong></td></tr>
+    <tr><td><strong>लोथल</strong></td><td>भोगावा, गुजरात</td><td>एस.आर. राव</td><td>⭐ <strong>प्राचीन बंदरगाह एवं गोदी</strong>, टेराकोटा नौकाएं, अग्निवेदी, संयुक्त/दोहरी समाधि</td></tr>
+    <tr><td><strong>कालीबंगा</strong></td><td>घग्गर, राजस्थान</td><td>ए. घोष</td><td>⭐ <strong>हल के निशान</strong>, जुते हुए खेत, काली चूड़ियाँ, 7 अग्निवेदियाँ, हर घर में कुआँ</td></tr>
+    <tr><td><strong>सुरकोटड़ा</strong></td><td>तटीय, गुजरात</td><td>जे.पी. जोशी</td><td>⭐ <strong>घोड़े की एकल हड्डी</strong> (विवादास्पद)</td></tr>
+    <tr><td><strong>धोलावीरा</strong></td><td>लुनी, गुजरात (कच्छ)</td><td>जे.पी. जोशी</td><td>⭐ <strong>नगर 3 भागों में</strong>, विशाल जलाशय, <strong>साइनबोर्ड</strong></td></tr>
+    <tr><td><strong>राखीगढ़ी</strong></td><td>घग्गर, हरियाणा</td><td>--</td><td>⭐ <strong>भारत का सबसे बड़ा IVC स्थल</strong>, टेराकोटा पहिए/खिलौने</td></tr>
+    <tr><td>भिरड़ाना</td><td>हरियाणा</td><td>--</td><td>सबसे प्राचीन IVC स्थल</td></tr>
+    <tr><td>बनवाली</td><td>घग्गर, हरियाणा</td><td>आर.एस. बिष्ट</td><td>डिज़ाइन पैटर्न की कमी</td></tr>
+    <tr><td>रोपड़</td><td>सतलुज, पंजाब</td><td>वाई.डी. शर्मा</td><td>⭐ <strong>कुत्ते के साथ मानव दफन</strong>, अंडाकार समाधि</td></tr>
+    <tr><td>सनौली</td><td>उत्तर प्रदेश</td><td>--</td><td>विस्तारित समाधि, ताबूत दफन</td></tr>
+</table>
+<div class="box box-key">
+    <strong>पशुपति मुहर:</strong> इस पर 5 पशु अंकित – भैंस, हाथी, बाघ, हिरण, गैंडा/एक सींगी जानवर। मध्य में योग मुद्रा में बैठी आकृति (शिव का प्रारंभिक रूप)।
+</div>
+
+<h3 id="ivc-eco">2.4 अर्थव्यवस्था एवं व्यापार</h3>
+<div class="box box-econ">
+    <strong>कृषि:</strong> गेहूँ, जौ, मटर, तिल, सरसों, कपास। <strong>चावल</strong> के साक्ष्य सीमित (लोथल, रंगपुर)।<br>
+    <strong>पशुपालन:</strong> बैल (हल के लिए), भैंस, भेड़, बकरी, सूअर, गधा, ऊँट।<br>
+    <strong>उद्योग:</strong> वस्त्र, ईंट, नाव, मनका/आभूषण, तांबे/कांसे के औज़ार।<br>
+    <strong>कच्चा माल:</strong> जेडाइट (असम), सोना (कर्नाटक), तांबा (खेतड़ी, राजस्थान), लाजुली (अफगानिस्तान), स्टीटाइट (ईरान)।
+</div>
+<div class="box box-map">
+    <strong>व्यापारिक संबंध:</strong><br>
+    • <strong>मेसोपोटामिया (ईराक)</strong> – प्रमुख साझेदार<br>
+    • <strong>मगन (ओमान)</strong> – तांबे के लिए<br>
+    • <strong>दिलमुन (बहरीन)</strong> – व्यापार केंद्र<br>
+    • <strong>मेलुहा</strong> – IVC को मेसोपोटामिया में इस नाम से जाना जाता था<br>
+    • <strong>भार मापन:</strong> 16 के गुणज में (16, 32, 64, 160, 320...)
+</div>
+<div class="box box-key">
+    <strong>मुहरें:</strong> स्टीटाइट एवं टेराकोटा। आयताकार (हड़प्पा), बेलनाकार (मेसोपोटामिया), गोलाकार (बहरीन)। विनिमय प्रणाली (Barter System) – कोई सिक्का नहीं।
+</div>
+
+<h3 id="ivc-rel">2.5 धर्म एवं लिपि</h3>
+<ul>
+    <li>🛕 <strong>कोई मंदिर नहीं</strong> – संभवतः व्यापारी वर्ग द्वारा शासित</li>
+    <li>🙏 <strong>पूजा:</strong> लिंग-योनि, पशुपति, वृक्ष (पीपल), मातृ देवी, पशु</li>
+    <li>👻 भूत-प्रेतों में विश्वास</li>
+</ul>
+<div class="box box-warn">
+    <strong>गाय और घोड़े से अपरिचित</strong> थे (सुरकोटड़ा की घोड़े की हड्डी विवादास्पद है)।
+</div>
+<ul>
+    <li>📝 <strong>लिपि:</strong> चित्र लिपि (Pictographic)</li>
+    <li>↔️ <strong>बॉस्ट्रोफेडन शैली</strong> – एक पंक्ति दाएँ→बाएँ, अगली बाएँ→दाएँ</li>
+    <li>❓ अभी तक <strong>अपठित</strong> (undeciphered)</li>
+</ul>
+
+<h3 id="ivc-art">🎨 IVC: कला एवं वास्तुकला</h3>
+<div class="box box-art">
+    <strong>मूर्तिकला:</strong><br>
+    • कांस्य नर्तकी (मोहनजोदड़ो) – <strong>Lost Wax (Cire Perdue)</strong> तकनीक<br>
+    • स्टीटाइट दाढ़ी वाला पुरुष (मोहनजोदड़ो)<br>
+    • टेराकोटा मातृ देवी (सभी स्थलों पर)<br>
+    • पत्थर की पुरुष मूर्ति (हड़प्पा)<br><br>
+    <strong>वास्तुकला:</strong><br>
+    • विशाल स्नानागार (मोहनजोदड़ो) – 12m × 7m × 2.4m<br>
+    • अनाज भंडार (हड़प्पा, मोहनजोदड़ो)<br>
+    • गोदी (लोथल) – 214m × 36m<br>
+    • जलाशय (धोलावीरा)<br><br>
+    <strong>मुहरें:</strong> पशुपति मुहर, एक सींगी जानवर (यूनिकॉर्न), बैल, हाथी
+</div>
+
+<h3 id="ivc-dec">2.6 पतन के कारण</h3>
+<div class="flow">
+    <div class="flow-box">🌡️ जलवायु<br>परिवर्तन</div>
+    <div class="flow-box">🌳 वनों की<br>कटाई</div>
+    <div class="flow-box">🌊 अधिक<br>बाढ़</div>
+    <div class="flow-box">🏜️ नदियाँ<br>सूखीं</div>
+    <div class="flow-box">⚔️ विदेशी<br>आक्रमण</div>
+</div>
+<div class="box box-warn">
+    <strong>सबसे मान्य सिद्धांत:</strong> जलवायु परिवर्तन + नदियों का मार्ग बदलना/सूखना (विशेषकर सरस्वती/घग्गर नदी)।<br>
+    <strong>मोर्टिमर व्हीलर का मत:</strong> आर्यों ने आक्रमण कर नष्ट किया (अब यह मत विवादास्पद है)।
+</div>
+<div class="box box-term">
+    <strong>मृद्भांड (Pottery) के प्रकार:</strong><br>
+    • गेरुआ रंग के (OCP – Ochre Coloured Pottery)<br>
+    • काले-लाल रंग के (BRW – Black and Red Ware)<br>
+    • चित्रित धूसर (PGW – Painted Grey Ware)
+</div>
+
+<h3 id="ivc-comp">🔄 तुलना: IVC vs मेसोपोटामिया vs मिस्र</h3>
+<table>
+    <tr><th>विषय</th><th>सिंधु घाटी</th><th>मेसोपोटामिया</th><th>मिस्र</th></tr>
+    <tr><td>📅 काल</td><td>2500–1750 ई.पू.</td><td>3500–2000 ई.पू.</td><td>3100–1200 ई.पू.</td></tr>
+    <tr><td>🏛️ नगर योजना</td><td>⭐ ग्रिड पद्धति (सर्वोत्तम)</td><td>अव्यवस्थित</td><td>पिरामिड केंद्रित</td></tr>
+    <tr><td>🧱 ईंट</td><td>पकी हुई (1:2:4)</td><td>कच्ची/पकी</td><td>पत्थर</td></tr>
+    <tr><td>🚰 जल निकासी</td><td>⭐ ढकी हुई (अद्वितीय)</td><td>खुली</td><td>सीमित</td></tr>
+    <tr><td>📝 लिपि</td><td>चित्र (अपठित)</td><td>कीलाकार (पठित)</td><td>हाइरोग्लिफ़ (पठित)</td></tr>
+    <tr><td>🛕 मंदिर</td><td>नहीं</td><td>ज़िगुरात</td><td>पिरामिड/मंदिर</td></tr>
+    <tr><td>⚔️ लोहा</td><td>नहीं</td><td>नहीं</td><td>नहीं</td></tr>
+</table>
+</section>
+
+<!-- ==================== VEDIC AGE ==================== -->
+<section id="vedic">
+<h2>📜 3. वैदिक युग (1500 – 600 ई.पू.)</h2>
+<p>वैदिक युग भारतीय सभ्यता का वह काल है जब आर्य लोग मध्य एशिया से भारत आए और वैदिक संस्कृति का विकास हुआ। इसे दो भागों में बाँटा गया है – प्रारंभिक (ऋग्वैदिक) और उत्तर वैदिक।</p>
+
+<h3 id="vedic-lit">3.1 वैदिक साहित्य</h3>
+<div class="box box-key">
+    <strong>वेद</strong> – विश्व का सबसे प्राचीन ग्रंथ। <strong>अपौरुषेय</strong> (ईश्वर द्वारा रचित, मानव निर्मित नहीं)।<br>
+    <strong>4 उपविभाग:</strong> संहिता (मंत्र) → ब्राह्मण (कर्मकांड) → आरण्यक (वन्य जीवन) → उपनिषद (ज्ञान)
+</div>
+<table>
+    <tr><th>वेद</th><th>विशेषता</th><th>प्रमुख तथ्य</th></tr>
+    <tr>
+        <td><strong>📖 ऋग्वेद</strong></td>
+        <td>सबसे प्राचीन एवं सबसे बड़ा</td>
+        <td>
+            • 10 मंडल (2-7 मूल, 1,8,9,10 बाद में)<br>
+            • 1028 सूक्त, 10,600 ऋचाएं<br>
+            • होतृ द्वारा उच्चारित<br>
+            • देवता: इंद्र (250 सूक्त), अग्नि (200), सोम (120)<br>
+            • ⭐ <strong>गायत्री मंत्र</strong> – 3रा मंडल, सवित्र देवता<br>
+            • <strong>सोम</strong> – 9वाँ मंडल, ऊर्जादायक पेय<br>
+            • <strong>दशराज युद्ध</strong> – 7वाँ मंडल, भरत vs 10 राजा<br>
+            • <strong>पुरुष सूक्त</strong> – 10वाँ मंडल (ब्राह्मण-मुख, क्षत्रिय-भुजा, वैश्य-जंघा, शूद्र-पैर)
+        </td>
+    </tr>
+    <tr>
+        <td><strong>🎵 सामवेद</strong></td>
+        <td>संगीत की जड़</td>
+        <td>
+            • मंत्रों के गायन की सुर-लहरियाँ<br>
+            • उपनिषद: <strong>केन</strong> (छांदोग्य से)
+        </td>
+    </tr>
+    <tr>
+        <td><strong>🔥 यजुर्वेद</strong></td>
+        <td>कर्मकांड का वेद</td>
+        <td>
+            • 2 भाग: शुक्ल + कृष्ण<br>
+            • <strong>शतपथ ब्राह्मण</strong> (सबसे बड़ा ब्राह्मण)<br>
+            • उपनिषद: <strong>बृहदारण्यक</strong> (सबसे प्राचीन), ईशोपनिषद
+        </td>
+    </tr>
+    <tr>
+        <td><strong>🪄 अथर्ववेद</strong></td>
+        <td>जादुई मंत्रों का वेद</td>
+        <td>
+            • 20 खंड<br>
+            • जादू-टोने, औषधियाँ, रोग निवारण
+        </td>
+    </tr>
+</table>
+
+<div class="box box-quote">
+    "वसुधैव कुटुम्बकम्" – सारा संसार एक परिवार है।<br>
+    <strong>-- महाउपनिषद</strong>
+</div>
+
+<h3 id="vedic-up">3.2 उपनिषद एवं वेदांग</h3>
+<div class="box box-key">
+    <strong>उपनिषद:</strong> कुल 108, मुख्य 10।<br>
+    • <strong>बृहदारण्यक</strong> – सबसे प्राचीन (यजुर्वेद)<br>
+    • <strong>मांडूक्य</strong> – सामवेद से ("सत्यमेव जयते" यहीं से)<br>
+    • <strong>महाउपनिषद</strong> – "वसुधैव कुटुम्बकम्"
+</div>
+<table>
+    <tr><th>वेदांग (6 अंग)</th><th>विषय</th></tr>
+    <tr><td>📢 शिक्षा</td><td>उच्चारण का अध्ययन</td></tr>
+    <tr><td>📋 कल्प</td><td>विधि और कर्मकांड</td></tr>
+    <tr><td>📝 व्याकरण</td><td>शब्दों का अध्ययन</td></tr>
+    <tr><td>🔍 निरुक्त</td><td>शब्दों की व्युत्पत्ति (Etymology)</td></tr>
+    <tr><td>⭐ ज्योतिष</td><td>खगोलीय गणना एवं समय</td></tr>
+    <tr><td>🎶 छंद</td><td>काव्य रचना एवं छंद</td></tr>
+</table>
+
+<h3 id="vedic-phil">3.3 दर्शन की 6 शाखाएँ (षड्दर्शन)</h3>
+<table>
+    <tr><th>दर्शन</th><th>स्थापक</th><th>विशेषता</th></tr>
+    <tr><td>सांख्य</td><td>कपिल</td><td>⭐ सबसे प्राचीन; पुरुष + प्रकृति</td></tr>
+    <tr><td>न्याय</td><td>गौतम</td><td>तार्किक/वैज्ञानिक दृष्टिकोण</td></tr>
+    <tr><td>वैशेषिक</td><td>कणाद</td><td>परमाणु सिद्धांत</td></tr>
+    <tr><td>योग</td><td>पतंजलि</td><td>अष्टांग योग</td></tr>
+    <tr><td>उत्तर मीमांसा</td><td>बादरायण</td><td>वेदांत दर्शन</td></tr>
+    <tr><td>पूर्व मीमांसा</td><td>जैमिनी</td><td>कर्मकांड प्रधान</td></tr>
+</table>
+
+<h3 id="vedic-early">3.4 प्रारंभिक वैदिक / ऋग्वैदिक काल (1500–1000 ई.पू.)</h3>
+
+<h4>🗺️ भौगोलिक क्षेत्र: सप्त सिंधु (पंजाब)</h4>
+<table>
+    <tr><th>प्राचीन नाम</th><th>आधुनिक नाम</th></tr>
+    <tr><td>हिमवत</td><td>हिमालय</td></tr>
+    <tr><td>अमुवत</td><td>हिंदूकुश</td></tr>
+    <tr><td>सिंधु</td><td>इंडस</td></tr>
+    <tr><td>वितस्ता</td><td>झेलम</td></tr>
+    <tr><td>असिकनी</td><td>चिनाब</td></tr>
+    <tr><td>पुरुषिणी/इरावती</td><td>रावी</td></tr>
+    <tr><td>विपाशा</td><td>ब्यास</td></tr>
+    <tr><td>शतुद्रि</td><td>सतलुज</td></tr>
+</table>
+
+<h4>👥 समाज</h4>
+<ul>
+    <li>🏛️ <strong>चार वर्ण:</strong> ब्राह्मण, क्षत्रिय, वैश्य, शूद्र – <strong>व्यवसाय आधारित</strong> (जन्म पर नहीं)</li>
+    <li>👶 <strong>बाल विवाह नहीं</strong> था</li>
+    <li>👩 <strong>विधवा पुनर्विवाह</strong> – नियोग प्रथा (अनुमत)</li>
+    <li>👨 <strong>पितृसत्ताक</strong> समाज, पर महिलाओं को सम्मान</li>
+    <li>🐄 <strong>गाय (अघन्या)</strong> – धन की पहचान; गोमत = धनवान; गोविद = गाय के लिए युद्ध</li>
+</ul>
+
+<h4>🏛️ राजनीति</h4>
+<ul>
+    <li>👑 <strong>राजतंत्र:</strong> चयनात्मक + वंशानुगत</li>
+    <li>🏛️ <strong>सभा</strong> – विशिष्ट वर्ग की परिषद (शक्तिशाली)</li>
+    <li>👥 <strong>समिति</strong> – सामान्य लोगों की परिषद (शक्तिशाली)</li>
+    <li>🙏 <strong>विधाता</strong> – धार्मिक उद्देश्य की सभा</li>
+</ul>
+<div class="box box-term">
+    <strong>अधिकारी:</strong> पुरोहित (याजक) | सेनानी (सेनापति) | ग्रामणी (ग्राम प्रधान)
+</div>
+
+<h4>🙏 धर्म</h4>
+<ul>
+    <li>प्रकृति पूजा – <strong>इंद्र</strong> (सबसे महत्वपूर्ण, 250 सूक्त), अग्नि, वरुण, सोम, वायु</li>
+    <li><strong>अदिति</strong> – देवों की माता | <strong>सावित्री</strong> – गायत्री मंत्र</li>
+    <li>❌ कोई मंदिर/मूर्ति पूजा नहीं, कोई पशुपूजा नहीं</li>
+    <li>🏺 <strong>मृद्भांड:</strong> गेरुआ रंग (OCP – Ochre Coloured Pottery)</li>
+</ul>
+
+<h4>💰 अर्थव्यवस्था</h4>
+<div class="box box-econ">
+    <strong>पशुपालन प्रधान</strong> अर्थव्यवस्था। गाय = मुख्य संपत्ति। कृषि गौण (यव/जौ की खेती)। विनिमय प्रणाली (Barter)। लोहे का ज्ञान नहीं था।
+</div>
+
+<h3 id="vedic-later">3.5 उत्तर वैदिक काल (1000–600 ई.पू.)</h3>
+
+<div class="box box-map">
+    <strong>विस्तार:</strong> सप्त सिंधु → <strong>आर्यावर्त</strong> (पंजाब से पश्चिमी UP एवं बिहार तक)।<br>
+    <strong>कारण:</strong> लौह औज़ारों एवं घोड़ों के प्रयोग से वन साफ़ किए।
+</div>
+
+<h4>🌾 कृषि</h4>
+<ul>
+    <li>मुख्य आजीविका बन गई। <strong>व्रीहि</strong> = चावल। लकड़ी का हल।</li>
+</ul>
+
+<h4>🏛️ राजनीति</h4>
+<ul>
+    <li><strong>क्षत्रीकरण</strong> की शुरुआत</li>
+    <li>सभा – महिलाओं को अब प्रवेश नहीं</li>
+    <li>समिति – कमजोर</li>
+    <li>विधाता – सामान्य हो गया</li>
+    <li><strong>बलि</strong> – राजा को दी जाने वाली कर/भेंट</li>
+</ul>
+
+<h4>👥 समाज</h4>
+<ul>
+    <li><strong>वर्ण व्यवस्था कठोर</strong> – अब <strong>जन्म आधारित</strong></li>
+    <li>ब्राह्मण (यज्ञ) → क्षत्रिय (युद्ध/रक्षा) → वैश्य (व्यापार) → शूद्र (सेवा)</li>
+    <li>👩 महिलाओं की स्थिति कमजोर हुई</li>
+    <li><strong>गोत्र प्रणाली</strong> उभरी</li>
+</ul>
+
+<h4>🧘 आश्रम व्यवस्था (4 आश्रम)</h4>
+<ol>
+    <li><strong>ब्रह्मचर्य</strong> (0–25 वर्ष) – शिक्षा</li>
+    <li><strong>गृहस्थ</strong> (25–50 वर्ष) – परिवार</li>
+    <li><strong>वानप्रस्थ</strong> (50–75 वर्ष) – वनवास</li>
+    <li><strong>संन्यास</strong> (75+ वर्ष) – मोक्ष</li>
+</ol>
+<div class="box box-key">
+    <strong>मृद्भांड:</strong> धूसर रंग (PGW – Painted Grey Ware)।<br>
+    <strong>धर्म:</strong> प्रजापति, रुद्र, विष्णु महत्वपूर्ण हुए। इंद्र/अग्नि का स्थान गौण हुआ।
+</div>
+
+<h3 id="vedic-comp">🔄 तुलना: प्रारंभिक vs उत्तर वैदिक</h3>
+<table>
+    <tr><th>विषय</th><th>🟢 प्रारंभिक वैदिक</th><th>🔴 उत्तर वैदिक</th></tr>
+    <tr><td>📅 काल</td><td>1500–1000 ई.पू.</td><td>1000–600 ई.पू.</td></tr>
+    <tr><td>🗺️ क्षेत्र</td><td>सप्त सिंधु (पंजाब)</td><td>आर्यावर्त (गंगा-यमुना दोआब)</td></tr>
+    <tr><td>🏛️ सभा-समिति</td><td>⭐ शक्तिशाली</td><td>कमजोर</td></tr>
+    <tr><td>👥 वर्ण</td><td>व्यवसाय आधारित</td><td>⭐ जन्म आधारित (कठोर)</td></tr>
+    <tr><td>👩 महिला</td><td>समान स्थिति, सभा में प्रवेश</td><td>⭐ कमजोर, प्रवेश बंद</td></tr>
+    <tr><td>🙏 देवता</td><td>इंद्र, अग्नि, वरुण</td><td>प्रजापति, रुद्र, विष्णु</td></tr>
+    <tr><td>💰 अर्थव्यवस्था</td><td>पशुपालन प्रधान</td><td>कृषि प्रधान</td></tr>
+    <tr><td>🏺 मृद्भांड</td><td>गेरुआ (OCP)</td><td>धूसर (PGW)</td></tr>
+    <tr><td>⚔️ धातु</td><td>तांबा/कांसा</td><td>लोहा (श्याम अयस)</td></tr>
+</table>
+
+<h3 id="vedic-marriage">3.6 विवाह के 8 प्रकार</h3>
+<table>
+    <tr><th>प्रकार</th><th>विवरण</th></tr>
+    <tr><td>🙏 ब्राह्म</td><td>समान वर्ण में वैदिक विधि से (सर्वोत्तम)</td></tr>
+    <tr><td>💕 गंधर्व</td><td>प्रेम विवाह</td></tr>
+    <tr><td>🔥 दैव</td><td>पिता द्वारा पुत्री को पुरोहित को दक्षिणा स्वरूप देना</td></tr>
+    <tr><td>🐄 अर्ष</td><td>एक गाय + एक बैल के बदले कन्या</td></tr>
+    <tr><td>🏠 प्रजापत्य</td><td>बिना दहेज के विवाह</td></tr>
+    <tr><td>💰 आसुर</td><td>खरीदकर विवाह</td></tr>
+    <tr><td>⚔️ राक्षस</td><td>जबरदस्ती अपहरण कर विवाह</td></tr>
+    <tr><td>😴 पैशाच</td><td>कन्या अचेत अवस्था में विवाह (सबसे निम्न)</td></tr>
+</table>
+<div class="box box-tip">
+    <strong>अनुलोम:</strong> लड़का उच्च जाति + लड़की निम्न जाति (स्वीकार्य)<br>
+    <strong>प्रतिलोम:</strong> लड़की उच्च जाति + लड़का निम्न जाति (अस्वीकार्य)
+</div>
+
+<h3 id="vedic-art">🎨 वैदिक काल: कला, साहित्य एवं वास्तुकला</h3>
+<div class="box box-art">
+    <strong>साहित्य:</strong> 4 वेद, ब्राह्मण, आरण्यक, उपनिषद, वेदांग, 6 दर्शन।<br>
+    <strong>वास्तुकला:</strong> मुख्यतः लकड़ी और बाँस के निर्माण (स्थायी नहीं बचे)। यज्ञ वेदियाँ (जैसे हस्तिनापुर, आहिच्छत्र)।<br>
+    <strong>मृद्भांड:</strong> OCP (प्रारंभिक) → PGW (उत्तर) → NBPW (मौर्य काल में)।<br>
+    <strong>संगीत:</strong> सामवेद से भारतीय शास्त्रीय संगीत की उत्पत्ति।
+</div>
+
+<h3 id="vedic-books">📖 वैदिक काल: प्रमुख पुस्तकें एवं रचनाकार</h3>
+<div class="box box-book">
+    <table>
+        <tr><th>पुस्तक/रचना</th><th>रचनाकार</th><th>विशेषता</th></tr>
+        <tr><td>ऋग्वेद</td><td>अपौरुषेय (विभिन्न ऋषि)</td><td>सबसे प्राचीन वेद</td></tr>
+        <tr><td>शतपथ ब्राह्मण</td><td>याज्ञवल्क्य (परंपरा)</td><td>सबसे बड़ा ब्राह्मण</td></tr>
+        <tr><td>बृहदारण्यक उपनिषद</td><td>याज्ञवल्क्य</td><td>सबसे प्राचीन उपनिषद</td></tr>
+        <tr><td>अष्टाध्यायी</td><td>पाणिनि</td><td>संस्कृत व्याकरण (बाद का काल)</td></tr>
+        <tr><td>निरुक्त</td><td>यास्क</td><td>शब्द व्युत्पत्ति</td></tr>
+        <tr><td>योग सूत्र</td><td>पतंजलि</td><td>अष्टांग योग</td></tr>
+    </table>
+</div>
+</section>
+
+<!-- ===== MNEMONICS ===== -->
+<section id="mnemonics">
+<h2>🧠 Mnemonics (याद करने की Tricks)</h2>
+
+<div class="box box-tip">
+<strong>🔥 1. वेदों का क्रम (4 वेद):</strong><br>
+<strong>"ऋचा-साम-यज्ञ-अथर्व"</strong><br>
+→ ऋग्वेद (ऋचाएं) → सामवेद (संगीत) → यजुर्वेद (यज्ञ) → अथर्ववेद (औषधियाँ)<br>
+<em>याद रखें: "ऋचा गाते-गाते यज्ञ किया, फिर अथर्व से इलाज किया"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 2. वेदांग (6 अंग):</strong><br>
+<strong>"शिक्षा-कल्प-व्याकरण, निरुक्त-ज्योतिष-छंद"</strong><br>
+<strong>Trick:</strong> "शिक्षा लेकर कल्पना की, व्याकरण से निरुक्त किया, ज्योतिष में छंद छेड़ा"<br>
+<em>या: "श-क-व-नि-ज-छ" = "शक्कर वनीला जलेबी छुरी"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 3. IVC के 4 प्रमुख स्थल (दिशा अनुसार):</strong><br>
+<strong>"उ-पू-प-द: मांडा-आलम-सुतका-दैमा"</strong><br>
+<strong>Story:</strong> "मांडा (उत्तर) से आलम (पूर्व) गया, फिर सुतका (पश्चिम) से दैमा (दक्षिण) आया"<br>
+<em>या: "MADS" = Maanda, Alamgir, Sutka, Daimabad</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 4. IVC खोजकर्ता:</strong><br>
+<strong>"दयाराम ने हड़प्पा, बनर्जी ने मोहन"</strong><br>
+<strong>Rhyme:</strong> "दया से हड़प्पा मिला, बनर्जी ने मोहनजोदड़ो खोज लिया"<br>
+<em>या: "DR-BR" = Dayaram (Harappa), Banerjee (Mohenjo-daro)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 5. IVC की विशेषताएं (अभाव):</strong><br>
+<strong>"लोहा-मंदिर-गाय-घोड़ा = LMGG"</strong><br>
+<strong>Trick:</strong> "LMGG = 'लम्ग' (Lang) - IVC में ये सब नहीं थे"<br>
+<em>याद रखें: IVC = "Iron-less, Mandir-less, Goat-less, Horse-less"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 6. दर्शन की 6 शाखाएँ (षड्दर्शन):</strong><br>
+<strong>"सांख्य-न्याय-वैशेषिक, योग-मीमांसा (उत्तर-पूर्व)"</strong><br>
+<strong>Story:</strong> "सांख्य ने न्याय किया, वैशेषिक से योग किया, फिर मीमांसा की"<br>
+<em>या: "SNV-YM" = "सन्नाव यम" (जैसे यमराज)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 7. विवाह के 8 प्रकार (श्रेष्ठ से निम्न):</strong><br>
+<strong>"ब्राह्म-गंधर्व-दैव-अर्ष, प्रजापत्य-आसुर-राक्षस-पैशाच"</strong><br>
+<strong>Trick:</strong> "ब्राह्मण गंधर्व देवताओं के अर्श (सिंहासन) पर बैठे, प्रजापति ने आसुरों को राक्षसों से पैशाच किया"<br>
+<em>या: "BGDA-PRAP" = "बगदाद प्राप" (Baghdad Prap)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 8. आश्रम व्यवस्था (4 आश्रम):</strong><br>
+<strong>"ब्रह्मचर्य-गृहस्थ-वानप्रस्थ-संन्यास"</strong><br>
+<strong>Story:</strong> "ब्रह्मचर्य में पढ़ा, गृहस्थ में बसा, वानप्रस्थ में वन गया, संन्यास में मोक्ष पाया"<br>
+<em>या: "BGVS" = "बगवास" (Bagwas - जैसे कपड़े)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 9. ऋग्वेद के महत्वपूर्ण तथ्य:</strong><br>
+<strong>"10-1028-10600"</strong><br>
+<strong>Trick:</strong> "10 मंडल, 1028 सूक्त, 10600 ऋचाएं"<br>
+<em>याद रखें: "10 का खेल" - 10 मंडल, 1028 (1000+28), 10600 (10000+600)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 10. गायत्री मंत्र:</strong><br>
+<strong>"3-10-सवित्र"</strong><br>
+<strong>Trick:</strong> "3रे मंडल में 10मं मंत्र, सवित्र देवता का वरदान"<br>
+<em>या: "3-10-Savitri" (3rd Mandala, 10th Hymn, Savitr Devata)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 11. पाषाण युग के प्रमुख स्थल (State-wise):</strong><br>
+<strong>"MP-भीमबेटका, RJ-बागोर, BS-मेहरगढ़, JK-बुरजहोम, UP-लाहुरादेवा"</strong><br>
+<strong>Story:</strong> "MP में भीम ने बेटका खोदा, RJ में बागोर ने पशु पाले, BS में मेहरगढ़ में घर बनाए, JK में बुरजहोम में कुत्ते दफनाए, UP में लाहुरादेवा में चावल उगाए"<br>
+<em>या: "MBRBL" = "मबरबल" (जैसे मजबूत)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 12. IVC के प्रमुख स्थल और उनकी विशेषताएं:</strong><br>
+<strong>"हड़प्पा-6 कोठार, मोहन-स्नानागार, लोथल-बंदरगाह, कालीबंगा-हल, धोलावीरा-3 भाग, राखीगढ़ी-सबसे बड़ा"</strong><br>
+<strong>Trick:</strong> "हड़प्पा में 6 कोठार थे, मोहन में नहाते थे, लोथल में जहाज़ आते थे, कालीबंगा में हल चलता था, धोलावीरा 3 भाग में बंटा था, राखीगढ़ी सबसे बड़ा था"<br>
+<em>या: "HMLKDR" = "हमलकदर" (हम लकड़र - जैसे लकड़ी)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 13. वैदिक देवता (प्रारंभिक vs उत्तर):</strong><br>
+<strong>प्रारंभिक:</strong> "इंद्र-अग्नि-वरुण-सोम" (IAVS)<br>
+<strong>उत्तर:</strong> "प्रजापति-रुद्र-विष्णु" (PRV)<br>
+<strong>Trick:</strong> "पहले IAVS (इन्द्रावस) थे, बाद में PRV (प्रवर) हुए"<br>
+<em>या: "इंद्र का अग्नि वरुण सोम" → "प्रजापति रुद्र विष्णु"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 14. मृद्भांड (Pottery) के प्रकार:</strong><br>
+<strong>"OCP → PGW → NBPW"</strong><br>
+<strong>Story:</strong> "पहले OCP (Ochre - गेरुआ), फिर PGW (Painted Grey - धूसर), अंत में NBPW (Northern Black Polished - काला)"<br>
+<em>याद रखें: "OPN" = "ओपन" (Open - जैसे दरवाज़ा खुला)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 15. IVC लिपि:</strong><br>
+<strong>"बॉस्ट्रोफेडन = बैल की जुताई"</strong><br>
+<strong>Trick:</strong> "जैसे बैल खेत में जुताई करता है (एक बार दाएं, फिर बाएं), वैसे ही IVC लिपि में एक पंक्ति दाएं→बाएं, फिर बाएं→दाएं"<br>
+<em>या: "Boustrophedon" = "Bull's Plowing" (बैल की जुताई)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 16. ताम्रपाषाण के प्रमुख स्थल:</strong><br>
+<strong>"जोर्वे-सबसे बड़ा, आहड़-सबसे प्राचीन"</strong><br>
+<strong>Trick:</strong> "जोर्वे (जो रवे = जो बोले) सबसे बड़ा था, आहड़ (आह! हड़) सबसे प्राचीन था"<br>
+<em>या: "JA" = "जा" (जाओ - जोर्वे बड़ा, आहड़ पुराना)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 17. नवपाषाण के प्रमुख स्थल:</strong><br>
+<strong>"मेहरगढ़-घर, बुरजहोम-कुत्ते, लाहुरादेवा-चावल, दोजाली-जेडाइट"</strong><br>
+<strong>Story:</strong> "मेहरगढ़ में घर बनाए, बुरजहोम में कुत्ते पाले, लाहुरादेवा में चावल उगाए, दोजाली में जेडाइट पत्थर लाए"<br>
+<em>या: "MBLD" = "मबल्द" (जैसे मजबूत)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 18. IVC का काल:</strong><br>
+<strong>"2500-1750 = 750 वर्ष"</strong><br>
+<strong>Trick:</strong> "25 से 17 = 750 वर्ष (2500-1750=750)"<br>
+<em>या: "25-17-75" = "पच्चीस-सत्र-पचहत्तर"</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 19. वैदिक युग का काल:</strong><br>
+<strong>"1500-600 = 900 वर्ष"</strong><br>
+<strong>Trick:</strong> "15 से 6 = 900 वर्ष (1500-600=900)"<br>
+<em>या: "15-6-9" = "पंद्रह-छह-नौ" (जैसे 15 तारीख, 6 बजे, 9 दिन)</em>
+</div>
+
+<div class="box box-tip">
+<strong>🔥 20. प्रारंभिक vs उत्तर वैदिक काल:</strong><br>
+<strong>"प्रारंभिक = सप्त सिंधु, इंद्र, OCP, पशुपालन, व्यवसाय-आधारित वर्ण"</strong><br>
+<strong>"उत्तर = आर्यावर्त, प्रजापति, PGW, कृषि, जन्म-आधारित वर्ण"</strong><br>
+<strong>Trick:</strong> "पहले 'सिंधु-इंद्र-पशु' थे, बाद में 'आर्य-प्रजापति-कृषि' हुए"<br>
+<em>या: "SIP-P" vs "APK-J" = "सिप-प" vs "अपक-ज"</em>
+</div>
+
+</section>
+
+<!-- ===== MIND MAP ===== -->
+<section id="mindmap">
+<h2>🧩 Mind Map: प्राचीन भारत - I</h2>
+<div class="mindmap">
+    <span class="center">🏛️ प्राचीन भारत - I</span>
+    <ul>
+        <li>🪨 <strong>पाषाण युग</strong>
+            <ul>
+                <li>पुरापाषाण → सोहन, बेलन, भीमबेटका</li>
+                <li>मध्यपाषाण → बागोर (घरेलूकरण)</li>
+                <li>नवपाषाण → मेहरगढ़, बुरजहोम, लाहुरादेवा</li>
+                <li>ताम्रपाषाण → जोर्वे, आहड़</li>
+            </ul>
+        </li>
+        <li>🏛️ <strong>सिंधु घाटी</strong>
+            <ul>
+                <li>नगर: हड़प्पा, मोहनजोदड़ो, लोथल, कालीबंगा, धोलावीरा</li>
+                <li>विशेष: ग्रिड, जल निकासी, पकी ईंट</li>
+                <li>व्यापार: मेसोपोटामिया (मेलुहा)</li>
+                <li>अभाव: लोहा, मंदिर, गाय, घोड़ा</li>
+            </ul>
+        </li>
+        <li>📜 <strong>वैदिक युग</strong>
+            <ul>
+                <li>साहित्य: 4 वेद, उपनिषद, वेदांग, दर्शन</li>
+                <li>प्रारंभिक: सप्त सिंधु, इंद्र, OCP, पशुपालन</li>
+                <li>उत्तर: आर्यावर्त, प्रजापति, PGW, कृषि</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</section>
+
+<!-- ===== QUOTE BOXES ===== -->
+<div class="box box-quote">
+    "यतो धर्मस्ततो जयः" – जहाँ धर्म है, वहाँ विजय है।<br>
+    <strong>-- महाभारत (वैदिक परंपरा से)</strong>
+</div>
+<div class="box box-quote">
+    "असतो मा सद्गमय, तमसो मा ज्योतिर्गमय, मृत्योर्मा अमृतं गमय"<br>
+    <strong>-- बृहदारण्यक उपनिषद</strong>
+</div>
+
+<!-- ===== COMMON MISTAKES ===== -->
+<section id="mistakes">
+<h2>🚫 Common Mistakes (अक्सर होने वाली गलतियाँ)</h2>
+<div class="box box-warn">
+    ❌ <strong>गलत:</strong> IVC में घोड़े का प्रचलन था।<br>
+    ✅ <strong>सही:</strong> IVC घोड़े से अपरिचित थे (सुरकोटड़ा की हड्डी विवादास्पद है)।<br><br>
+    ❌ <strong>गलत:</strong> IVC में लोहे का प्रयोग होता था।<br>
+    ✅ <strong>सही:</strong> IVC कांस्य युग की सभ्यता थी, लोहे का ज्ञान नहीं था।<br><br>
+    ❌ <strong>गलत:</strong> हड़प्पा की खोज आर.डी. बनर्जी ने की।<br>
+    ✅ <strong>सही:</strong> हड़प्पा = दयाराम साहनी (1921) | मोहनजोदड़ो = आर.डी. बनर्जी (1922)।<br><br>
+    ❌ <strong>गलत:</strong> ऋग्वेद में 12 मंडल हैं।<br>
+    ✅ <strong>सही:</strong> ऋग्वेद में <strong>10 मंडल</strong> हैं (1028 सूक्त)।<br><br>
+    ❌ <strong>गलत:</strong> प्रारंभिक वैदिक काल में वर्ण व्यवस्था जन्म आधारित थी।<br>
+    ✅ <strong>सही:</strong> प्रारंभिक में <strong>व्यवसाय आधारित</strong> थी, उत्तर वैदिक में जन्म आधारित हुई।<br><br>
+    ❌ <strong>गलत:</strong> IVC में मंदिर थे।<br>
+    ✅ <strong>सही:</strong> IVC में <strong>कोई मंदिर नहीं</strong> मिला है।<br><br>
+    ❌ <strong>गलत:</strong> गायत्री मंत्र सामवेद में है।<br>
+    ✅ <strong>सही:</strong> गायत्री मंत्र <strong>ऋग्वेद</strong> के 3रे मंडल में है (सवित्र देवता)।
+</div>
+</section>
+
+<!-- ===== SUMMARY ===== -->
+<section id="summary">
+<div class="summary-box">
+    <h2>📝 Chapter Summary (Quick Revision)</h2>
+    <ul>
+        <li>🪨 पाषाण युग 4 चरणों में: पुरापाषाण → मध्यपाषाण → नवपाषाण → ताम्रपाषाण</li>
+        <li>🎨 भीमबेटका (MP) – V.S. वाकणकर, 1957 – शैलचित्र गुफाएं</li>
+        <li>🐕 बागोर (राजस्थान) – पशुओं का प्राचीनतम घरेलूकरण</li>
+        <li>🌾 मेहरगढ़ (बलूचिस्तान) – घरों/फसलों का प्राचीनतम साक्ष्य</li>
+        <li>🐶 बुरजहोम (कश्मीर) – कुत्तों को मालिकों के साथ दफन</li>
+        <li>🍚 लाहुरादेवा (UP) – चावल की खेती का प्राचीनतम साक्ष्य</li>
+        <li>🏛️ IVC का नामकरण – जॉन मार्शल | काल: 2500–1750 ई.पू.</li>
+        <li>🏙️ हड़प्पा = दयाराम साहनी (1921) | मोहनजोदड़ो = आर.डी. बनर्जी (1922)</li>
+        <li>⚓ लोथल = बंदरगाह | कालीबंगा = हल के निशान | धोलावीरा = 3 भाग + साइनबोर्ड</li>
+        <li>📏 राखीगढ़ी = भारत का सबसे बड़ा IVC स्थल</li>
+        <li>❌ IVC में: लोहा नहीं, मंदिर नहीं, गाय/घोड़ा नहीं</li>
+        <li>📝 IVC लिपि = चित्र लिपि, बॉस्ट्रोफेडन, अपठित</li>
+        <li>📖 ऋग्वेद = सबसे प्राचीन, 10 मंडल, 1028 सूक्त</li>
+        <li>🙏 गायत्री मंत्र = ऋग्वेद, 3रा मंडल, सवित्र देवता</li>
+        <li>🎵 सामवेद = संगीत की जड़ | यजुर्वेद = शतपथ ब्राह्मण (सबसे बड़ा)</li>
+        <li>📜 बृहदारण्यक = सबसे प्राचीन उपनिषद</li>
+        <li>🧘 6 दर्शन: सांख्य (कपिल), न्याय (गौतम), वैशेषिक (कणाद), योग (पतंजलि), उत्तर मीमांसा (बादरायण), पूर्व मीमांसा (जैमिनी)</li>
+        <li>🗺️ प्रारंभिक वैदिक = सप्त सिंधु, इंद्र, OCP, पशुपालन, व्यवसाय आधारित वर्ण</li>
+        <li>🌾 उत्तर वैदिक = आर्यावर्त, प्रजापति, PGW, कृषि, जन्म आधारित वर्ण</li>
+        <li>💍 विवाह के 8 प्रकार: ब्राह्म (श्रेष्ठ) → पैशाच (निम्न)</li>
+    </ul>
+</div>
+</section>
+
+<!-- ===== QUICK REFERENCE CARD ===== -->
+<section id="refcard">
+<div class="ref-card">
+    <h2>📇 Quick Reference Card</h2>
+    <table>
+        <tr><th>विषय</th><th>तथ्य</th></tr>
+        <tr><td>सबसे प्राचीन वेद</td><td>ऋग्वेद</td></tr>
+        <tr><td>गायत्री मंत्र</td><td>ऋग्वेद, 3रा मंडल</td></tr>
+        <tr><td>संगीत की जड़</td><td>सामवेद</td></tr>
+        <tr><td>सबसे बड़ा ब्राह्मण</td><td>शतपथ ब्राह्मण (यजुर्वेद)</td></tr>
+        <tr><td>सबसे प्राचीन उपनिषद</td><td>बृहदारण्यक</td></tr>
+        <tr><td>IVC खोज (प्रथम)</td><td>हड़प्पा, दयाराम साहनी, 1921</td></tr>
+        <tr><td>IVC बंदरगाह</td><td>लोथल (गुजरात)</td></tr>
+        <tr><td>IVC सबसे बड़ा स्थल</td><td>राखीगढ़ी (हरियाणा)</td></tr>
+        <tr><td>पशु घरेलूकरण</td><td>बागोर (राजस्थान)</td></tr>
+        <tr><td>चावल प्राचीनतम</td><td>लाहुरादेवा (UP)</td></tr>
+        <tr><td>ताम्रपाषाण सबसे बड़ा</td><td>जोर्वे (महाराष्ट्र)</td></tr>
+        <tr><td>सबसे प्राचीन दर्शन</td><td>सांख्य (कपिल)</td></tr>
+        <tr><td>प्रारंभिक मृद्भांड</td><td>OCP (गेरुआ)</td></tr>
+        <tr><td>उत्तर वैदिक मृद्भांड</td><td>PGW (धूसर)</td></tr>
+    </table>
+</div>
+</section>
+
+<!-- ===== GLOSSARY ===== -->
+<section id="glossary">
+<div class="glossary">
+    <h2>📚 Glossary (शब्दावली)</h2>
+    <div class="gloss-item"><strong>अपौरुषेय</strong> – ईश्वर रचित, मानव निर्मित नहीं</div>
+    <div class="gloss-item"><strong>अघन्या</strong> – गाय (जिसे मारा न जाए)</div>
+    <div class="gloss-item"><strong>गोमत</strong> – धनवान (गायों का मालिक)</div>
+    <div class="gloss-item"><strong>गोविद</strong> – गाय के लिए युद्ध</div>
+    <div class="gloss-item"><strong>दशराज युद्ध</strong> – 10 राजाओं का युद्ध (भरत vs 10)</div>
+    <div class="gloss-item"><strong>पुरुष सूक्त</strong> – वर्ण व्यवस्था का वर्णन (10वाँ मंडल)</div>
+    <div class="gloss-item"><strong>बॉस्ट्रोफेडन</strong> – IVC लिपि शैली (दाएँ→बाएँ→दाएँ)</div>
+    <div class="gloss-item"><strong>मेलुहा</strong> – IVC का मेसोपोटामियाई नाम</div>
+    <div class="gloss-item"><strong>मृद्भांड</strong> – मिट्टी के बर्तन (Pottery)</div>
+    <div class="gloss-item"><strong>OCP</strong> – Ochre Coloured Pottery (गेरुआ)</div>
+    <div class="gloss-item"><strong>PGW</strong> – Painted Grey Ware (धूसर)</div>
+    <div class="gloss-item"><strong>NBPW</strong> – Northern Black Polished Ware (उत्तर कालीन)</div>
+    <div class="gloss-item"><strong>Microliths</strong> – सूक्ष्म पाषाण औज़ार</div>
+    <div class="gloss-item"><strong>अनुलोम</strong> – उच्च जाति लड़का + निम्न जाति लड़की</div>
+    <div class="gloss-item"><strong>प्रतिलोम</strong> – निम्न जाति लड़का + उच्च जाति लड़की</div>
+    <div class="gloss-item"><strong>नियोग</strong> – विधवा पुनर्विवाह प्रथा</div>
+    <div class="gloss-item"><strong>सप्त सिंधु</strong> – 7 नदियों का क्षेत्र (पंजाब)</div>
+    <div class="gloss-item"><strong>आर्यावर्त</strong> – उत्तर वैदिक काल का विस्तृत क्षेत्र</div>
+</div>
+</section>
+
+<div class="page-footer">
+    <p>📖 <strong>End of Chapter 1</strong> | प्राचीन भारत (Part I)</p>
+    <p>Next ➜ Chapter 2: जैन-बौद्ध धर्म, महाजनपद, मगध, मौर्य साम्राज्य</p>
+</div>
+</main>
+
+<script>
+// Close sidebar when clicking on a link (mobile)
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            document.querySelector('.sidebar').classList.remove('open');
+        }
+    });
+});
+
+// Back to Top Button Logic
+window.onscroll = function() {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+</script>
+
+</body>
+</html>
