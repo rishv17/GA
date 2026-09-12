@@ -192,7 +192,7 @@
         <div class="chapter-grid">
 
             <!-- Chapter 1 (Available) -->
-            <a href="chapter-01-ancient-1.html" class="card">
+            <a href="GA/History/chapter-01-ancient-1.html" class="card">
                 <div class="card-header">
                     <span class="chapter-num">Chapter 01</span>
                     <span class="badge badge-available">✅ उपलब्ध</span>
