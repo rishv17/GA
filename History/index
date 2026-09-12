@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Notes | GS Shorts Notes</title>
+    <style>
+        :root {
+            --primary: #1a252f;
+            --ancient: #d35400;
+            --ancient-light: #e67e22;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', 'Noto Sans Devanagari', Tahoma, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ===== TOP NAVIGATION ===== */
+        .top-nav {
+            background: var(--primary);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+        .back-btn:hover { background: rgba(255,255,255,0.2); transform: translateX(-3px); }
+        .nav-title { font-size: 1.3rem; font-weight: 700; }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--ancient), var(--ancient-light));
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+        }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.1rem; opacity: 0.95; max-width: 700px; margin: 0 auto; }
+
+        /* ===== MAIN CONTAINER ===== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 60px 20px;
+            flex: 1;
+        }
+
+        /* ===== CHAPTER GRID ===== */
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        /* ===== CHAPTER CARD ===== */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid var(--ancient);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(211, 84, 0, 0.15);
+        }
+        .card.disabled {
+            opacity: 0.7;
+            border-top-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+        .card.disabled:hover { transform: none; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .chapter-num {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--ancient);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .badge {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        .badge-available { background: #eafaf1; color: #27ae60; }
+        .badge-soon { background: #f2f3f4; color: #7f8c8d; }
+
+        .card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: var(--primary);
+            line-height: 1.4;
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: #636e72;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        .card-footer {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: var(--ancient);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .card.disabled .card-footer { color: #95a5a6; }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #e0e0e0;
+            background: white;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .top-nav { padding: 12px 15px; }
+            .nav-title { font-size: 1.1rem; }
+            .chapter-grid { grid-template-columns: 1fr; }
+        }
+</style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <a href="../index.html" class="back-btn">
+            <span>←</span> मुख्य पृष्ठ (Main Dashboard)
+        </a>
+        <span class="nav-title">📜 भारतीय इतिहास</span>
+        <div style="width: 120px;"></div> <!-- Spacer for centering -->
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>📚 Comprehensive History Notes</h1>
+        <p>प्राचीन, मध्यकालीन और आधुनिक भारत का विस्तृत, इंटरैक्टिव और परीक्षा-उन्मुख अध्ययन सामग्री।</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="chapter-grid">
+
+            <!-- Chapter 1 (Available) -->
+            <a href="chapter-01-ancient-1.html" class="card">
+                <div class="card-header">
+                    <span class="chapter-num">Chapter 01</span>
+                    <span class="badge badge-available">✅ उपलब्ध</span>
+                </div>
+                <h2>प्राचीन भारत - I</h2>
+                <p>पाषाण युग, सिंधु घाटी सभ्यता (IVC), वैदिक युग, वेद, उपनिषद और षड्दर्शन का विस्तृत विवरण।</p>
+                <div class="card-footer">
+                    पढ़ना शुरू करें <span>→</span>
+                </div>
+            </a>
+
+            <!-- Chapter 2 (Coming Soon) -->
+            <div class="card disabled">
+                <div class="card-header">
+                    <span class="chapter-num">Chapter 02</span>
+                    <span class="badge badge-soon">🚧 जल्द आ रहा है</span>
+                </div>
+                <h2>प्राचीन भारत - II</h2>
+                <p>जैन और बौद्ध धर्म, 16 महाजनपद, मगध का उत्थान, मौर्य साम्राज्य और मौर्योत्तर काल।</p>
+                <div class="card-footer">
+                    निर्माणाधीन <span>⏳</span>
+                </div>
+            </div>
+
+            <!-- Chapter 3 (Coming Soon) -->
+            <div class="card disabled">
+                <div class="card-header">
+                    <span class="chapter-num">Chapter 03</span>
+                    <span class="badge badge-soon">🚧 जल्द आ रहा है</span>
+                </div>
+                <h2>मध्यकालीन भारत - I</h2>
+                <p>प्रारंभिक इस्लामी आक्रमण, दिल्ली सल्तनत (गुलाम, खिलजी, तुगलक, सैयद, लोदी)।</p>
+                <div class="card-footer">
+                    निर्माणाधीन <span>⏳</span>
+                </div>
+            </div>
+
+            <!-- Chapter 4 (Coming Soon) -->
+            <div class="card disabled">
+                <div class="card-header">
+                    <span class="chapter-num">Chapter 04</span>
+                    <span class="badge badge-soon">🚧 जल्द आ रहा है</span>
+                </div>
+                <h2>मध्यकालीन भारत - II</h2>
+                <p>विजयनगर और बहमनी साम्राज्य, भक्ति और सूफी आंदोलन, सिख धर्म, और मुग़ल साम्राज्य।</p>
+                <div class="card-footer">
+                    निर्माणाधीन <span>⏳</span>
+                </div>
+            </div>
+
+            <!-- Chapter 5 (Coming Soon) -->
+            <div class="card disabled">
+                <div class="card-header">
+                    <span class="chapter-num">Chapter 05</span>
+                    <span class="badge badge-soon">🚧 जल्द आ रहा है</span>
+                </div>
+                <h2>आधुनिक भारत - I</h2>
+                <p>यूरोपीय शक्तियों का आगमन, अंग्रेजों का विस्तार, भूमि सुधार और 1857 का विद्रोह।</p>
+                <div class="card-footer">
+                    निर्माणाधीन <span>⏳</span>
+                </div>
+            </div>
+
+            <!-- Chapter 6 (Coming Soon) -->
+            <div class="card disabled">
+                <div class="card-header">
+                    <span class="chapter-num">Chapter 06</span>
+                    <span class="badge badge-soon">🚧 जल्द आ रहा है</span>
+                </div>
+                <h2>आधुनिक भारत - II</h2>
+                <p>सामाजिक-धार्मिक सुधार आंदोलन, INC का गठन, गांधी युग और स्वतंत्रता आंदोलन।</p>
+                <div class="card-footer">
+                    निर्माणाधीन <span>⏳</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>📖 GS Shorts Notes | Made with ❤️ for Competitive Exam Aspirants</p>
+    </footer>
+
+</body>
+</html>
