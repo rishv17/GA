@@ -1,151 +1,75 @@
-<!DOCTYPE html>
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GS Shorts Notes - Master Dashboard</title>
-<style>
-    :root {
-        --primary: #1a252f;
-        --accent: #f39c12;
-        --bg: #f8f9fa;
-        --text: #2d3436;
-        --card-bg: #ffffff;
-        --shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-        font-family: 'Segoe UI', 'Noto Sans Devanagari', sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-    header {
-        background: var(--primary);
-        color: white;
-        padding: 2rem 1rem;
-        text-align: center;
-        box-shadow: var(--shadow);
-    }
-    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-    header p { opacity: 0.9; font-size: 1.1rem; }
-    
-    main {
-        flex: 1;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-        width: 100%;
-    }
-
-    .subjects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 1rem;
-    }
-
-    .subject-card {
-        background: var(--card-bg);
-        border-radius: 12px;
-        padding: 2rem;
-        box-shadow: var(--shadow);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-top: 5px solid transparent;
-    }
-    .subject-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-    
-    /* Subject Specific Colors */
-    .card-history { border-color: #e67e22; }
-    .card-geography { border-color: #27ae60; }
-    .card-polity { border-color: #2980b9; }
-    .card-economy { border-color: #8e44ad; }
-
-    .subject-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
-    .subject-title { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary); }
-    .subject-desc { color: #636e72; margin-bottom: 1.5rem; font-size: 0.95rem; }
-
-    .btn {
-        display: inline-block;
-        padding: 0.8rem 1.5rem;
-        background: var(--primary);
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: background 0.3s;
-    }
-    .btn:hover { background: var(--accent); }
-
-    footer {
-        text-align: center;
-        padding: 1.5rem;
-        background: var(--primary);
-        color: #bdc3c7;
-        margin-top: auto;
-        font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-        header h1 { font-size: 1.8rem; }
-        .subjects-grid { grid-template-columns: 1fr; }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS Shorts Notes - Master Dashboard</title>
+    <style>
+        :root { --primary: #1a252f; --accent: #f39c12; --bg: #f8f9fa; }
+        body { font-family: 'Segoe UI', 'Noto Sans Devanagari', sans-serif; background: var(--bg); margin: 0; padding: 0; color: #2d3436; }
+        .header { background: linear-gradient(135deg, var(--primary), #2c3e50); color: white; padding: 40px 20px; text-align: center; }
+        .header h1 { margin: 0; font-size: 2.5rem; }
+        .header p { opacity: 0.9; font-size: 1.1rem; margin-top: 10px; }
+        
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        
+        .card {
+            background: white; border-radius: 12px; padding: 30px;
+            text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; color: inherit;
+            border-top: 5px solid var(--accent);
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .card .icon { font-size: 3rem; margin-bottom: 15px; display: block; }
+        .card h2 { margin: 10px 0; color: var(--primary); }
+        .card p { color: #636e72; font-size: 0.95rem; }
+        
+        .footer { text-align: center; padding: 30px; color: #7f8c8d; font-size: 0.9rem; margin-top: 50px; border-top: 1px solid #ddd; }
+    </style>
 </head>
 <body>
 
-<header>
+<div class="header">
     <h1>📚 GS Shorts Notes</h1>
     <p>Competitive Exams के लिए Comprehensive, Interactive & Detailed Notes</p>
-</header>
+</div>
 
-<main>
-    <div class="subjects-grid">
+<div class="container">
+    <div class="grid">
+        <!-- History Card -->
+        <a href="GA/History/index.html" class="card">
+            <span class="icon">📜</span>
+            <h2>इतिहास (History)</h2>
+            <p>प्राचीन, मध्यकालीन, आधुनिक भारत और विश्व इतिहास के विस्तृत नोट्स।</p>
+        </a>
+
+        <!-- Geography Card (Placeholder) -->
+        <a href="geography/index.html" class="card" style="border-top-color: #27ae60;">
+            <span class="icon">🌍</span>
+            <h2>भूगोल (Geography)</h2>
+            <p>भौतिक, भारतीय और विश्व भूगोल के इंटरैक्टिव नोट्स। (Coming Soon)</p>
+        </a>
+
+        <!-- Polity Card (Placeholder) -->
+        <a href="polity/index.html" class="card" style="border-top-color: #2980b9;">
+            <span class="icon">⚖️</span>
+            <h2>राजव्यवस्था (Polity)</h2>
+            <p>भारतीय संविधान, सरकार और नागरिक अधिकारों पर विस्तृत जानकारी। (Coming Soon)</p>
+        </a>
         
-        <!-- History Section -->
-        <div class="subject-card card-history">
-            <span class="subject-icon"></span>
-            <h2 class="subject-title">इतिहास (History)</h2>
-            <p class="subject-desc">प्राचीन, मध्यकालीन, आधुनिक भारत और विश्व इतिहास के विस्तृत नोट्स।</p>
-            <a href="history/index.html" class="btn">अध्ययन शुरू करें →</a>
-        </div>
-
-        <!-- Geography Section -->
-        <div class="subject-card card-geography">
-            <span class="subject-icon">🌍</span>
-            <h2 class="subject-title">भूगोल (Geography)</h2>
-            <p class="subject-desc">भौतिक, भारतीय और विश्व भूगोल के इंटरैक्टिव नोट्स।</p>
-            <a href="geography/index.html" class="btn">जल्द आ रहा है ⏳</a>
-        </div>
-
-        <!-- Polity Section -->
-        <div class="subject-card card-polity">
-            <span class="subject-icon">️</span>
-            <h2 class="subject-title">राजव्यवस्था (Polity)</h2>
-            <p class="subject-desc">भारतीय संविधान, सरकार और नागरिक अधिकारों पर विस्तृत जानकारी।</p>
-            <a href="polity/index.html" class="btn">जल्द आ रहा है ⏳</a>
-        </div>
-
-        <!-- Economy Section -->
-        <div class="subject-card card-economy">
-            <span class="subject-icon"></span>
-            <h2 class="subject-title">अर्थव्यवस्था (Economy)</h2>
-            <p class="subject-desc">भारतीय अर्थव्यवस्था, बजट और सर्वेक्षण के मुख्य बिंदु।</p>
-            <a href="#" class="btn">जल्द आ रहा है </a>
-        </div>
-
+        <!-- Economy Card (Placeholder) -->
+        <a href="#" class="card" style="border-top-color: #8e44ad;">
+            <span class="icon">📈</span>
+            <h2>अर्थव्यवस्था (Economy)</h2>
+            <p>भारतीय अर्थव्यवस्था, बजट और सर्वेक्षण के मुख्य बिंदु। (Coming Soon)</p>
+        </a>
     </div>
-</main>
+</div>
 
-<footer>
+<div class="footer">
     <p>Made with ❤️ for Competitive Exam Aspirants | Hosted on GitHub Pages</p>
-</footer>
+</div>
 
 </body>
 </html>
